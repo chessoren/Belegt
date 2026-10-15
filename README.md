@@ -32,6 +32,19 @@ See [`eval/results.md`](eval/results.md) for every item and the raw outputs in `
 Median latency 67.4 s per answer on 4 CPU cores. 95% Wilson intervals.
 <!-- RESULTS:END -->
 
+## Submission material
+
+| | |
+|---|---|
+| Demo video (FR voice by Oren via Fish Audio, FR + EN subtitles) | [`docs/video/Belegt-demo.mp4`](docs/video/Belegt-demo.mp4) · subtitles [`.srt`](docs/video/Belegt-demo.srt) · storyboard [`script.json`](docs/video/script.json) |
+| Slide deck, 3:2 images (2400×1600) + PDF | [`docs/deck/png/`](docs/deck/png/) · [`docs/deck/Belegt-deck.pdf`](docs/deck/Belegt-deck.pdf) |
+| Submission PDF (A4) | [`docs/submission/Belegt-submission.pdf`](docs/submission/Belegt-submission.pdf) |
+| Devpost kit: title, tagline, 25 tags, story, judges’ notes | [`docs/devpost.md`](docs/devpost.md) |
+| Essay (French) | [`docs/essai-fr.md`](docs/essai-fr.md) |
+| Design system notes | [`docs/design-system.md`](docs/design-system.md) |
+
+All numbers in these documents are filled in by `scripts/fill_numbers.py` from `eval/summary.json`; nothing is typed by hand.
+
 ## Who does what
 
 ```
