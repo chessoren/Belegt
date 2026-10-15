@@ -1,0 +1,65 @@
+@import url(../../web/tokens.css);
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #ddd; }
+body { font-family: var(--font-body); color: var(--color-text-primary); letter-spacing: var(--tracking-body); -webkit-font-smoothing: antialiased; }
+.slide { width: 1500px; height: 1000px; background: #fff; position: relative; overflow: hidden; margin: 0 auto 40px; padding: 72px 88px; display: flex; flex-direction: column; }
+.serif { font-family: var(--font-display); font-weight: 400; letter-spacing: -.03em; }
+.kicker { font-size: 18px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--color-red-600); }
+h1 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 84px; line-height: .98; letter-spacing: -.035em; }
+h2 { margin: 14px 0 0; font-family: var(--font-display); font-weight: 400; font-size: 64px; line-height: 1.02; letter-spacing: -.035em; max-width: 1200px; }
+.lead { font-size: 26px; line-height: 1.4; color: var(--color-text-secondary); max-width: 1100px; margin: 22px 0 0; letter-spacing: -.02em; }
+.foot { position: absolute; left: 88px; right: 88px; bottom: 40px; display: flex; justify-content: space-between; font-size: 15px; color: var(--color-text-tertiary); }
+.foot b { color: var(--color-text-primary); font-family: var(--font-display); font-size: 20px; font-weight: 400; letter-spacing: -.02em; }
+.foot b i { color: var(--color-swiss); font-style: normal; }
+.brand { display: inline-flex; align-items: center; gap: 14px; }
+.mark { width: 44px; height: 44px; border-radius: 10px; background: var(--color-swiss); display: grid; place-items: center; }
+.mark svg { width: 30px; height: 30px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card { border-radius: 32px; background: var(--color-surface-muted); padding: 30px 32px; }
+.card.line { background: #fff; box-shadow: inset 0 0 0 1.5px var(--color-border-tertiary); }
+.card.red { background: var(--color-red-600); color: #fff; }
+.card.ink { background: var(--color-red-900); color: #fff; }
+.card h3 { margin: 0 0 10px; font-size: 30px; font-weight: 600; letter-spacing: -.03em; line-height: 1.1; }
+.card p { margin: 0; font-size: 20px; line-height: 1.45; color: var(--color-text-secondary); }
+.card.red p, .card.ink p { color: #ffffffcc; }
+.big { font-family: var(--font-sans-display); font-weight: 800; letter-spacing: -.05em; line-height: .9; }
+.muted { color: var(--color-text-secondary); }
+.chip { display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; font-size: 15px; font-weight: 700; letter-spacing: .02em; }
+.chip.ai { background: var(--color-red-50); color: var(--color-red-600); box-shadow: inset 0 0 0 1px #da291c44; }
+.chip.code { background: #fff; color: var(--color-text-primary); box-shadow: inset 0 0 0 1px var(--color-border-tertiary); }
+.chip.ok { background: var(--color-verified-surface); color: var(--color-verified); }
+.chip.bad { background: var(--color-red-50); color: var(--color-red-600); }
+.shot { border-radius: 28px; overflow: hidden; box-shadow: 0 20px 60px #1c020422, inset 0 0 0 1px var(--color-border-tertiary); background: #fff; }
+.shot img { display: block; width: 100%; }
+table { width: 100%; border-collapse: collapse; font-size: 21px; }
+th, td { text-align: left; padding: 14px 10px; border-bottom: 1px solid var(--color-border-tertiary); }
+th { font-size: 15px; letter-spacing: .05em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 700; }
+td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.n b { color: var(--color-red-600); }
+.ci { font-size: 15px; color: var(--color-text-tertiary); }
+.quote { font-family: var(--font-display); font-size: 26px; line-height: 1.35; letter-spacing: -.015em; }
+mark { background: var(--color-highlight); box-shadow: inset 0 -3px 0 var(--color-red-600); color: inherit; padding: 0 3px; }
+s { text-decoration-color: var(--color-red-600); text-decoration-thickness: 3px; }
+.flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; align-items: stretch; }
+.step { border-radius: 26px; padding: 22px 22px; background: var(--color-surface-muted); display: flex; flex-direction: column; gap: 10px; position: relative; }
+.step.v { background: var(--color-red-900); color: #fff; }
+.step h4 { margin: 0; font-size: 24px; letter-spacing: -.02em; }
+.step p { margin: 0; font-size: 16.5px; line-height: 1.4; color: var(--color-text-secondary); }
+.step.v p { color: #ffffffcc; }
+.rules { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 22px; }
+.rule { border-radius: 20px; background: #fff; box-shadow: inset 0 0 0 1.5px var(--color-border-tertiary); padding: 16px 18px; font-size: 16.5px; line-height: 1.35; }
+.rule b { display: block; font-family: var(--font-mono); color: var(--color-red-600); font-size: 15px; margin-bottom: 6px; }
+.bars { display: grid; gap: 26px; }
+.barrow .lbl { display: flex; justify-content: space-between; font-size: 20px; margin-bottom: 8px; }
+.bar { height: 22px; border-radius: 99px; background: var(--color-background-secondary); overflow: hidden; margin-top: 6px; }
+.bar i { display: block; height: 100%; border-radius: 99px; background: var(--color-red-900-45); }
+.bar.us i { background: var(--color-red-600); }
+ul.clean { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+ul.clean li { font-size: 22px; line-height: 1.4; padding-left: 30px; position: relative; color: var(--color-text-secondary); }
+ul.clean li::before { content: "»"; position: absolute; left: 0; color: var(--color-red-600); font-weight: 700; }
+ul.clean li b { color: var(--color-text-primary); }
+@font-face { font-family: "Newsreader"; src: url(../../web/fonts/newsreader-latin-standard-normal.woff2) format("woff2"); font-weight: 200 800; }
+@font-face { font-family: "Newsreader"; src: url(../../web/fonts/newsreader-latin-standard-italic.woff2) format("woff2"); font-weight: 200 800; font-style: italic; }
+@font-face { font-family: "Inter"; src: url(../../web/fonts/inter-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; }

@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import os
 import time
+import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 
@@ -41,7 +42,15 @@ def chat(messages: list[dict], *, schema: dict | None = None, max_tokens: int = 
         headers={"Content-Type": "application/json"},
     )
     t0 = time.time()
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+    for attempt in range(6):  # the local server answers 503 while loading or saturated
+        try:
+            r = urllib.request.urlopen(req, timeout=timeout)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code != 503 or attempt == 5:
+                raise
+            time.sleep(2 + 3 * attempt)
+    with r:
         if on_token is None:
             d = json.loads(r.read())
             text = d["choices"][0]["message"].get("content") or ""
