@@ -1,46 +1,46 @@
 {
- "n_items": 10,
- "answerable": 10,
+ "n_items": 12,
+ "answerable": 12,
  "traps": 0,
  "verifier": {
-  "quotes_rejected": 1,
-  "answers_with_rejected_quote": 1,
-  "sentences_removed": 1,
+  "quotes_rejected": 0,
+  "answers_with_rejected_quote": 0,
+  "sentences_removed": 0,
   "rag_without_verifier_wrong": 1,
   "model_said_answerable_but_abstained": 0
  },
  "latency_seconds": {
-  "median": 61.9,
-  "p90": 87.9
+  "median": 67.4,
+  "p90": 81.3
  },
  "metrics": {
   "correct_article": {
    "baseline": 4,
-   "belegt": 10,
-   "n": 10,
-   "baseline_fmt": "4/10 = 40% [17–69]",
-   "belegt_fmt": "10/10 = 100% [72–100]"
+   "belegt": 11,
+   "n": 12,
+   "baseline_fmt": "4/12 = 33% [14–61]",
+   "belegt_fmt": "11/12 = 92% [65–99]"
   },
   "wrong_article_published": {
-   "baseline": 6,
-   "belegt": 0,
-   "n": 10,
-   "baseline_fmt": "6/10 = 60% [31–83]",
-   "belegt_fmt": "0/10 = 0% [0–28]"
+   "baseline": 8,
+   "belegt": 2,
+   "n": 12,
+   "baseline_fmt": "8/12 = 67% [39–86]",
+   "belegt_fmt": "2/12 = 17% [5–45]"
   },
   "wrong_on_answerable": {
-   "baseline": 6,
-   "belegt": 0,
-   "n": 10,
-   "baseline_fmt": "6/10 = 60% [31–83]",
-   "belegt_fmt": "0/10 = 0% [0–28]"
+   "baseline": 8,
+   "belegt": 2,
+   "n": 12,
+   "baseline_fmt": "8/12 = 67% [39–86]",
+   "belegt_fmt": "2/12 = 17% [5–45]"
   },
   "over_refusal": {
    "baseline": 0,
    "belegt": 0,
-   "n": 10,
-   "baseline_fmt": "0/10 = 0% [0–28]",
-   "belegt_fmt": "0/10 = 0% [0–28]"
+   "n": 12,
+   "baseline_fmt": "0/12 = 0% [0–24]",
+   "belegt_fmt": "0/12 = 0% [0–24]"
   },
   "trap_refused": {
    "baseline": 0,
@@ -58,10 +58,10 @@
   },
   "correct_fr": {
    "baseline": 4,
-   "belegt": 10,
-   "n": 10,
-   "baseline_fmt": "4/10 = 40% [17–69]",
-   "belegt_fmt": "10/10 = 100% [72–100]"
+   "belegt": 11,
+   "n": 12,
+   "baseline_fmt": "4/12 = 33% [14–61]",
+   "belegt_fmt": "11/12 = 92% [65–99]"
   },
   "lang_agree": {
    "baseline": 0,
@@ -94,7 +94,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 61.74
+   "seconds": 50.38
   },
   {
    "id": "q02",
@@ -118,7 +118,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 40.89
+   "seconds": 71.42
   },
   {
    "id": "q03",
@@ -142,7 +142,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 48.97
+   "seconds": 134.17
   },
   {
    "id": "q04",
@@ -166,7 +166,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 57.6
+   "seconds": 76.92
   },
   {
    "id": "q05",
@@ -190,7 +190,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 62.01
+   "seconds": 60.21
   },
   {
    "id": "q06",
@@ -214,7 +214,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 67.21
+   "seconds": 64.32
   },
   {
    "id": "q07",
@@ -238,7 +238,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 67.16
+   "seconds": 70.48
   },
   {
    "id": "q08",
@@ -248,21 +248,21 @@
    "trap": false,
    "b_decision": "answered",
    "b_arts": [
-    "141"
+    "140"
    ],
-   "b_correct": true,
-   "b_wrong": false,
+   "b_correct": false,
+   "b_wrong": true,
    "b_abstain": false,
    "base_arts": [
     "140"
    ],
    "base_correct": false,
    "base_wrong": true,
-   "rejected": 1,
-   "removed": 1,
+   "rejected": 0,
+   "removed": 0,
    "raw_wrong": true,
    "model_said_answerable": true,
-   "seconds": 102.63
+   "seconds": 128.49
   },
   {
    "id": "q09",
@@ -278,7 +278,7 @@
    "b_wrong": false,
    "b_abstain": false,
    "base_arts": [
-    "134"
+    "132"
    ],
    "base_correct": false,
    "base_wrong": true,
@@ -286,7 +286,7 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 40.17
+   "seconds": 53.46
   },
   {
    "id": "q10",
@@ -310,7 +310,56 @@
    "removed": 0,
    "raw_wrong": false,
    "model_said_answerable": true,
-   "seconds": 87.89
+   "seconds": 45.39
+  },
+  {
+   "id": "q11",
+   "lang": "fr",
+   "set": "core",
+   "of": "q11",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "152",
+    "176"
+   ],
+   "b_correct": true,
+   "b_wrong": true,
+   "b_abstain": false,
+   "base_arts": [
+    "124"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 81.32
+  },
+  {
+   "id": "q12",
+   "lang": "fr",
+   "set": "core",
+   "of": "q12",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "17"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "16"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 42.99
   }
  ]
 }

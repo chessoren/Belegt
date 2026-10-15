@@ -21,6 +21,15 @@ Hack Apertus 2026 · Track 2B “Own Project” · Apache-2.0
 See [`eval/results.md`](eval/results.md) for every item and the raw outputs in `eval/runs/`.
 
 <!-- RESULTS:START -->
+| 12 questions (12 answerable, 0 traps) | Apertus alone | Apertus + Belegt |
+|---|---|---|
+| Cites a correct article | 4/12 = 33% [14–61] | **11/12 = 92% [65–99]** |
+| Publishes a wrong or invented article | 8/12 = 67% [39–86] | **2/12 = 17% [5–45]** |
+| Trap questions refused | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
+| Same answer in all 4 languages | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
+| Abstains although an answer exists | — | 0/12 = 0% [0–24] |
+
+Median latency 67.4 s per answer on 4 CPU cores. 95% Wilson intervals.
 <!-- RESULTS:END -->
 
 ## Who does what

@@ -5,8 +5,8 @@
    "belegt": 0
   },
   "wrong_published": {
-   "base": 60,
-   "belegt": 0
+   "base": 67,
+   "belegt": 17
   },
   "lang_agree": {
    "base": 0,
@@ -22,8 +22,8 @@
     "rm": "Artitgel correct cità",
     "en": "Correct article cited"
    },
-   "base": "4/10 = 40% [17–69]",
-   "belegt": "10/10 = 100% [72–100]"
+   "base": "4/12 = 33% [14–61]",
+   "belegt": "11/12 = 92% [65–99]"
   },
   {
    "label": {
@@ -33,8 +33,8 @@
     "rm": "Artitgel fauss u inventà publitgà",
     "en": "Wrong or invented article published"
    },
-   "base": "6/10 = 60% [31–83]",
-   "belegt": "0/10 = 0% [0–28]"
+   "base": "8/12 = 67% [39–86]",
+   "belegt": "2/12 = 17% [5–45]"
   },
   {
    "label": {
@@ -56,7 +56,7 @@
     "en": "Wrongful abstention"
    },
    "base": "—",
-   "belegt": "0/10 = 0% [0–28]"
+   "belegt": "0/12 = 0% [0–24]"
   },
   {
    "label": {
@@ -71,11 +71,11 @@
   }
  ],
  "text": {
-  "fr": "10 questions (10 avec réponse, 0 pièges), dont 0 posées dans les 4 langues. Même modèle Apertus 1.5 8B local, température 0. Intervalles de confiance à 95 % (Wilson).",
-  "de": "10 Fragen (10 beantwortbar, 0 Fallen), davon 0 in allen 4 Sprachen. Gleiches lokales Modell Apertus 1.5 8B, Temperatur 0. 95-%-Konfidenzintervalle (Wilson).",
-  "it": "10 domande (10 con risposta, 0 trappole), di cui 0 nelle 4 lingue. Stesso modello locale Apertus 1.5 8B, temperatura 0. Intervalli di confidenza al 95% (Wilson).",
-  "rm": "10 dumondas (10 cun resposta, 0 trappas), da quellas 0 en tut las 4 linguas. Il medem model local Apertus 1.5 8B, temperatura 0.",
-  "en": "10 questions (10 answerable, 0 traps), 0 of them asked in all 4 languages. Same local Apertus 1.5 8B model, temperature 0. 95% Wilson confidence intervals."
+  "fr": "12 questions (12 avec réponse, 0 pièges), dont 0 posées dans les 4 langues. Même modèle Apertus 1.5 8B local, température 0. Intervalles de confiance à 95 % (Wilson).",
+  "de": "12 Fragen (12 beantwortbar, 0 Fallen), davon 0 in allen 4 Sprachen. Gleiches lokales Modell Apertus 1.5 8B, Temperatur 0. 95-%-Konfidenzintervalle (Wilson).",
+  "it": "12 domande (12 con risposta, 0 trappole), di cui 0 nelle 4 lingue. Stesso modello locale Apertus 1.5 8B, temperatura 0. Intervalli di confidenza al 95% (Wilson).",
+  "rm": "12 dumondas (12 cun resposta, 0 trappas), da quellas 0 en tut las 4 linguas. Il medem model local Apertus 1.5 8B, temperatura 0.",
+  "en": "12 questions (12 answerable, 0 traps), 0 of them asked in all 4 languages. Same local Apertus 1.5 8B model, temperature 0. 95% Wilson confidence intervals."
  },
  "footnote": {
   "fr": "Détail par question, sorties brutes et étiquetage manuel des pièges : eval/results.md dans le dépôt.",

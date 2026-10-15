@@ -3,6 +3,7 @@
    whatever the interface language. */
 window.I18N = {
 fr: {
+  netNow: "État actuel de cette machine",
   netTitle: "Réseau et souveraineté", netBlocked: "connexions sortantes bloquées", netRoute: "Route par défaut", netNone: "aucune", netYes: "présente", netLoop: "Appels locaux (127.0.0.1)", netExplain: "Observé passivement : table de routage du noyau et journal d’audit du processus Belegt. Aucun paquet n’est envoyé pour le vérifier.",
   skip: "Aller au contenu", banner: "Prototype indépendant pour Hack Apertus — pas un site officiel de la Confédération",
   uiLang: "Langue de l’interface", menu: "Menu", describe: "Votre question", send: "Envoyer",
@@ -41,6 +42,7 @@ fr: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus seul", chartTrap: "Pièges refusés", chartWrong: "Articles faux ou inventés publiés", chartLang: "Mêmes articles dans les 4 langues",
 },
 de: {
+  netNow: "Aktueller Zustand dieses Rechners",
   netTitle: "Netz und Souveränität", netBlocked: "ausgehende Verbindungen blockiert", netRoute: "Standardroute", netNone: "keine", netYes: "vorhanden", netLoop: "Lokale Aufrufe (127.0.0.1)", netExplain: "Passiv ermittelt: Routingtabelle des Kernels und Audit-Protokoll des Belegt-Prozesses. Dafür wird kein Paket gesendet.",
   skip: "Zum Inhalt", banner: "Unabhängiger Prototyp für Hack Apertus — keine offizielle Website des Bundes",
   uiLang: "Sprache der Oberfläche", menu: "Menü", describe: "Ihre Frage", send: "Senden",
@@ -78,6 +80,7 @@ de: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus allein", chartTrap: "Fallen abgelehnt", chartWrong: "Falsche oder erfundene Artikel veröffentlicht", chartLang: "Gleiche Artikel in allen 4 Sprachen",
 },
 it: {
+  netNow: "Stato attuale di questa macchina",
   netTitle: "Rete e sovranità", netBlocked: "connessioni in uscita bloccate", netRoute: "Route predefinita", netNone: "nessuna", netYes: "presente", netLoop: "Chiamate locali (127.0.0.1)", netExplain: "Osservato passivamente: tabella di routing del kernel e registro di audit del processo Belegt. Nessun pacchetto viene inviato per verificarlo.",
   skip: "Vai al contenuto", banner: "Prototipo indipendente per Hack Apertus — non è un sito ufficiale della Confederazione",
   uiLang: "Lingua dell’interfaccia", menu: "Menu", describe: "La sua domanda", send: "Invia",
@@ -115,6 +118,7 @@ it: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus da solo", chartTrap: "Trappole rifiutate", chartWrong: "Articoli errati o inventati pubblicati", chartLang: "Stessi articoli nelle 4 lingue",
 },
 rm: {
+  netNow: "Stadi actual da questa maschina",
   netTitle: "Rait e suveranitad", netBlocked: "colliaziuns vers l’exteriur bloccadas", netRoute: "Ruta da standard", netNone: "nagina", netYes: "avant maun", netLoop: "Clomadas localas (127.0.0.1)", netExplain: "Observà passivamain: tabella da rutas dal kernel e protocol d’audit dal process Belegt. Nagin pachet na vegn tramess per quai.",
   skip: "Ir al cuntegn", banner: "Prototip independent per Hack Apertus — betg ina pagina uffiziala da la Confederaziun",
   uiLang: "Lingua da l’interfatscha", menu: "Menu", describe: "Vossa dumonda", send: "Trametter",
@@ -152,6 +156,7 @@ rm: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus sulet", chartTrap: "Trappas refusadas", chartWrong: "Artitgels fauss u inventads publitgads", chartLang: "Ils medems artitgels en las 4 linguas",
 },
 en: {
+  netNow: "Current state of this machine",
   netTitle: "Network & sovereignty", netBlocked: "outbound connections blocked", netRoute: "Default route", netNone: "none", netYes: "present", netLoop: "Local calls (127.0.0.1)", netExplain: "Observed passively: the kernel routing table and the audit log of the Belegt process. No packet is sent to check it.",
   skip: "Skip to content", banner: "Independent prototype for Hack Apertus — not an official website of the Swiss Confederation",
   uiLang: "Interface language", menu: "Menu", describe: "Your question", send: "Send",
@@ -229,6 +234,17 @@ de: {
   limits: `<div class="prose"><ul><li>Belegt ist keine Rechtsberatung.</li><li>Die Prüfung garantiert, dass Zitate wörtlich existieren – nicht, dass die Umformulierung richtig ist. Nicht wörtliche Sätze sind gepunktet unterstrichen.</li><li>Eine Ablehnung kann falsch sein, wenn die Suche den richtigen Artikel verfehlt. Die Quote wird gemessen und veröffentlicht.</li><li>Korpus: Bundesverfassung (SR 101), Stand 3. März 2024.</li><li>Das Modell läuft 4-bit auf CPU: eine Antwort dauert rund eine Minute.</li><li>Die rätoromanischen Testfragen stammen vom Team, nicht von Muttersprachigen.</li></ul></div>`,
   about: `<div class="prose"><p><b>Belegt</b> ist ein Prototyp für <b>Hack Apertus 2026</b>, Track 2B. Nicht mit dem Bund oder den Apertus-Autorinnen und -Autoren verbunden.</p><p>Modell: Apertus 1.5 8B (swiss-ai), GGUF Q4_K_M. Text: Fedlex, amtliches Akoma-Ntoso-XML in DE, FR, IT, RM.</p><p>Design: Struktur nach America.gov, in Schweizer Rot (Pantone 485 C). Offene Schriften Newsreader und Inter, lokal ausgeliefert.</p><p>Lizenz Apache-2.0.</p></div>`,
 },
+it: {
+  how: `<div class="prose"><p>Belegt segue una regola semplice: <b>non afferma nulla che non possa indicare nel testo ufficiale.</b></p>
+    <h4>1 · Capire — IA</h4><p>Apertus legge la domanda e la riformula nelle quattro lingue ufficiali con il vocabolario della Costituzione («manifestare» diventa «libertà di riunione»).</p>
+    <h4>2 · Cercare — codice</h4><p>Una ricerca lessicale (BM25 su parole e su n-grammi di caratteri) esamina i 657 capoversi di ogni versione; le classifiche delle quattro lingue vengono fuse.</p>
+    <h4>3 · Redigere — IA</h4><p>Apertus scrive una risposta breve e sceglie le citazioni tra i capoversi candidati. Può anche rispondere che nulla risponde alla domanda.</p>
+    <h4>4 · Verificare — codice, senza IA</h4><p>R1 il capoverso esiste · R2 la citazione compare parola per parola · R3 è abbastanza lunga · R4 nessun numero d’articolo non provato nella risposta · R5 se non resta alcuna prova, Belegt si astiene. La concordanza delle quattro lingue è controllata grazie agli identificatori Fedlex, identici in ogni versione.</p>
+    <h4>5 · Ricevuta</h4><p>Ogni risposta produce una ricevuta: modello e impronta SHA-256, versione e impronta del testo di legge, prove, controlli, stato della rete.</p></div>`,
+  privacy: `<div class="prose"><p><b>Nulla esce dalla macchina.</b> Apertus gira localmente in llama.cpp, compilato senza accesso alla rete. Un «audit hook» Python blocca e conta ogni connessione o richiesta DNS verso l’esterno; il contatore è sempre visibile e figura in ogni ricevuta.</p><p>Lo stato offline è osservato passivamente (interfacce e tabella di routing): nessun pacchetto viene inviato per verificarlo.</p><p>Nessuna domanda è memorizzata sul server. La ricevuta resta nel suo browser.</p><p>Caratteri e script sono serviti da Belegt stesso: nessun CDN, nessun tracciamento.</p></div>`,
+  limits: `<div class="prose"><ul><li>Belegt non è una consulenza giuridica.</li><li>La verifica garantisce che le citazioni esistano alla lettera, non che la riformulazione sia corretta. Le frasi non citate sono sottolineate a puntini.</li><li>Un rifiuto può essere sbagliato se la ricerca manca l’articolo giusto. Il tasso è misurato e pubblicato.</li><li>Corpus: Costituzione federale (RS 101), stato 3 marzo 2024.</li><li>Il modello gira a 4 bit su CPU: una risposta richiede circa un minuto.</li><li>Le domande di test in romancio sono state scritte dal team, non da madrelingua.</li></ul></div>`,
+  about: `<div class="prose"><p><b>Belegt</b> («comprovato, documentato» in tedesco) è un prototipo per <b>Hack Apertus 2026</b>, percorso 2B. Non è affiliato alla Confederazione né agli autori di Apertus.</p><p>Modello: Apertus 1.5 8B (swiss-ai), GGUF Q4_K_M. Testo: Fedlex, XML Akoma Ntoso ufficiale in DE, FR, IT, RM.</p><p>Design: struttura e sistema di componenti ispirati ad America.gov, ricolorati in rosso svizzero (Pantone 485 C). Caratteri liberi Newsreader e Inter, serviti localmente.</p><p>Licenza Apache-2.0.</p></div>`,
+},
 en: {
   how: `<div class="prose"><p>Belegt follows one rule: <b>it asserts nothing it cannot point to in the official text.</b></p>
     <h4>1 · Understand — AI</h4><p>Apertus reads the question and rewrites it in the four official languages using the Constitution’s own vocabulary (“demonstrate” becomes “freedom of assembly”).</p>
@@ -241,5 +257,4 @@ en: {
   about: `<div class="prose"><p><b>Belegt</b> (German for “substantiated, documented”) is a prototype for <b>Hack Apertus 2026</b>, Track 2B “Own Project”. Not affiliated with the Swiss Confederation or the Apertus authors.</p><p>Model: Apertus 1.5 8B (swiss-ai: EPFL · ETH Zurich · CSCS), GGUF Q4_K_M. Text: Fedlex official Akoma Ntoso XML in DE, FR, IT, RM.</p><p>Design: structure and component system modelled on America.gov, recoloured in Swiss red (Pantone 485 C). Open fonts Newsreader and Inter, served locally.</p><p>Code, test questions, results and receipts: Apache-2.0.</p></div>`,
 },
 };
-window.PAGES.it = window.PAGES.fr;
 window.PAGES.rm = window.PAGES.de;

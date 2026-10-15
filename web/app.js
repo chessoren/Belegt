@@ -178,7 +178,7 @@
     const yes = (b) => (b ? "✓" : "✗");
     const row = (k, v) => `<dt>${esc(k)}</dt><dd>${v}</dd>`;
     openSheet(t("netTitle"), `
-      <div class="receipt"><div class="r-head"><div><div class="muted">${esc(t("netTitle"))}</div>
+      <div class="receipt"><div class="r-head"><div><div class="muted">${esc(t("netNow"))}</div>
         <div class="decision">${esc(n.offline ? t("netOffline") : t("netOnline"))}</div></div>
         <div style="text-align:right"><div class="r-id" style="font-size:2rem">${n.outbound_attempts ?? 0}</div><div class="muted">${esc(t("netBlocked"))}</div></div></div>
       <dl>
