@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Belegt — citation ou silence</title>
+<meta name="description" content="Belegt answers questions about the Swiss Federal Constitution only when it can prove every claim with the official text. Built on Apertus, running offline.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/newsreader-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body data-view="landing">
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<!-- ================================================================ LANDING -->
+<div class="landing">
+  <div class="top-banner">
+    <span data-i18n="banner">Prototype indépendant pour Hack Apertus — pas un site officiel de la Confédération</span>
+    <button type="button" data-open="about" aria-label="Info"><svg class="info" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor"/><path d="M8 7v4M8 5v.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+  </div>
+
+  <div class="hero-wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Belegt">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M3.2 5.2 0.8 9l2.4 3.8M7.2 5.2 4.8 9l2.4 3.8M10.8 5.2 13.2 9l-2.4 3.8M14.8 5.2 17.2 9l-2.4 3.8" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="brand-word">Belegt</span>
+        </a>
+        <div class="right">
+          <span class="net-pill" data-net><span class="net-dot"></span><span class="label" data-net-label>…</span><span class="count" data-net-count></span></span>
+          <label class="lang-select"><span class="sr-only" data-i18n="uiLang">Langue de l'interface</span>
+            <select data-ui-lang><option value="fr">FR</option><option value="de">DE</option><option value="it">IT</option><option value="rm">RM</option><option value="en">EN</option></select>
+          </label>
+          <button class="btn btn-primary btn-sm" type="button" data-open="menu" data-i18n="menu">Menu</button>
+        </div>
+      </header>
+
+      <div class="hero-head" id="main">
+        <h1 class="serif" id="hero-title"><span class="greet" data-greet>Allegra, Svizra</span></h1>
+        <p class="lede" data-i18n="lede">Une question sur la Constitution fédérale ? Belegt répond avec le texte officiel, ou il se tait.</p>
+      </div>
+
+      <div class="stage">
+        <form class="composer" data-composer="hero" autocomplete="off">
+          <label class="sr-only" for="q-hero" data-i18n="describe">Votre question</label>
+          <textarea id="q-hero" rows="1" data-q placeholder=""></textarea>
+          <button class="send" type="submit" aria-label="Envoyer" data-i18n-aria="send"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <div class="posters" aria-hidden="true" data-posters></div>
+      </div>
+
+      <div class="carousel-ctrl">
+        <button type="button" data-car="prev" aria-label="Précédent"><svg viewBox="0 0 16 16" fill="none"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" data-car="pause" aria-label="Pause"><svg viewBox="0 0 16 16" fill="currentColor" data-pause-ico><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg></button>
+        <button type="button" data-car="next" aria-label="Suivant"><svg viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="hero-chips" data-chips></div>
+    </section>
+  </div>
+
+  <main class="features">
+    <section class="feature reveal">
+      <div class="feature-art art-proof" aria-hidden="true">
+        <span class="lbl">Art. 22 · Constitution fédérale</span>
+        <div class="txt"><mark>La liberté de réunion est garantie.</mark> Toute personne a le droit d’organiser des réunions, d’y prendre part ou non.</div>
+        <span class="ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="m3.5 8.5 3 3 6-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="foundVerbatim">Trouvé mot pour mot</span></span>
+      </div>
+      <div>
+        <h2 data-i18n-html="f1t">Prouvé.<br>Mot pour mot.</h2>
+        <p data-i18n="f1p">Chaque réponse s’appuie sur des phrases exactes de la Constitution, surlignées dans le texte officiel. Vous n’avez pas à nous croire : vous vérifiez en dix secondes.</p>
+        <button class="text-link" type="button" data-open="how" data-i18n="f1l">Voir comment ça marche</button>
+      </div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="feature-art art-night" aria-hidden="true">
+        <div class="stars"></div>
+        <div class="disc"><svg viewBox="0 0 40 40" fill="none"><path d="M14 6v8M26 6v8M10 14h20v6a10 10 0 0 1-20 0v-6ZM20 30v5" stroke="#1c0204" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 35 35 5" stroke="#da291c" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+        <div class="cap" data-net-cap>0 connexion sortante</div>
+      </div>
+      <div>
+        <h2 data-i18n-html="f2t">Souverain.<br>Câble débranché.</h2>
+        <p data-i18n="f2p">Apertus tourne sur cette machine. Aucun service étranger, aucune donnée qui sort : toute connexion sortante serait bloquée et comptée. Le compteur est à zéro.</p>
+        <button class="text-link" type="button" data-open="privacy" data-i18n="f2l">En savoir plus sur la confidentialité</button>
+      </div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="feature-art" aria-hidden="true" style="background:var(--color-grey-50)">
+        <div class="art-seals">
+          <div class="seal"><div><span>DE</span><small>Deutsch</small></div></div>
+          <div class="seal red"><div><span>101</span><small>RS · SR · CS</small></div></div>
+          <div class="seal"><div><span>FR</span><small>Français</small></div></div>
+          <div class="seal"><div><span>IT</span><small>Italiano</small></div></div>
+          <div class="seal"><div><span>§</span><small>Fedlex</small></div></div>
+          <div class="seal"><div><span>RM</span><small>Rumantsch</small></div></div>
+          <div class="seal"><div><span>4</span><small>versions</small></div></div>
+          <div class="seal"><div><span>=</span><small>1 loi</small></div></div>
+          <div class="seal"><div><span>657</span><small>alinéas</small></div></div>
+        </div>
+      </div>
+      <div>
+        <h2 data-i18n-html="f3t">Quatre langues.<br>Une seule loi.</h2>
+        <p data-i18n="f3p">Allemand, français, italien, romanche. Belegt vérifie que la même question mène aux mêmes articles dans chaque version officielle, et le signale sinon.</p>
+        <button class="text-link" type="button" data-ask="Hai jau il dretg da demonstrar sin via?" data-i18n="f3l">Poser une question en romanche</button>
+      </div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="feature-art art-chart" aria-hidden="true" data-mini-chart></div>
+      <div>
+        <h2 data-i18n-html="f4t">Mesuré.<br>Pas promis.</h2>
+        <p data-i18n="f4p">Apertus seul contre Apertus avec Belegt, sur le même modèle local et les mêmes questions, pièges compris. Les chiffres sont publiés avec leurs marges d’erreur et leurs échecs.</p>
+        <button class="text-link" type="button" data-open="numbers" data-i18n="f4l">Voir les chiffres</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="coming reveal">
+    <h2 class="serif" data-i18n="comingT">Une méthode, pas seulement un outil.</h2>
+    <p data-i18n="comingP">La Constitution est un terrain d’essai. La règle « citation ou silence » s’applique à tout texte officiel : Code civil, protection des données, AVS, règlements communaux.</p>
+    <button class="btn btn-secondary" type="button" data-open="how" data-i18n="comingB">Lire la méthode</button>
+    <div class="floaters" aria-hidden="true">
+      <div class="floater" style="left:2%;top:40px;transform:rotate(-2deg)"><h3>RS 210 · Code civil</h3><div class="row">Art. 11 Jouissance des droits civils <span class="tag">2027</span></div><div class="row">Art. 28 Protection de la personnalité <span class="tag">2027</span></div><div class="row">Art. 90 Fiançailles <span class="tag">2027</span></div></div>
+      <div class="floater" style="left:22%;top:170px;width:250px"><h3>Reçu BLG-7F3A2C91D04E</h3><div class="row">Citations mot pour mot <span class="tag ok">✓</span></div><div class="row">Aucun article non prouvé <span class="tag ok">✓</span></div><div class="row">Concordance 4 langues <span class="tag ok">4/4</span></div><div class="row">Connexions sortantes <span class="tag ok">0</span></div></div>
+      <div class="floater" style="left:43%;top:20px;width:260px"><h3>RS 235.1 · Protection des données</h3><div class="row">Art. 6 Principes <span class="tag">2027</span></div><div class="row">Art. 25 Droit d’accès <span class="tag">2027</span></div></div>
+      <div class="floater" style="left:64%;top:200px"><h3>RS 831.10 · AVS</h3><div class="row">Art. 21 Âge de référence <span class="tag">2027</span></div><div class="row">Art. 29 Rentes ordinaires <span class="tag">2027</span></div></div>
+      <div class="floater" style="right:1%;top:60px;width:210px;transform:rotate(2deg)"><h3>Règlement communal</h3><div class="row">Déchets <span class="tag">PME</span></div><div class="row">Stationnement <span class="tag">PME</span></div></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <ul class="footer-links">
+      <li><button type="button" data-open="how" data-i18n="howT">Comment ça marche</button></li>
+      <li><button type="button" data-open="privacy" data-i18n="privacyT">Confidentialité</button></li>
+      <li><button type="button" data-open="numbers" data-i18n="numbersT">Méthode et chiffres</button></li>
+      <li><button type="button" data-open="limits" data-i18n="limitsT">Limites connues</button></li>
+      <li><button type="button" data-open="about" data-i18n="aboutT">À propos</button></li>
+    </ul>
+    <div class="wordmark" aria-hidden="true">Belegt<span class="dot">.</span></div>
+    <div class="footer-bar">
+      <div class="l"><span class="seal-mini">A</span><span data-i18n="poweredBy">Propulsé par Apertus · EPFL, ETH Zurich, CSCS</span></div>
+      <div class="laurel">
+        <svg viewBox="0 0 28 80" fill="none" aria-hidden="true"><path d="M22 4C10 18 8 46 22 76" stroke="currentColor" stroke-width="1.5"/><g fill="currentColor"><ellipse cx="13" cy="16" rx="6" ry="2.4" transform="rotate(-50 13 16)"/><ellipse cx="10" cy="27" rx="6" ry="2.4" transform="rotate(-30 10 27)"/><ellipse cx="9" cy="39" rx="6" ry="2.4" transform="rotate(-10 9 39)"/><ellipse cx="10" cy="51" rx="6" ry="2.4" transform="rotate(15 10 51)"/><ellipse cx="13" cy="62" rx="6" ry="2.4" transform="rotate(35 13 62)"/></g></svg>
+        <span data-i18n="motto">Citation ou silence</span>
+        <svg viewBox="0 0 28 80" fill="none" aria-hidden="true" style="transform:scaleX(-1)"><path d="M22 4C10 18 8 46 22 76" stroke="currentColor" stroke-width="1.5"/><g fill="currentColor"><ellipse cx="13" cy="16" rx="6" ry="2.4" transform="rotate(-50 13 16)"/><ellipse cx="10" cy="27" rx="6" ry="2.4" transform="rotate(-30 10 27)"/><ellipse cx="9" cy="39" rx="6" ry="2.4" transform="rotate(-10 9 39)"/><ellipse cx="10" cy="51" rx="6" ry="2.4" transform="rotate(15 10 51)"/><ellipse cx="13" cy="62" rx="6" ry="2.4" transform="rotate(35 13 62)"/></g></svg>
+      </div>
+      <div class="r" data-i18n="builtFor">Conçu pour Hack Apertus 2026 · Piste 2B</div>
+    </div>
+    <div class="footer-legal">
+      <button type="button" data-open="privacy" data-i18n="privacyT">Confidentialité</button>
+      <button type="button" data-open="limits" data-i18n="limitsT">Limites connues</button>
+      <a href="https://www.fedlex.admin.ch/eli/cc/1999/404/fr" rel="noopener" data-fedlex-link>Fedlex ↗</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ================================================================ CHAT -->
+<div class="chat" aria-live="polite">
+  <header class="chat-header">
+    <a class="brand" href="/" data-home aria-label="Belegt">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M3.2 5.2 0.8 9l2.4 3.8M7.2 5.2 4.8 9l2.4 3.8M10.8 5.2 13.2 9l-2.4 3.8M14.8 5.2 17.2 9l-2.4 3.8" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-word">Belegt</span>
+    </a>
+    <div class="right">
+      <span class="net-pill" data-net><span class="net-dot"></span><span class="label" data-net-label>…</span><span class="count" data-net-count></span></span>
+      <button class="btn btn-primary btn-sm" type="button" data-open="menu" data-i18n="menu">Menu</button>
+    </div>
+  </header>
+  <div class="thread" data-thread></div>
+  <div class="dock">
+    <form class="composer" data-composer="dock" autocomplete="off">
+      <label class="sr-only" for="q-dock" data-i18n="describe">Votre question</label>
+      <textarea id="q-dock" rows="1" data-q></textarea>
+      <button class="send" type="submit" aria-label="Envoyer"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </form>
+    <div class="fine" data-i18n="fine">Belegt aide à trouver le texte officiel. Ce n’est pas un conseil juridique.</div>
+  </div>
+</div>
+
+<!-- ================================================================ SHEET -->
+<div class="scrim" data-scrim></div>
+<aside class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" data-sheet>
+  <div class="sheet-head"><h3 id="sheet-title" data-sheet-title></h3><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 20 20" fill="none"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+  <div class="sheet-body" data-sheet-body></div>
+</aside>
+
+<script src="/i18n.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

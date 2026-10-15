@@ -1,0 +1,39 @@
+{
+  "sr": "101",
+  "eli": "https://fedlex.data.admin.ch/eli/cc/1999/404",
+  "version": "20240303",
+  "languages": {
+    "de": {
+      "paragraphs": 657,
+      "articles": 231,
+      "source_xml": "sr101-20240303-de.xml",
+      "source_sha256": "573c1a869c9f327f247f0f45b8bed10f5babb17c8228a306a0ee87f6b3929c8b",
+      "corpus_sha256": "c6459abee8b71fdd291f1b4bf8f96b59c0e615e299d87b4392fa5c09492210ee",
+      "url": "https://www.fedlex.admin.ch/eli/cc/1999/404/de"
+    },
+    "fr": {
+      "paragraphs": 657,
+      "articles": 231,
+      "source_xml": "sr101-20240303-fr.xml",
+      "source_sha256": "751cb139466e7ef91474545ef094a6cb55984c7d3180b180c6a89fbc02009773",
+      "corpus_sha256": "b9825a80637696b0ec0594290d5d902e52915f2010160696440e4363ada910a1",
+      "url": "https://www.fedlex.admin.ch/eli/cc/1999/404/fr"
+    },
+    "it": {
+      "paragraphs": 657,
+      "articles": 231,
+      "source_xml": "sr101-20240303-it.xml",
+      "source_sha256": "a7442daac5098a847d17422736b4ba9784c8f1f5a06138bc4d7af57f044a5620",
+      "corpus_sha256": "303e78aff808125f2e4a19d3a2365f1ce26e6582f7db7664bd799038496c4178",
+      "url": "https://www.fedlex.admin.ch/eli/cc/1999/404/it"
+    },
+    "rm": {
+      "paragraphs": 657,
+      "articles": 231,
+      "source_xml": "sr101-20240303-rm.xml",
+      "source_sha256": "a2adaef4c8d80b92016d948b8d9010e31ca896b3c567db87362cdcdc83550eb9",
+      "corpus_sha256": "212b1af61f4af8c65d1ed7a7e5a77a522024bcbf4f8757fc59e4032e92947d8f",
+      "url": "https://www.fedlex.admin.ch/eli/cc/1999/404/rm"
+    }
+  }
+}

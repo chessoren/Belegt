@@ -1,0 +1,9 @@
+"""Bring the loopback interface up inside a fresh network namespace
+(equivalent of `ip link set lo up`, for systems without iproute2)."""
+import fcntl, socket, struct
+SIOCGIFFLAGS, SIOCSIFFLAGS, IFF_UP = 0x8913, 0x8914, 0x1
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+ifr = struct.pack("16sH", b"lo", 0)
+flags = struct.unpack("16sH", fcntl.ioctl(s, SIOCGIFFLAGS, ifr)[:18])[1]
+fcntl.ioctl(s, SIOCSIFFLAGS, struct.pack("16sH", b"lo", flags | IFF_UP))
+print("lo up")

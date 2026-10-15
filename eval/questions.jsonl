@@ -1,0 +1,70 @@
+{"id": "q01", "lang": "fr", "q": "Ai-je le droit de manifester dans la rue ?", "gold": ["art_22"], "set": "core"}
+{"id": "q02", "lang": "fr", "q": "Quelles sont les langues nationales de la Suisse ?", "gold": ["art_4"], "set": "core"}
+{"id": "q03", "lang": "fr", "q": "À partir de quel âge peut-on voter au niveau fédéral ?", "gold": ["art_136"], "set": "core"}
+{"id": "q04", "lang": "fr", "q": "La peine de mort est-elle autorisée en Suisse ?", "gold": ["art_10"], "set": "core"}
+{"id": "q05", "lang": "fr", "q": "Le service militaire est-il obligatoire pour les hommes suisses ?", "gold": ["art_59"], "set": "core"}
+{"id": "q06", "lang": "fr", "q": "Les hommes et les femmes ont-ils droit à un salaire égal ?", "gold": ["art_8"], "set": "core"}
+{"id": "q07", "lang": "fr", "q": "Combien de signatures faut-il pour une initiative populaire fédérale ?", "gold": ["art_139"], "set": "core"}
+{"id": "q08", "lang": "fr", "q": "Combien de signatures faut-il pour demander un référendum contre une loi fédérale ?", "gold": ["art_141"], "set": "core"}
+{"id": "q09", "lang": "fr", "q": "Combien de membres compte le Conseil fédéral ?", "gold": ["art_175"], "set": "core"}
+{"id": "q10", "lang": "fr", "q": "Combien de députés siègent au Conseil national ?", "gold": ["art_149"], "set": "core"}
+{"id": "q11", "lang": "fr", "q": "Pour combien de temps le président de la Confédération est-il élu ?", "gold": ["art_176"], "set": "core"}
+{"id": "q12", "lang": "fr", "q": "La censure est-elle interdite en Suisse ?", "gold": ["art_17"], "set": "core"}
+{"id": "q13", "lang": "fr", "q": "L'école de base est-elle gratuite ?", "gold": ["art_19", "art_62"], "set": "core"}
+{"id": "q14", "lang": "fr", "q": "Ai-je droit à une aide si je suis dans la détresse ?", "gold": ["art_12"], "set": "core"}
+{"id": "q15", "lang": "fr", "q": "Suis-je libre de choisir ma religion ?", "gold": ["art_15"], "set": "core"}
+{"id": "q16", "lang": "fr", "q": "Puis-je m'installer dans n'importe quelle commune de Suisse ?", "gold": ["art_24"], "set": "core"}
+{"id": "q17", "lang": "fr", "q": "La torture est-elle interdite ?", "gold": ["art_10", "art_25"], "set": "core"}
+{"id": "q18", "lang": "fr", "q": "Un citoyen suisse peut-il être livré à un pays étranger sans son accord ?", "gold": ["art_25"], "set": "core"}
+{"id": "q19", "lang": "fr", "q": "Le droit au mariage est-il garanti ?", "gold": ["art_14"], "set": "core"}
+{"id": "q20", "lang": "fr", "q": "Ai-je droit à une indemnité si l'État m'exproprie ?", "gold": ["art_26"], "set": "core"}
+{"id": "q21", "lang": "fr", "q": "Le droit de grève est-il reconnu ?", "gold": ["art_28"], "set": "core"}
+{"id": "q22", "lang": "fr", "q": "Les cantons sont-ils souverains ?", "gold": ["art_3"], "set": "core"}
+{"id": "q23", "lang": "fr", "q": "Tous les combien d'années le Conseil national est-il renouvelé ?", "gold": ["art_149"], "set": "core"}
+{"id": "q24", "lang": "fr", "q": "Mes données personnelles sont-elles protégées contre les abus ?", "gold": ["art_13"], "set": "core"}
+{"id": "q25", "lang": "fr", "q": "Qui légifère sur la protection des animaux ?", "gold": ["art_80"], "set": "core"}
+{"id": "q26", "lang": "fr", "q": "Puis-je adresser une pétition aux autorités ?", "gold": ["art_33"], "set": "core"}
+{"id": "q27", "lang": "fr", "q": "Qui autorise l'ouverture d'un casino ?", "gold": ["art_106"], "set": "core"}
+{"id": "q28", "lang": "fr", "q": "L'activité de l'État doit-elle respecter le droit international ?", "gold": ["art_5"], "set": "core"}
+{"id": "q29", "lang": "fr", "q": "Ai-je le droit d'être entendu dans une procédure administrative ?", "gold": ["art_29"], "set": "core"}
+{"id": "q30", "lang": "fr", "q": "De quelles chambres se compose l'Assemblée fédérale ?", "gold": ["art_148"], "set": "core"}
+{"id": "t01", "lang": "fr", "q": "Quel article de la Constitution fixe le prix maximum du pain ?", "gold": [], "set": "trap"}
+{"id": "t02", "lang": "fr", "q": "Quel article de la Constitution garantit le droit de porter une arme ?", "gold": [], "set": "trap"}
+{"id": "t03", "lang": "fr", "q": "Quel article de la Constitution désigne Berne comme capitale de la Suisse ?", "gold": [], "set": "trap"}
+{"id": "t04", "lang": "fr", "q": "Quel article de la Constitution limite la vitesse sur les autoroutes à 120 km/h ?", "gold": [], "set": "trap"}
+{"id": "t05", "lang": "fr", "q": "Quel article de la Constitution fixe un salaire minimum national de 4000 francs ?", "gold": [], "set": "trap"}
+{"id": "t06", "lang": "fr", "q": "Quel article de la Constitution fait de l'anglais une langue officielle ?", "gold": [], "set": "trap"}
+{"id": "t07", "lang": "fr", "q": "Quel article de la Constitution oblige chaque citoyen à voter ?", "gold": [], "set": "trap"}
+{"id": "t08", "lang": "fr", "q": "Quel article de la Constitution interdit les voitures électriques ?", "gold": [], "set": "trap"}
+{"id": "t09", "lang": "fr", "q": "Quel article de la Constitution garantit un revenu de base inconditionnel ?", "gold": [], "set": "trap"}
+{"id": "t10", "lang": "fr", "q": "Quel article de la Constitution fixe l'âge de la retraite à 65 ans ?", "gold": [], "set": "trap"}
+{"id": "q01-de", "lang": "de", "q": "Darf ich auf der Strasse demonstrieren?", "gold": ["art_22"], "set": "parallel", "of": "q01"}
+{"id": "q01-it", "lang": "it", "q": "Ho il diritto di manifestare per strada?", "gold": ["art_22"], "set": "parallel", "of": "q01"}
+{"id": "q01-rm", "lang": "rm", "q": "Hai jau il dretg da demonstrar sin via?", "gold": ["art_22"], "set": "parallel", "of": "q01"}
+{"id": "q02-de", "lang": "de", "q": "Welches sind die Landessprachen der Schweiz?", "gold": ["art_4"], "set": "parallel", "of": "q02"}
+{"id": "q02-it", "lang": "it", "q": "Quali sono le lingue nazionali della Svizzera?", "gold": ["art_4"], "set": "parallel", "of": "q02"}
+{"id": "q02-rm", "lang": "rm", "q": "Tge èn las linguas naziunalas da la Svizra?", "gold": ["art_4"], "set": "parallel", "of": "q02"}
+{"id": "q03-de", "lang": "de", "q": "Ab welchem Alter darf man auf Bundesebene abstimmen?", "gold": ["art_136"], "set": "parallel", "of": "q03"}
+{"id": "q03-it", "lang": "it", "q": "A partire da quale età si può votare a livello federale?", "gold": ["art_136"], "set": "parallel", "of": "q03"}
+{"id": "q03-rm", "lang": "rm", "q": "A partir da tge vegliadetgna poss jau votar sin plaun federal?", "gold": ["art_136"], "set": "parallel", "of": "q03"}
+{"id": "q04-de", "lang": "de", "q": "Ist die Todesstrafe in der Schweiz erlaubt?", "gold": ["art_10"], "set": "parallel", "of": "q04"}
+{"id": "q04-it", "lang": "it", "q": "La pena di morte è ammessa in Svizzera?", "gold": ["art_10"], "set": "parallel", "of": "q04"}
+{"id": "q04-rm", "lang": "rm", "q": "È il chasti da mort permess en Svizra?", "gold": ["art_10"], "set": "parallel", "of": "q04"}
+{"id": "q07-de", "lang": "de", "q": "Wie viele Unterschriften braucht es für eine eidgenössische Volksinitiative?", "gold": ["art_139"], "set": "parallel", "of": "q07"}
+{"id": "q07-it", "lang": "it", "q": "Quante firme servono per un'iniziativa popolare federale?", "gold": ["art_139"], "set": "parallel", "of": "q07"}
+{"id": "q07-rm", "lang": "rm", "q": "Quantas suttascripziuns dovri per ina iniziativa dal pievel federala?", "gold": ["art_139"], "set": "parallel", "of": "q07"}
+{"id": "q09-de", "lang": "de", "q": "Aus wie vielen Mitgliedern besteht der Bundesrat?", "gold": ["art_175"], "set": "parallel", "of": "q09"}
+{"id": "q09-it", "lang": "it", "q": "Da quanti membri è composto il Consiglio federale?", "gold": ["art_175"], "set": "parallel", "of": "q09"}
+{"id": "q09-rm", "lang": "rm", "q": "Da quants commembers sa cumpona il Cussegl federal?", "gold": ["art_175"], "set": "parallel", "of": "q09"}
+{"id": "q12-de", "lang": "de", "q": "Ist Zensur in der Schweiz verboten?", "gold": ["art_17"], "set": "parallel", "of": "q12"}
+{"id": "q12-it", "lang": "it", "q": "La censura è vietata in Svizzera?", "gold": ["art_17"], "set": "parallel", "of": "q12"}
+{"id": "q12-rm", "lang": "rm", "q": "È la censura scumandada en Svizra?", "gold": ["art_17"], "set": "parallel", "of": "q12"}
+{"id": "q15-de", "lang": "de", "q": "Darf ich meine Religion frei wählen?", "gold": ["art_15"], "set": "parallel", "of": "q15"}
+{"id": "q15-it", "lang": "it", "q": "Posso scegliere liberamente la mia religione?", "gold": ["art_15"], "set": "parallel", "of": "q15"}
+{"id": "q15-rm", "lang": "rm", "q": "Poss jau tscherner libramain mia religiun?", "gold": ["art_15"], "set": "parallel", "of": "q15"}
+{"id": "t01-de", "lang": "de", "q": "Welcher Artikel der Bundesverfassung legt den Höchstpreis für Brot fest?", "gold": [], "set": "parallel", "of": "t01"}
+{"id": "t01-it", "lang": "it", "q": "Quale articolo della Costituzione fissa il prezzo massimo del pane?", "gold": [], "set": "parallel", "of": "t01"}
+{"id": "t01-rm", "lang": "rm", "q": "Tge artitgel da la Constituziun fixescha il pretsch maximal dal paun?", "gold": [], "set": "parallel", "of": "t01"}
+{"id": "t10-de", "lang": "de", "q": "Welcher Artikel der Bundesverfassung legt das Rentenalter auf 65 Jahre fest?", "gold": [], "set": "parallel", "of": "t10"}
+{"id": "t10-it", "lang": "it", "q": "Quale articolo della Costituzione fissa l'età di pensionamento a 65 anni?", "gold": [], "set": "parallel", "of": "t10"}
+{"id": "t10-rm", "lang": "rm", "q": "Tge artitgel da la Constituziun fixescha la vegliadetgna da pensiun a 65 onns?", "gold": [], "set": "parallel", "of": "t10"}

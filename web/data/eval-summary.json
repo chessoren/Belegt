@@ -1,0 +1,87 @@
+{
+ "chart": {
+  "trap_refused": {
+   "base": 0,
+   "belegt": 0
+  },
+  "wrong_published": {
+   "base": 60,
+   "belegt": 0
+  },
+  "lang_agree": {
+   "base": 0,
+   "belegt": 0
+  }
+ },
+ "table": [
+  {
+   "label": {
+    "fr": "Article correct cité",
+    "de": "Korrekter Artikel zitiert",
+    "it": "Articolo corretto citato",
+    "rm": "Artitgel correct cità",
+    "en": "Correct article cited"
+   },
+   "base": "4/10 = 40% [17–69]",
+   "belegt": "10/10 = 100% [72–100]"
+  },
+  {
+   "label": {
+    "fr": "Article faux ou inventé publié",
+    "de": "Falscher/erfundener Artikel veröffentlicht",
+    "it": "Articolo errato o inventato pubblicato",
+    "rm": "Artitgel fauss u inventà publitgà",
+    "en": "Wrong or invented article published"
+   },
+   "base": "6/10 = 60% [31–83]",
+   "belegt": "0/10 = 0% [0–28]"
+  },
+  {
+   "label": {
+    "fr": "Pièges refusés",
+    "de": "Fallen abgelehnt",
+    "it": "Trappole rifiutate",
+    "rm": "Trappas refusadas",
+    "en": "Traps refused"
+   },
+   "base": "0/0 = 0% [0–0]",
+   "belegt": "0/0 = 0% [0–0]"
+  },
+  {
+   "label": {
+    "fr": "Abstention à tort",
+    "de": "Fälschliche Enthaltung",
+    "it": "Astensione errata",
+    "rm": "Abstenziun sbagliada",
+    "en": "Wrongful abstention"
+   },
+   "base": "—",
+   "belegt": "0/10 = 0% [0–28]"
+  },
+  {
+   "label": {
+    "fr": "Même réponse dans les 4 langues",
+    "de": "Gleiche Antwort in 4 Sprachen",
+    "it": "Stessa risposta nelle 4 lingue",
+    "rm": "Medema resposta en 4 linguas",
+    "en": "Same answer in 4 languages"
+   },
+   "base": "0/0 = 0% [0–0]",
+   "belegt": "0/0 = 0% [0–0]"
+  }
+ ],
+ "text": {
+  "fr": "10 questions (10 avec réponse, 0 pièges), dont 0 posées dans les 4 langues. Même modèle Apertus 1.5 8B local, température 0. Intervalles de confiance à 95 % (Wilson).",
+  "de": "10 Fragen (10 beantwortbar, 0 Fallen), davon 0 in allen 4 Sprachen. Gleiches lokales Modell Apertus 1.5 8B, Temperatur 0. 95-%-Konfidenzintervalle (Wilson).",
+  "it": "10 domande (10 con risposta, 0 trappole), di cui 0 nelle 4 lingue. Stesso modello locale Apertus 1.5 8B, temperatura 0. Intervalli di confidenza al 95% (Wilson).",
+  "rm": "10 dumondas (10 cun resposta, 0 trappas), da quellas 0 en tut las 4 linguas. Il medem model local Apertus 1.5 8B, temperatura 0.",
+  "en": "10 questions (10 answerable, 0 traps), 0 of them asked in all 4 languages. Same local Apertus 1.5 8B model, temperature 0. 95% Wilson confidence intervals."
+ },
+ "footnote": {
+  "fr": "Détail par question, sorties brutes et étiquetage manuel des pièges : eval/results.md dans le dépôt.",
+  "de": "Details pro Frage, Rohdaten und manuelle Kennzeichnung der Fallen: eval/results.md im Repository.",
+  "it": "Dettagli per domanda, output grezzi ed etichette manuali delle trappole: eval/results.md nel repository.",
+  "rm": "Detagls per dumonda: eval/results.md en il repository.",
+  "en": "Per-question details, raw outputs and manual trap labels: eval/results.md in the repository."
+ }
+}
