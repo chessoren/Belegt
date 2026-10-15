@@ -22,7 +22,10 @@ from .retrieve import Retriever, detect_language
 from .verify import verify
 
 LANG_NAME = {"de": "German", "fr": "French", "it": "Italian", "rm": "Romansh (Rumantsch Grischun)", "en": "English"}
-TOP_K = 6
+TOP_K = 6          # kept for backwards compatibility of receipts
+MAX_SOURCES = 10
+MAX_ARTICLES = 3
+CHAR_BUDGET = 4200
 
 UNDERSTAND_SCHEMA = {
     "type": "object",
@@ -54,7 +57,7 @@ ANSWER_SCHEMA = {
             "maxItems": 3,
             "items": {
                 "type": "object",
-                "properties": {"source": {"type": "string", "enum": [f"S{i}" for i in range(1, TOP_K + 1)]},
+                "properties": {"source": {"type": "string", "enum": [f"S{i}" for i in range(1, MAX_SOURCES + 1)]},
                                "quote": {"type": "string", "maxLength": 400}},
                 "required": ["source", "quote"],
             },
@@ -67,7 +70,7 @@ ANSWER_SCHEMA = {
 def answer_system(lang: str) -> str:
     return (
         "You are Belegt, a careful assistant for the Swiss Federal Constitution. Rule: cite or stay silent.\n"
-        "You receive a question and numbered sources S1..S6, which are paragraphs of the official text.\n"
+        "You receive a question and numbered sources S1..S10, which are paragraphs of the official text.\n"
         "1. Decide whether the sources DIRECTLY answer the question. If they do not, or only touch the topic, "
         "set answerable=false, write one short sentence saying no provision answers this, and give no citations.\n"
         "2. If they do, set answerable=true and write a plain answer of 1 to 3 short sentences in "
@@ -116,7 +119,31 @@ class Belegt:
             if l == q_lang:
                 q = question + " " + q + " " + " ".join(understood.get("keywords", []))
             queries[l] = q.strip() or question
-        return self.retriever.search(queries, k=TOP_K)
+        return self.retriever.search(queries, k=20)
+
+    def context(self, fused: list[tuple[str, float]], lang: str) -> list[str]:
+        """Article-level context: the best articles with all their paragraphs,
+        within a character budget (articles are the unit a citizen reads)."""
+        ids, arts, used = [], [], 0
+        for pid, _ in fused:
+            art = pid.split("/")[0]
+            if art in arts:
+                continue
+            paras = self.corpus.article_paragraphs(lang, art)
+            size = sum(len(p["text"]) for p in paras)
+            if size > CHAR_BUDGET - used:
+                paras = [self.corpus.get(lang, pid)]
+                size = len(paras[0]["text"])
+            if used + size > CHAR_BUDGET and ids:
+                continue
+            arts.append(art)
+            for p in paras:
+                if len(ids) < MAX_SOURCES and p["id"] not in ids:
+                    ids.append(p["id"])
+            used += size
+            if len(arts) == MAX_ARTICLES or len(ids) >= MAX_SOURCES:
+                break
+        return ids
 
     def draft(self, question: str, ev_lang: str, ans_lang: str, ids: list[str]) -> dict:
         lines = []
@@ -158,7 +185,7 @@ class Belegt:
         yield {"type": "step", "step": "retrieve", "status": "start"}
         t = time.time()
         ret = self.retrieve(question, q_lang, und)
-        ids = [pid for pid, _ in ret["fused"]][:TOP_K]
+        ids = self.context(ret["fused"], ev_lang)
         yield {"type": "step", "step": "retrieve", "status": "done", "seconds": round(time.time() - t, 2),
                "candidates": [self.corpus.get(ev_lang, i)["label"] for i in ids]}
 

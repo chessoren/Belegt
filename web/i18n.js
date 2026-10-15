@@ -3,6 +3,7 @@
    whatever the interface language. */
 window.I18N = {
 fr: {
+  netTitle: "Réseau et souveraineté", netBlocked: "connexions sortantes bloquées", netRoute: "Route par défaut", netNone: "aucune", netYes: "présente", netLoop: "Appels locaux (127.0.0.1)", netExplain: "Observé passivement : table de routage du noyau et journal d’audit du processus Belegt. Aucun paquet n’est envoyé pour le vérifier.",
   skip: "Aller au contenu", banner: "Prototype indépendant pour Hack Apertus — pas un site officiel de la Confédération",
   uiLang: "Langue de l’interface", menu: "Menu", describe: "Votre question", send: "Envoyer",
   lede: "Une question sur la Constitution fédérale ? Belegt répond avec le texte officiel, ou il se tait.",
@@ -40,6 +41,7 @@ fr: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus seul", chartTrap: "Pièges refusés", chartWrong: "Articles faux ou inventés publiés", chartLang: "Mêmes articles dans les 4 langues",
 },
 de: {
+  netTitle: "Netz und Souveränität", netBlocked: "ausgehende Verbindungen blockiert", netRoute: "Standardroute", netNone: "keine", netYes: "vorhanden", netLoop: "Lokale Aufrufe (127.0.0.1)", netExplain: "Passiv ermittelt: Routingtabelle des Kernels und Audit-Protokoll des Belegt-Prozesses. Dafür wird kein Paket gesendet.",
   skip: "Zum Inhalt", banner: "Unabhängiger Prototyp für Hack Apertus — keine offizielle Website des Bundes",
   uiLang: "Sprache der Oberfläche", menu: "Menü", describe: "Ihre Frage", send: "Senden",
   lede: "Eine Frage zur Bundesverfassung? Belegt antwortet mit dem amtlichen Text – oder schweigt.",
@@ -76,6 +78,7 @@ de: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus allein", chartTrap: "Fallen abgelehnt", chartWrong: "Falsche oder erfundene Artikel veröffentlicht", chartLang: "Gleiche Artikel in allen 4 Sprachen",
 },
 it: {
+  netTitle: "Rete e sovranità", netBlocked: "connessioni in uscita bloccate", netRoute: "Route predefinita", netNone: "nessuna", netYes: "presente", netLoop: "Chiamate locali (127.0.0.1)", netExplain: "Osservato passivamente: tabella di routing del kernel e registro di audit del processo Belegt. Nessun pacchetto viene inviato per verificarlo.",
   skip: "Vai al contenuto", banner: "Prototipo indipendente per Hack Apertus — non è un sito ufficiale della Confederazione",
   uiLang: "Lingua dell’interfaccia", menu: "Menu", describe: "La sua domanda", send: "Invia",
   lede: "Una domanda sulla Costituzione federale? Belegt risponde con il testo ufficiale, oppure tace.",
@@ -112,6 +115,7 @@ it: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus da solo", chartTrap: "Trappole rifiutate", chartWrong: "Articoli errati o inventati pubblicati", chartLang: "Stessi articoli nelle 4 lingue",
 },
 rm: {
+  netTitle: "Rait e suveranitad", netBlocked: "colliaziuns vers l’exteriur bloccadas", netRoute: "Ruta da standard", netNone: "nagina", netYes: "avant maun", netLoop: "Clomadas localas (127.0.0.1)", netExplain: "Observà passivamain: tabella da rutas dal kernel e protocol d’audit dal process Belegt. Nagin pachet na vegn tramess per quai.",
   skip: "Ir al cuntegn", banner: "Prototip independent per Hack Apertus — betg ina pagina uffiziala da la Confederaziun",
   uiLang: "Lingua da l’interfatscha", menu: "Menu", describe: "Vossa dumonda", send: "Trametter",
   lede: "Ina dumonda davart la Constituziun federala? Belegt respunda cun il text uffizial, u el tascha.",
@@ -148,6 +152,7 @@ rm: {
   chartUs: "Apertus + Belegt", chartBase: "Apertus sulet", chartTrap: "Trappas refusadas", chartWrong: "Artitgels fauss u inventads publitgads", chartLang: "Ils medems artitgels en las 4 linguas",
 },
 en: {
+  netTitle: "Network & sovereignty", netBlocked: "outbound connections blocked", netRoute: "Default route", netNone: "none", netYes: "present", netLoop: "Local calls (127.0.0.1)", netExplain: "Observed passively: the kernel routing table and the audit log of the Belegt process. No packet is sent to check it.",
   skip: "Skip to content", banner: "Independent prototype for Hack Apertus — not an official website of the Swiss Confederation",
   uiLang: "Interface language", menu: "Menu", describe: "Your question", send: "Send",
   lede: "A question about the Swiss Federal Constitution? Belegt answers with the official text, or stays silent.",

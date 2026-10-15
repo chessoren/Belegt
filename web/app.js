@@ -154,6 +154,8 @@
     if (a) { e.preventDefault(); ask(a.dataset.ask); return; }
     const art = e.target.closest("[data-article]");
     if (art) { e.preventDefault(); openArticle(art.dataset.article, art.dataset.lang, art.dataset.pid, art.dataset.quote); return; }
+    const np = e.target.closest("[data-net]");
+    if (np) { e.preventDefault(); openNet(); return; }
     const rc = e.target.closest("[data-receipt]");
     if (rc) { e.preventDefault(); openReceipt(receipts[rc.dataset.receipt]); return; }
   });
@@ -167,6 +169,28 @@
       <table><thead><tr><th></th><th class="num">${esc(t("chartBase"))}</th><th class="num">${esc(t("chartUs"))}</th></tr></thead>
       <tbody>${s.table.map((r) => row(r.label[ui] || r.label.en, r)).join("")}</tbody></table>
       <p class="muted">${esc(s.footnote[ui] || s.footnote.en)}</p></div>`;
+  }
+
+  /* ------------------------------------------------------ network sheet */
+  async function openNet() {
+    await pollStatus();
+    const n = net || {}, m = status?.model || {}, c = status?.corpus || {};
+    const yes = (b) => (b ? "✓" : "✗");
+    const row = (k, v) => `<dt>${esc(k)}</dt><dd>${v}</dd>`;
+    openSheet(t("netTitle"), `
+      <div class="receipt"><div class="r-head"><div><div class="muted">${esc(t("netTitle"))}</div>
+        <div class="decision">${esc(n.offline ? t("netOffline") : t("netOnline"))}</div></div>
+        <div style="text-align:right"><div class="r-id" style="font-size:2rem">${n.outbound_attempts ?? 0}</div><div class="muted">${esc(t("netBlocked"))}</div></div></div>
+      <dl>
+        ${row(t("netRoute"), n.default_route ? esc(t("netYes")) : `<b>${esc(t("netNone"))}</b>`)}
+        ${row(t("netLoop"), `${n.loopback_calls ?? 0}`)}
+        ${row(t("rcModel"), `${esc(m.model || "")}<br><span class="muted">${esc(m.url || "")} · ${yes(m.ok)}</span>`)}
+        ${row(t("rcModelHash"), `<span class="mono">${esc((m.sha256 || "…").slice(0, 32))}…</span>`)}
+        ${row(t("rcLaw"), `SR ${esc(c.sr || "101")} · ${esc(String(c.version || "").replace(/(\d{4})(\d{2})(\d{2})/, "$3.$2.$1"))} · DE ${c.languages?.de ?? ""} · FR ${c.languages?.fr ?? ""} · IT ${c.languages?.it ?? ""} · RM ${c.languages?.rm ?? ""}`)}
+        ${row(t("rcTextHash"), `<span class="mono">${esc((c.fingerprint || "").slice(0, 32))}…</span>`)}
+        ${row("PID", `${n.pid ?? ""}`)}
+      </dl>
+      <p class="muted" style="margin:14px 0 0">${esc(t("netExplain"))}</p></div>`);
   }
 
   /* ---------------------------------------------------------- article */

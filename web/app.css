@@ -52,7 +52,7 @@ img, svg { display: block; }
 .text-link:hover { text-decoration: underline; }
 
 /* ---------- network pill (sovereignty, always visible) ---------- */
-.net-pill {
+.net-pill { cursor: pointer;
   display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px 0 12px; border-radius: var(--radius-full);
   background: var(--color-background-primary); box-shadow: inset 0 0 0 1px var(--color-border-tertiary); font-size: .8125rem; font-weight: 500;
   white-space: nowrap;
@@ -364,6 +364,6 @@ body[data-view="landing"] .chat { display: none; }
   .brand-word small { display: none; }
 }
 @media (max-width: 420px) {
-  .site-header .net-pill { display: none; }
+  .site-header .net-pill { cursor: pointer; display: none; }
   .chat-header .net-pill .label { display: none; }
 }

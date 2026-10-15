@@ -68,3 +68,14 @@
 {"id": "t10-de", "lang": "de", "q": "Welcher Artikel der Bundesverfassung legt das Rentenalter auf 65 Jahre fest?", "gold": [], "set": "parallel", "of": "t10"}
 {"id": "t10-it", "lang": "it", "q": "Quale articolo della Costituzione fissa l'età di pensionamento a 65 anni?", "gold": [], "set": "parallel", "of": "t10"}
 {"id": "t10-rm", "lang": "rm", "q": "Tge artitgel da la Constituziun fixescha la vegliadetgna da pensiun a 65 onns?", "gold": [], "set": "parallel", "of": "t10"}
+{"id": "h01", "lang": "fr", "q": "Ai-je le droit de choisir librement ma profession ?", "gold": ["art_27"], "set": "heldout"}
+{"id": "h02", "lang": "de", "q": "Gibt es ein Recht auf unentgeltlichen Grundschulunterricht?", "gold": ["art_19", "art_62"], "set": "heldout"}
+{"id": "h03", "lang": "it", "q": "Chi emana le prescrizioni sulla circolazione stradale?", "gold": ["art_82"], "set": "heldout"}
+{"id": "h04", "lang": "fr", "q": "Les cantons peuvent-ils conclure des traités avec des États étrangers ?", "gold": ["art_56"], "set": "heldout"}
+{"id": "h05", "lang": "de", "q": "Wer wählt die Mitglieder des Bundesrates?", "gold": ["art_175"], "set": "heldout"}
+{"id": "h06", "lang": "rm", "q": "Han las Svizras ed ils Svizzers il dretg da bandunar la Svizra?", "gold": ["art_24"], "set": "heldout"}
+{"id": "h07", "lang": "fr", "q": "La Confédération peut-elle percevoir un impôt fédéral direct ?", "gold": ["art_128"], "set": "heldout"}
+{"id": "h08", "lang": "it", "q": "Ho diritto al rispetto della mia sfera privata?", "gold": ["art_13"], "set": "heldout"}
+{"id": "h09", "lang": "fr", "q": "Quel article de la Constitution fixe le nombre de jours de vacances par an ?", "gold": [], "set": "heldout"}
+{"id": "h10", "lang": "de", "q": "Welcher Artikel der Bundesverfassung erklärt Zürich zur Hauptstadt?", "gold": [], "set": "heldout"}
+{"id": "h11", "lang": "it", "q": "Quale articolo della Costituzione vieta di giocare a calcio la domenica?", "gold": [], "set": "heldout"}
