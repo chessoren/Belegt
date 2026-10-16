@@ -222,7 +222,7 @@ add(f"""
   <div class="serif" style="font-size:76px;line-height:1.05;max-width:1250px;letter-spacing:-.035em">“Apertus was built open so that trust could be verified. Belegt is a first public demonstration.”</div>
   <div class="grid3" style="margin-top:60px">
     <div><div class="kicker">Run it</div><p class="lead" style="font-size:22px;margin-top:8px"><code>scripts/start.sh</code><br><code>sudo scripts/offline_demo.sh</code></p></div>
-    <div><div class="kicker">Code & data</div><p class="lead" style="font-size:22px;margin-top:8px">github.com/chessoren/swiss<br>Apache-2.0</p></div>
+    <div><div class="kicker">Code & data</div><p class="lead" style="font-size:22px;margin-top:8px">github.com/chessoren/Belegt<br>Apache-2.0</p></div>
     <div><div class="kicker">Built with</div><p class="lead" style="font-size:22px;margin-top:8px">Apertus 1.5 8B · llama.cpp · Fedlex · Python stdlib</p></div>
   </div>
   <div class="serif" style="font-size:44px;margin-top:70px">Prove it, or stay silent.</div>

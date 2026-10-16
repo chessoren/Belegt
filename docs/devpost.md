@@ -40,7 +40,7 @@ Suggested video description: *All app footage is the real application, recorded 
 ## Try it out / links
 
 - Live static demo (replays of real offline runs): https://belegt-swiss.netlify.app
-- Code: https://github.com/chessoren/swiss (branch `claude/america-gov-swiss-design-xalzfq` until merged)
+- Code: https://github.com/chessoren/Belegt
 - Run: `scripts/start.sh` → http://127.0.0.1:8080 · offline proof: `sudo scripts/offline_demo.sh`
 
 ## Image gallery

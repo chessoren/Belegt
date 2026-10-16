@@ -105,7 +105,7 @@ blockquote {{ margin: 8pt 0; padding: 6pt 10pt; border-left: 2pt solid #da291c; 
    <div class="kpi"><b>0</b><p>outbound connections: Apertus runs locally, demo in a network namespace with no route out</p></div>
   </div>
   <div><img src="../img/landing.png" style="width:100%;height:78mm;object-fit:cover;object-position:top;border-radius:10pt;border:.6pt solid #1c02041f"></div>
-  <p class="muted" style="margin:0">Code, data, evaluation and receipts: github.com/chessoren/swiss · Apache-2.0</p>
+  <p class="muted" style="margin:0">Code, data, evaluation and receipts: github.com/chessoren/Belegt · Apache-2.0</p>
 </section>
 <h1>About the project</h1>
 {md(story)}
