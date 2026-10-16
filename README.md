@@ -4,7 +4,7 @@
 
 > *Les IA répondent avec aplomb, même quand elles se trompent. Belegt fait l’inverse : il cite, il vérifie, et il préfère se taire plutôt que d’inventer.*
 
-Hack Apertus 2026 · Track 2B “Own Project” · Apache-2.0
+Hack Apertus 2026 · Track 2B “Own Project” · Apache-2.0 · **Static demo: https://belegt-swiss.netlify.app** (replays of real offline runs; the live system runs locally)
 
 ![Belegt](docs/img/landing.png)
 

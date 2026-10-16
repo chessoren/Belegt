@@ -31,7 +31,7 @@ AI assistants answer with confidence even when they are wrong. On our test set, 
 
 ## Video demo
 
-- Main cut: `docs/video/Belegt-demo.mp4` (1:33) — English voice-over (Oren, Fish Audio s2.1-pro-free), burned-in English subtitles (`.srt` alongside).
+- Main cut: `docs/video/Belegt-demo.mp4` (1:41) — English voice-over in Oren’s own cloned voice (Fish Audio s2.1-pro-free), burned-in English subtitles (`.srt` alongside).
 - Also available: a French-voiced cut with FR + EN subtitles (`docs/video/fr/`).
 - Upload to YouTube/Vimeo (unlisted) and paste the link.
 
@@ -39,6 +39,7 @@ Suggested video description: *All app footage is the real application, recorded 
 
 ## Try it out / links
 
+- Live static demo (replays of real offline runs): https://belegt-swiss.netlify.app
 - Code: https://github.com/chessoren/swiss (branch `claude/america-gov-swiss-design-xalzfq` until merged)
 - Run: `scripts/start.sh` → http://127.0.0.1:8080 · offline proof: `sudo scripts/offline_demo.sh`
 
