@@ -1,0 +1,54 @@
+1
+00:00:00,350 --> 00:00:05,173
+Voici ce que fait une IA quand elle ne sait pas : elle invente, sûre d'elle.
+This is what an AI does when it doesn't know: it makes things up, confidently.
+
+2
+00:00:05,223 --> 00:00:12,920
+Même Apertus, interrogé seul : « l'article 30 fixe le prix maximum du pain ». Cet article n'existe pas.
+Even Apertus, asked on its own: “Article 30 sets the maximum price of bread.” No such article exists.
+
+3
+00:00:13,516 --> 00:00:20,430
+Belegt est construit sur Apertus, l'IA ouverte suisse. Sa règle : citation, ou silence.
+Belegt is built on Apertus, the open Swiss AI. Its rule: cite, or stay silent.
+
+4
+00:00:20,983 --> 00:00:32,024
+« Ai-je le droit de manifester ? » Apertus lit et reformule. Puis du code, sans IA, vérifie chaque citation mot pour mot.
+“Can I demonstrate?” Apertus reads and rephrases. Then plain code, no AI, checks every quote word for word.
+
+5
+00:00:32,650 --> 00:00:36,533
+Un clic : la phrase, surlignée dans la Constitution.
+One click: the sentence, highlighted in the Constitution.
+
+6
+00:00:37,116 --> 00:00:45,545
+La même question, en romanche. Réponse en romanche, les 4 versions officielles concordent. Quatre langues, une seule loi.
+The same question, in Romansh. Answer in Romansh, all 4 official versions agree. Four languages, one law.
+
+7
+00:00:47,616 --> 00:00:54,530
+Aucun service étranger : la démo tourne dans un réseau isolé, zéro connexion sortante. La réponse arrive.
+No foreign service: the demo runs in an isolated network, zero outbound connections. The answer arrives.
+
+8
+00:01:00,103 --> 00:01:07,748
+Question piège : quel article fixe le prix maximum du pain ? Aucun. Belegt le dit, et n'affirme rien.
+A trap: which article sets the maximum price of bread? None. Belegt says so, and claims nothing.
+
+9
+00:01:09,536 --> 00:01:15,379
+Chaque réponse a son reçu : modèle, version de la loi, preuves, contrôles.
+Every answer has a receipt: model, law version, evidence, checks.
+
+10
+00:01:15,970 --> 00:01:26,592
+Même modèle, mêmes questions. Article faux ou inventé : 59 % seul, 5 % avec Belegt. Pièges refusés : 19/19.
+Same model, same questions. Wrong or invented article: 59% alone, 5% with Belegt. Traps refused: 19/19.
+
+11
+00:01:27,203 --> 00:01:30,172
+Belegt. Prouver, ou se taire.
+Belegt. Prove it, or stay silent.

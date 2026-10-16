@@ -31,7 +31,11 @@ AI assistants answer with confidence even when they are wrong. On our test set, 
 
 ## Video demo
 
-`docs/video/Belegt-demo.mp4` (1:59, French voice-over by Oren, burned-in FR + EN subtitles). Upload to YouTube/Vimeo (unlisted) and paste the link.
+- Main cut: `docs/video/Belegt-demo.mp4` (1:30) — French voice-over (Oren, Fish Audio s2.1-pro-free), burned-in FR + EN subtitles (`.srt` alongside).
+- Extended cut: `docs/video/Belegt-demo-extended.mp4` (≈ 2:00) with more explanation.
+- Upload to YouTube/Vimeo (unlisted) and paste the link.
+
+Suggested video description: *All app footage is the real application, recorded live inside a Linux network namespace with no route out (routing table empty, 0 outbound connections shown in the header). The local model's thinking time is time-lapsed and marked “accéléré ×N” on screen; screen recording slowed the CPU, the measured median latency without recording is 49.2 s per answer on 4 cores. The opening examples are real outputs of Apertus 1.5 8B asked alone (eval items t01 and q02).*
 
 ## Try it out / links
 
