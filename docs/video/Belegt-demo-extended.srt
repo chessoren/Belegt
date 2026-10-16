@@ -1,0 +1,54 @@
+1
+00:00:00,350 --> 00:00:05,252
+Voici ce que fait une IA quand elle ne sait pas : elle invente, avec aplomb.
+This is what an AI does when it doesn't know: it makes things up, confidently.
+
+2
+00:00:05,302 --> 00:00:18,850
+Même Apertus, interrogé seul. Le prix maximum du pain ? « L'article 30 », avec un plafond cantonal en prime. Ça n'existe pas. Les langues nationales ? Il oublie le romanche.
+Even Apertus, asked on its own. The maximum price of bread? “Article 30”, with a cantonal cap thrown in. It doesn't exist. The national languages? It forgets Romansh.
+
+3
+00:00:19,716 --> 00:00:27,544
+Belegt est construit sur Apertus, l'IA ouverte suisse. Sa règle : citation, ou silence.
+Belegt is built on Apertus, the open Swiss AI. Its rule fits in three words: cite, or stay silent.
+
+4
+00:00:28,350 --> 00:00:41,480
+« Ai-je le droit de manifester ? » Apertus comprend et reformule dans les 4 langues. Puis du code, sans IA, vérifie chaque citation mot pour mot.
+“Can I demonstrate in the street?” Apertus understands and rephrases in 4 languages. Then plain code, no AI, checks every quote word for word.
+
+5
+00:00:42,350 --> 00:00:50,647
+Un clic : la phrase apparaît, surlignée dans la Constitution. En allemand, en italien, en romanche : même disposition.
+One click: the sentence appears, highlighted in the Constitution. German, Italian, Romansh: the same provision.
+
+6
+00:00:51,483 --> 00:01:02,393
+La même question, en romanche. Réponse en romanche, et les 4 versions officielles mènent au même article. Quatre langues, une seule loi.
+The same question, in Romansh. The answer comes in Romansh, and all 4 official versions lead to the same article. Four languages, one law.
+
+7
+00:01:03,250 --> 00:01:16,014
+Aucun service étranger. Toute la démo tourne dans un espace réseau isolé : aucune route, zéro connexion sortante. La réponse arrive quand même.
+No foreign service. The whole demo runs in an isolated network namespace: no route out, zero outbound connections. The answer still arrives.
+
+8
+00:01:16,903 --> 00:01:27,526
+Question piège : quel article fixe le prix maximum du pain ? Aucun. Belegt le dit, montre les articles proches, et n'affirme rien.
+A trap: which article sets the maximum price of bread? None. Belegt says so, shows the closest articles, and claims nothing.
+
+9
+00:01:28,370 --> 00:01:36,955
+Chaque réponse produit un reçu : modèle et empreinte, version de la loi, preuves, contrôles. Archivable par un service juridique.
+Every answer comes with a receipt: model and hash, law version, evidence, checks. A legal team can file it.
+
+10
+00:01:37,803 --> 00:01:52,083
+Même modèle, mêmes questions. Article faux ou inventé : 59 % seul, 5 % avec Belegt. Pièges refusés : 19/19.
+Same model, same questions. Wrong or invented article: 59% alone, 5% with Belegt. Traps refused: 19/19.
+
+11
+00:01:52,936 --> 00:01:58,857
+Belegt. Prouver, ou se taire. Un plan ouvert pour une IA publique digne de confiance.
+Belegt. Prove it, or stay silent. An open blueprint for trustworthy public AI.

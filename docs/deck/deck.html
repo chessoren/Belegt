@@ -10,26 +10,26 @@
 <span class="kicker">The problem</span>
 <h2>A confident wrong answer cannot serve the state.</h2>
 <div class="grid2" style="margin-top:40px">
-  <div class="card line"><div class="muted" style="font-size:18px">Apertus 1.5 8B, asked alone — real output</div>
-    <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«Le Conseil fédéral compte sept membres. Cette composition est définie à l’<s>article 134</s> de la Constitution fédérale.»</p>
-    <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ wrong</span>&nbsp; It is Art. 175.</p></div>
-  <div class="card line"><div class="muted" style="font-size:18px">Same model, same setting — real output</div>
+  <div class="card line"><div class="muted" style="font-size:18px">Apertus 1.5 8B asked alone: “Which article sets the maximum price of bread?” — real output</div>
+    <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«L’<s>article 30</s> de la Constitution fédérale suisse fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton…»</p>
+    <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ invented</span>&nbsp; No such provision. In DE/IT/RM: Art. 103, 31, 103.</p></div>
+  <div class="card line"><div class="muted" style="font-size:18px">Same model: “What are the national languages?” — real output</div>
     <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«Les langues nationales de la Suisse sont l’allemand, le français et l’italien.»</p>
     <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ incomplete</span>&nbsp; Romansh is forgotten (Art. 4).</p></div>
 </div>
 <div class="grid3" style="margin-top:28px">
-  <div class="card red"><div class="big" style="font-size:96px">50%</div><p>of Apertus-alone answers name a wrong or invented article (4/8)</p></div>
+  <div class="card red"><div class="big" style="font-size:96px">59%</div><p>of Apertus-alone answers name a wrong or invented article (48/81)</p></div>
   <div class="card"><h3>Inequality</h3><p>Four official languages: an answer that changes with the language is unequal treatment before the law.</p></div>
   <div class="card"><h3>Dependency</h3><p>Sending citizens’ questions to a foreign service is a sovereignty and data-protection problem first.</p></div>
 </div><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 02</span></div></section><section class="slide " id="s3">
 <span class="kicker">The idea</span>
 <h2>One rule everyone understands: <span style="color:var(--color-red-600)">cite, or stay silent.</span></h2>
 <p class="lead">Belegt asserts nothing it cannot point to in the official text. If the sentences don’t exist, the answer isn’t given.</p>
-<div class="grid4" style="margin-top:46px">
-  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">01</div><h3 style="margin-top:16px">Proven</h3><p>Exact sentences of the law, highlighted, one click away.</p></div>
-  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">02</div><h3 style="margin-top:16px">Honest</h3><p>No evidence, no answer: it abstains, explains, and shows the closest articles.</p></div>
-  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">03</div><h3 style="margin-top:16px">One law, four languages</h3><p>DE · FR · IT · RM checked against each other; divergences are flagged.</p></div>
-  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">04</div><h3 style="margin-top:16px">A receipt</h3><p>Model hash, law version, evidence, checks, network state. Fileable.</p></div>
+<div class="grid4" style="margin-top:64px">
+  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">01</div><h3 style="margin-top:22px">Proven</h3><p>Exact sentences of the law, highlighted, one click away.</p></div>
+  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">02</div><h3 style="margin-top:22px">Honest</h3><p>No evidence, no answer: it abstains, explains, and shows the closest articles.</p></div>
+  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">03</div><h3 style="margin-top:22px">One law, four languages</h3><p>DE · FR · IT · RM checked against each other; divergences are flagged.</p></div>
+  <div class="card"><div class="big" style="font-size:64px;color:var(--color-red-600)">04</div><h3 style="margin-top:22px">A receipt</h3><p>Model hash, law version, evidence, checks, network state. Fileable.</p></div>
 </div><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 03</span></div></section><section class="slide " id="s4">
 <span class="kicker">How it works</span>
 <h2>The AI understands and drafts. Plain code decides.</h2>
@@ -59,7 +59,7 @@
   <div class="shot"><img src="../img/answer_rm.png" style="height:800px;object-fit:cover;object-position:0 18%"></div>
   <div><span class="kicker">Scene 2 · four languages, one law</span><h2 style="font-size:56px">The same question, in Romansh.</h2>
   <p class="lead" style="font-size:23px">Answer in Rumantsch, quotes from the official Romansh text, and proof that DE, FR, IT and RM lead to the same provision.</p>
-  <div class="card" style="margin-top:26px"><div class="big" style="font-size:72px;color:var(--color-red-600)">0%</div><p>of questions asked in all four languages get the same answer with Belegt (0/0), vs 0% for Apertus alone.</p></div></div>
+  <div class="card" style="margin-top:26px"><div class="big" style="font-size:72px;color:var(--color-red-600)">80%</div><p>of questions asked in all four languages get the same answer with Belegt (8/10), vs 40% for Apertus alone.</p></div></div>
 </div><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 06</span></div></section><section class="slide " id="s7">
 <span class="kicker">Sovereign, demonstrated</span>
 <h2>Cable unplugged. Zero outbound connections.</h2>
@@ -92,38 +92,38 @@
 <span class="kicker">Measured, not promised</span>
 <h2>Same model. Same questions. With and without Belegt.</h2>
 <div class="grid2" style="grid-template-columns:1.25fr .75fr;gap:48px;margin-top:30px;align-items:start">
-  <div><table><thead><tr><th></th><th style="text-align:right">Apertus alone</th><th style="text-align:right">Apertus + Belegt</th></tr></thead><tbody><tr><td>Cites a correct article (answerable)</td><td class='n'>50% <span class='ci'>50% [22–78]</span></td><td class='n'><b>88%</b> <span class='ci'>88% [53–98]</span></td></tr><tr><td>Publishes a wrong or invented article</td><td class='n'>50% <span class='ci'>50% [22–78]</span></td><td class='n'><b>12%</b> <span class='ci'>12% [2–47]</span></td></tr><tr><td>Trap questions refused</td><td class='n'>0% <span class='ci'>0% [0–0]</span></td><td class='n'><b>0%</b> <span class='ci'>0% [0–0]</span></td></tr><tr><td>Same answer in all 4 languages</td><td class='n'>0% <span class='ci'>0% [0–0]</span></td><td class='n'><b>0%</b> <span class='ci'>0% [0–0]</span></td></tr>
-  <tr><td>Abstains although an answer exists</td><td class='n'>—</td><td class='n'><b>0%</b> <span class='ci'>0% [0–32]</span></td></tr></tbody></table>
-  <p class="muted" style="font-size:17px;margin-top:16px">8 items: 8 answerable, 0 traps; parallel set asked in DE/FR/IT/RM; held-out questions written after the last design change. Apertus 1.5 8B Q4_K_M, local, temperature 0. 95% Wilson intervals. Baseline trap answers labelled by hand, with justification. Raw outputs: <code>eval/</code>.</p></div>
-  <div class="card ink"><h3>What the verifier caught</h3><p style="font-size:21px;line-height:1.6">0 quotes not found word for word<br>0 sentences naming an unproven article<br>0 drafts with no surviving evidence<br><br>Median latency 71.0 s per answer on 4 CPU cores.</p></div>
+  <div><table><thead><tr><th></th><th style="text-align:right">Apertus alone</th><th style="text-align:right">Apertus + Belegt</th></tr></thead><tbody><tr><td>Cites a correct article (answerable)</td><td class='n'>42% <span class='ci'>42% [30–54]</span></td><td class='n'><b>82%</b> <span class='ci'>82% [71–90]</span></td></tr><tr><td>Publishes a wrong or invented article</td><td class='n'>59% <span class='ci'>59% [48–69]</span></td><td class='n'><b>5%</b> <span class='ci'>5% [2–12]</span></td></tr><tr><td>Trap questions refused</td><td class='n'>32% <span class='ci'>32% [15–54]</span></td><td class='n'><b>100%</b> <span class='ci'>100% [83–100]</span></td></tr><tr><td>Same answer in all 4 languages</td><td class='n'>40% <span class='ci'>40% [17–69]</span></td><td class='n'><b>80%</b> <span class='ci'>80% [49–94]</span></td></tr><tr><td>Correct article — Romansh questions</td><td class='n'>33% <span class='ci'>33% [12–65]</span></td><td class='n'><b>89%</b> <span class='ci'>89% [56–98]</span></td></tr>
+  <tr><td>Abstains although an answer exists</td><td class='n'>—</td><td class='n'><b>15%</b> <span class='ci'>15% [8–25]</span></td></tr></tbody></table>
+  <p class="muted" style="font-size:17px;margin-top:16px">81 items: 62 answerable, 19 traps; parallel set asked in DE/FR/IT/RM; held-out questions written after the last design change. Apertus 1.5 8B Q4_K_M, local, temperature 0. 95% Wilson intervals. Baseline trap answers labelled by hand, with justification. Raw outputs: <code>eval/</code>.</p></div>
+  <div class="card ink"><h3>What the verifier caught</h3><p style="font-size:21px;line-height:1.6">0 quotes not found word for word<br>1 sentence(s) naming an unproven article<br>0 drafts with no surviving evidence<br><br>Median latency 49.2 s per answer on 4 CPU cores.</p></div>
 </div><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 10</span></div></section><section class="slide " id="s11">
 <span class="kicker">Track 2B criteria</span>
 <h2>Built against the five published criteria.</h2>
-<table style="margin-top:28px;font-size:20px"><thead><tr><th style="width:24%">Criterion</th><th>How Belegt answers</th><th style="width:27%">Proof to check</th></tr></thead><tbody>
+<table style="margin-top:44px;font-size:22px"><thead><tr><th style="width:24%">Criterion</th><th>How Belegt answers</th><th style="width:27%">Proof to check</th></tr></thead><tbody>
 <tr><td><b>Meaningful use of AI</b></td><td>Apertus understands, rewrites in four languages and drafts. Verification is deterministic.</td><td>“AI / Code” chips on every step; trap refusal</td></tr>
 <tr><td><b>Technical rigour</b></td><td>Baseline vs Belegt on the same model, Wilson intervals, held-out set, failures kept visible.</td><td><code>eval/results.md</code>, raw runs</td></tr>
-<tr><td><b>Value, cost, scale</b></td><td>8B model, 4-bit, CPU. ≈ CHF 3.0 per 1,000 answers on a 4-vCPU VM (assumption: CHF 0.15/h).</td><td>Latency in every receipt</td></tr>
+<tr><td><b>Value, cost, scale</b></td><td>8B model, 4-bit, CPU. ≈ CHF 2.0 per 1,000 answers on a 4-vCPU VM (assumption: CHF 0.15/h).</td><td>Latency in every receipt</td></tr>
 <tr><td><b>Sovereign deployability</b></td><td>Offline, local weights, no external service, outbound audit, receipts.</td><td><code>offline_demo.sh</code> + network panel</td></tr>
 <tr><td><b>Implementation feasibility</b></td><td>Deliberately small scope that fully works; Python stdlib + llama.cpp; one command to run.</td><td>Jury can run it in 10 minutes</td></tr>
 </tbody></table><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 11</span></div></section><section class="slide " id="s12">
 <span class="kicker">Who it is for</span>
 <h2>A blueprint others can take tomorrow.</h2>
-<div class="grid3" style="margin-top:36px">
-  <div class="card"><h3>Citizens & schools</h3><p>Understand rights with the source one click away; teach critical thinking about AI with an AI that shows its evidence.</p></div>
-  <div class="card"><h3>Administrations</h3><p>Communes, cantons, Confederation: deployable without invented content or foreign dependency; receipts for the file.</p></div>
-  <div class="card"><h3>Regulated firms</h3><p>Banks, insurers, health: the same rule on their own texts — compliance needs traceability, not eloquence.</p></div>
+<div class="grid3" style="margin-top:56px">
+  <div class="card" style="min-height:300px"><h3>Citizens & schools</h3><p>Understand rights with the source one click away; teach critical thinking about AI with an AI that shows its evidence.</p></div>
+  <div class="card" style="min-height:300px"><h3>Administrations</h3><p>Communes, cantons, Confederation: deployable without invented content or foreign dependency; receipts for the file.</p></div>
+  <div class="card" style="min-height:300px"><h3>Regulated firms</h3><p>Banks, insurers, health: the same rule on their own texts — compliance needs traceability, not eloquence.</p></div>
 </div>
-<div class="card line" style="margin-top:24px"><h3>Next corpora (the method is the product)</h3><p>Civil Code (SR 210) · Data Protection Act (SR 235.1) · AVS/AHV (SR 831.10) · municipal regulations. Any Akoma Ntoso text from Fedlex drops in: <code>belegt/corpus.py</code> parses the official XML and keeps the official IDs.</p></div><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 12</span></div></section><section class="slide " id="s13">
+<div class="card line" style="margin-top:28px;padding:40px"><h3>Next corpora (the method is the product)</h3><p>Civil Code (SR 210) · Data Protection Act (SR 235.1) · AVS/AHV (SR 831.10) · municipal regulations. Any Akoma Ntoso text from Fedlex drops in: <code>belegt/corpus.py</code> parses the official XML and keeps the official IDs.</p></div><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 12</span></div></section><section class="slide " id="s13">
 <span class="kicker">What Belegt gives back to Apertus</span>
 <h2>A contribution, not just a demo.</h2>
-<div class="grid2" style="margin-top:34px;gap:40px">
+<div class="grid2" style="margin-top:60px;gap:48px;flex:1;align-items:start">
   <ul class="clean">
     <li><b>A weakness map</b>: where Apertus cites correctly, invents, or diverges across languages — with examples.</li>
     <li><b>A reusable test set</b>: questions, traps, the same questions in DE/FR/IT/RM, gold articles.</li>
     <li><b>A behaviour worth training</b>: cite or abstain, as a target for future alignment work.</li>
     <li><b>A receipt format</b> other projects can adopt. Everything Apache-2.0.</li>
   </ul>
-  <div class="card"><h3>Limits, said first</h3><p style="font-size:19.5px;line-height:1.55">Not legal advice. The verifier proves quotes exist — not that the paraphrase is right, nor that the quoted article is the relevant one (those cases are counted as errors). Lexical search can miss the article → abstention. ~1 min per answer on CPU. Romansh test questions written by the team, not native speakers.</p></div>
+  <div class="card ink" style="padding:44px"><h3>Limits, said first</h3><p style="font-size:23px;line-height:1.6;margin-top:14px">Not legal advice. The verifier proves quotes exist — not that the paraphrase is right, nor that the quoted article is the relevant one (those cases are counted as errors). Lexical search can miss the article → abstention. ≈ 50 s per answer on 4 CPU cores. Romansh test questions written by the team, not native speakers.</p></div>
 </div><div class="foot"><b>Belegt<i>.</i></b><span>Hack Apertus 2026 · Track 2B · 13</span></div></section><section class="slide " id="s14">
 <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
   <div class="serif" style="font-size:76px;line-height:1.05;max-width:1250px;letter-spacing:-.035em">“Apertus was built open so that trust could be verified. Belegt is a first public demonstration.”</div>

@@ -56,7 +56,7 @@ Ces chiffres ont un prix, que nous assumons : Belegt s’abstient parfois alors 
 
 ## Ce que Belegt n’est pas, et ses limites
 
-Belegt n’est pas un conseiller juridique : il aide à trouver et à lire le texte officiel, pas à trancher un cas particulier. Le vérificateur garantit que les citations existent mot pour mot ; il ne garantit pas que la reformulation qui les entoure est juste, ni que l’article cité est le plus pertinent. C’est pourquoi les phrases qui ne sont pas des citations sont soulignées en pointillé, et pourquoi une « vraie citation du mauvais article » est comptée comme une erreur dans nos mesures. Le modèle tourne en 4 bits sur processeur : une réponse prend environ une minute. Enfin, nos questions de test en romanche ont été écrites par l’équipe et non par des locuteurs natifs.
+Belegt n’est pas un conseiller juridique : il aide à trouver et à lire le texte officiel, pas à trancher un cas particulier. Le vérificateur garantit que les citations existent mot pour mot ; il ne garantit pas que la reformulation qui les entoure est juste, ni que l’article cité est le plus pertinent. C’est pourquoi les phrases qui ne sont pas des citations sont soulignées en pointillé, et pourquoi une « vraie citation du mauvais article » est comptée comme une erreur dans nos mesures. Le modèle tourne en 4 bits sur processeur : une réponse prend environ 50 secondes (médiane mesurée). Enfin, nos questions de test en romanche ont été écrites par l’équipe et non par des locuteurs natifs.
 
 ## Ce que Belegt rend à Apertus
 

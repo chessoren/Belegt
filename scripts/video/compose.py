@@ -16,7 +16,8 @@ TMP = OUT.parent / "_build"
 TMP.mkdir(parents=True, exist_ok=True)
 W, H, FPS = 1920, 1080, 30
 FONT = "/usr/share/fonts/opentype/inter/Inter-SemiBold.otf"
-SCRIPT = json.loads((ROOT / "docs" / "video" / "script.json").read_text())
+import os
+SCRIPT = json.loads(Path(os.environ.get("SCRIPT_JSON", ROOT / "docs" / "video" / "script.json")).read_text())
 LINES = {l["id"]: l for l in SCRIPT["lines"]}
 
 
@@ -65,7 +66,7 @@ SEGMENTS = [
     (["l10"], [("scene", "f_numbers", "start", "end", "fit")]),
     (["l11"], [("card", "end.png")]),
 ]
-GAP = 0.7  # silence after each segment's voice
+GAP = float(os.environ.get("GAP", 0.7))  # silence after each segment voice
 
 
 def render_frames(frames, t_from, t_to, factor, out, badge=None):
@@ -79,8 +80,8 @@ def render_frames(frames, t_from, t_to, factor, out, badge=None):
     lst.write_text("\n".join(lines) + "\n")
     vf = f"scale={W}:{H}:force_original_aspect_ratio=decrease,pad={W}:{H}:(ow-iw)/2:(oh-ih)/2:white,fps={FPS},format=yuv420p"
     if badge:
-        vf += (f",drawbox=x=w-330:y=36:w=290:h=64:color=0x1c0204@0.86:t=fill,"
-               f"drawtext=fontfile={FONT}:text='{badge}':x=w-305:y=56:fontsize=27:fontcolor=white")
+        vf += (f",drawbox=x=iw-330:y=104:w=290:h=60:color=0x1c0204@0.86:t=fill,"
+               f"drawtext=fontfile={FONT}:text='{badge}':x=w-305:y=121:fontsize=27:fontcolor=white")
     total = (t_to - t_from) * factor
     run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-vf", vf,
          "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-an", str(out)])
@@ -184,13 +185,14 @@ def main():
     ass = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 0", "",
            "[V4+ Styles]",
            "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
-           "Style: Sub,Inter,38,&H00FFFFFF,&H00FFFFFF,&HD01C0204,&H401C0204,0,0,0,0,100,100,0,0,3,14,0,2,220,220,46,1",
+           "Style: Sub,Inter,36,&H00FFFFFF,&H00FFFFFF,&H2004021C,&H6004021C,0,0,0,0,100,100,0,0,3,16,0,2,200,200,22,1",
            "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     srt, n = [], 1
     for ev in events:
         for lid, a, b in ev["timing"]:
             L = LINES[lid]
-            txt = L["sub_fr"] + r"\N{\fs31\c&HC8D8FF&\i1}" + L["sub_en"]
+            nb = lambda x: x.replace(" :", "\u00a0:").replace(" ?", "\u00a0?").replace(" !", "\u00a0!").replace("« ", "«\u00a0").replace(" »", "\u00a0»")
+            txt = nb(L["sub_fr"]) + r"\N{\fs29\c&HD6DCFF&\i1}" + L["sub_en"]
             ass.append(f"Dialogue: 0,{ts(a)},{ts(b + 0.2)},Sub,,0,0,0,,{txt}")
             srt.append(f"{n}\n{srt_ts(a)} --> {srt_ts(b + 0.2)}\n{L['sub_fr']}\n{L['sub_en']}\n"); n += 1
     (TMP / "subs.ass").write_text("\n".join(ass) + "\n")

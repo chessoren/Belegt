@@ -1,0 +1,83 @@
+{
+ "voice": "Oren (Fish Audio, model s2.1-pro-free)",
+ "note": "90-second cut (brief timing). fr = text sent to TTS ('Bélèkt' is a pronunciation hint for 'Belegt'); sub_fr / sub_en = burned-in subtitles.",
+ "lines": [
+  {
+   "id": "l01",
+   "scene": "s_problem",
+   "fr": "Voici ce que fait une IA quand elle ne sait pas : elle invente, sûre d'elle.",
+   "sub_fr": "Voici ce que fait une IA quand elle ne sait pas : elle invente, sûre d'elle.",
+   "sub_en": "This is what an AI does when it doesn't know: it makes things up, confidently."
+  },
+  {
+   "id": "l02",
+   "scene": "s_problem",
+   "fr": "Même Apertus, interrogé seul : « l'article trente fixe le prix maximum du pain ». Cet article n'existe pas.",
+   "sub_fr": "Même Apertus, interrogé seul : « l'article 30 fixe le prix maximum du pain ». Cet article n'existe pas.",
+   "sub_en": "Even Apertus, asked on its own: “Article 30 sets the maximum price of bread.” No such article exists."
+  },
+  {
+   "id": "l03",
+   "scene": "s_rule",
+   "fr": "Bélèkt est construit sur Apertus, l'IA ouverte suisse. Sa règle : citation, ou silence.",
+   "sub_fr": "Belegt est construit sur Apertus, l'IA ouverte suisse. Sa règle : citation, ou silence.",
+   "sub_en": "Belegt is built on Apertus, the open Swiss AI. Its rule: cite, or stay silent."
+  },
+  {
+   "id": "l04",
+   "scene": "s_fr",
+   "fr": "Première question : le droit de manifester. Apertus lit la question, et la reformule. Ensuite, du code, sans IA, vérifie chaque citation, mot pour mot.",
+   "sub_fr": "« Ai-je le droit de manifester ? » Apertus lit et reformule. Puis du code, sans IA, vérifie chaque citation mot pour mot.",
+   "sub_en": "“Can I demonstrate?” Apertus reads and rephrases. Then plain code, no AI, checks every quote word for word."
+  },
+  {
+   "id": "l05",
+   "scene": "s_fr_evidence",
+   "fr": "Un clic : la phrase, surlignée dans la Constitution.",
+   "sub_fr": "Un clic : la phrase, surlignée dans la Constitution.",
+   "sub_en": "One click: the sentence, highlighted in the Constitution."
+  },
+  {
+   "id": "l06",
+   "scene": "s_rm",
+   "fr": "La même question, en romanche. Réponse en romanche, et les quatre versions officielles concordent. Quatre langues, une seule loi.",
+   "sub_fr": "La même question, en romanche. Réponse en romanche, les 4 versions officielles concordent. Quatre langues, une seule loi.",
+   "sub_en": "The same question, in Romansh. Answer in Romansh, all 4 official versions agree. Four languages, one law."
+  },
+  {
+   "id": "l07",
+   "scene": "s_net",
+   "fr": "Aucun service étranger : la démo tourne dans un réseau isolé, zéro connexion sortante. Et la réponse arrive.",
+   "sub_fr": "Aucun service étranger : la démo tourne dans un réseau isolé, zéro connexion sortante. La réponse arrive.",
+   "sub_en": "No foreign service: the demo runs in an isolated network, zero outbound connections. The answer arrives."
+  },
+  {
+   "id": "l08",
+   "scene": "s_trap",
+   "fr": "Question piège : quel article fixe le prix maximum du pain ? Aucun. Bélèkt le dit, et n'affirme rien.",
+   "sub_fr": "Question piège : quel article fixe le prix maximum du pain ? Aucun. Belegt le dit, et n'affirme rien.",
+   "sub_en": "A trap: which article sets the maximum price of bread? None. Belegt says so, and claims nothing."
+  },
+  {
+   "id": "l09",
+   "scene": "s_receipt",
+   "fr": "Chaque réponse a son reçu : modèle, version de la loi, preuves, contrôles.",
+   "sub_fr": "Chaque réponse a son reçu : modèle, version de la loi, preuves, contrôles.",
+   "sub_en": "Every answer has a receipt: model, law version, evidence, checks."
+  },
+  {
+   "id": "l10",
+   "scene": "s_numbers",
+   "fr": "Même modèle, mêmes questions. Article faux ou inventé : cinquante-neuf pour cent seul, cinq pour cent avec Bélèkt. Dix-neuf pièges refusés sur dix-neuf.",
+   "sub_fr": "Même modèle, mêmes questions. Article faux ou inventé : 59 % seul, 5 % avec Belegt. Pièges refusés : 19/19.",
+   "sub_en": "Same model, same questions. Wrong or invented article: 59% alone, 5% with Belegt. Traps refused: 19/19."
+  },
+  {
+   "id": "l11",
+   "scene": "s_end",
+   "fr": "Bélèkt. Prouver, ou se taire.",
+   "sub_fr": "Belegt. Prouver, ou se taire.",
+   "sub_en": "Belegt. Prove it, or stay silent."
+  }
+ ]
+}

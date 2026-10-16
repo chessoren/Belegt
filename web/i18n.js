@@ -214,7 +214,7 @@ fr: {
     <li>La vérification garantit que les citations existent mot pour mot, pas que la reformulation est juste. Les phrases qui ne sont pas des citations sont soulignées en pointillé.</li>
     <li>Un refus peut être un faux refus : la recherche lexicale manque parfois le bon article. Le taux est mesuré et publié.</li>
     <li>Corpus : Constitution fédérale (RS 101), état au 3 mars 2024. Les dispositions transitoires longues sont incluses mais moins bien couvertes.</li>
-    <li>Le modèle tourne en 4 bits sur processeur : une réponse prend environ une minute.</li>
+    <li>Le modèle tourne en 4 bits sur processeur : une réponse prend environ 50 secondes (médiane mesurée).</li>
     <li>Les questions de test en romanche ont été rédigées par l’équipe, non par des locuteurs natifs. L’interface romanche peut contenir des maladresses.</li></ul></div>`,
   about: `<div class="prose"><p><b>Belegt</b> (« étayé, documenté ») est un prototype pour <b>Hack Apertus 2026</b>, piste 2B « Own Project ». Il n’est affilié ni à la Confédération ni aux auteurs d’Apertus.</p>
     <p>Modèle : Apertus 1.5 8B (swiss-ai, EPFL · ETH Zurich · CSCS), quantifié en GGUF Q4_K_M. Texte : Fedlex, XML Akoma Ntoso officiel en DE, FR, IT, RM.</p>

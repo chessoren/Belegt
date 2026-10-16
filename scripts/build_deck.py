@@ -173,7 +173,7 @@ add(f"""
   <div><table><thead><tr><th></th><th style="text-align:right">Apertus alone</th><th style="text-align:right">Apertus + Belegt</th></tr></thead><tbody>{trs}
   <tr><td>Abstains although an answer exists</td><td class='n'>—</td><td class='n'><b>{pct('over_refusal','belegt')}%</b> <span class='ci'>{ci('over_refusal','belegt')}</span></td></tr></tbody></table>
   <p class="muted" style="font-size:17px;margin-top:16px">{N} items: {S['answerable']} answerable, {S['traps']} traps; parallel set asked in DE/FR/IT/RM; held-out questions written after the last design change. Apertus 1.5 8B Q4_K_M, local, temperature 0. 95% Wilson intervals. Baseline trap answers labelled by hand, with justification. Raw outputs: <code>eval/</code>.</p></div>
-  <div class="card ink"><h3>What the verifier caught</h3><p style="font-size:21px;line-height:1.6">{V['quotes_rejected']} quotes not found word for word<br>{V['sentences_removed']} sentences naming an unproven article<br>{V['model_said_answerable_but_abstained']} drafts with no surviving evidence<br><br>Median latency {latency} s per answer on 4 CPU cores.</p></div>
+  <div class="card ink"><h3>What the verifier caught</h3><p style="font-size:21px;line-height:1.6">{V['quotes_rejected']} quotes not found word for word<br>{V['sentences_removed']} sentence(s) naming an unproven article<br>{V['model_said_answerable_but_abstained']} drafts with no surviving evidence<br><br>Median latency {latency} s per answer on 4 CPU cores.</p></div>
 </div>""")
 
 # 11 — criteria
@@ -210,7 +210,7 @@ add("""
     <li><b>A behaviour worth training</b>: cite or abstain, as a target for future alignment work.</li>
     <li><b>A receipt format</b> other projects can adopt. Everything Apache-2.0.</li>
   </ul>
-  <div class="card ink" style="padding:44px"><h3>Limits, said first</h3><p style="font-size:23px;line-height:1.6;margin-top:14px">Not legal advice. The verifier proves quotes exist — not that the paraphrase is right, nor that the quoted article is the relevant one (those cases are counted as errors). Lexical search can miss the article → abstention. ~1 min per answer on CPU. Romansh test questions written by the team, not native speakers.</p></div>
+  <div class="card ink" style="padding:44px"><h3>Limits, said first</h3><p style="font-size:23px;line-height:1.6;margin-top:14px">Not legal advice. The verifier proves quotes exist — not that the paraphrase is right, nor that the quoted article is the relevant one (those cases are counted as errors). Lexical search can miss the article → abstention. ≈ 50 s per answer on 4 CPU cores. Romansh test questions written by the team, not native speakers.</p></div>
 </div>""")
 
 # 14 — close

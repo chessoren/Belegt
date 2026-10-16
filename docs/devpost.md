@@ -31,7 +31,7 @@ AI assistants answer with confidence even when they are wrong. On our test set, 
 
 ## Video demo
 
-`docs/video/Belegt-demo.mp4` (≈ 2 min, French voice-over by Oren, burned-in FR + EN subtitles). Upload to YouTube/Vimeo (unlisted) and paste the link.
+`docs/video/Belegt-demo.mp4` (1:59, French voice-over by Oren, burned-in FR + EN subtitles). Upload to YouTube/Vimeo (unlisted) and paste the link.
 
 ## Try it out / links
 

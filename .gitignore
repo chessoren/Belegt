@@ -3,3 +3,4 @@ __pycache__/
 eval/runs.log
 *.gguf
 .DS_Store
+docs/video/_build/
