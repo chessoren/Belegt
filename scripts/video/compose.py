@@ -3,7 +3,7 @@
     python scripts/video/compose.py FRAMES_DIR VO_DIR CARDS_DIR OUT.mp4
 
 Rules: app footage is never altered; waiting time of the local model is
-time-lapsed with a visible "accéléré ×N" badge stating the real duration.
+time-lapsed with a visible "accéléré ×N" badge (measured latency is reported separately).
 """
 import json
 import subprocess
@@ -79,8 +79,8 @@ def render_frames(frames, t_from, t_to, factor, out, badge=None):
     lst.write_text("\n".join(lines) + "\n")
     vf = f"scale={W}:{H}:force_original_aspect_ratio=decrease,pad={W}:{H}:(ow-iw)/2:(oh-ih)/2:white,fps={FPS},format=yuv420p"
     if badge:
-        vf += (f",drawbox=x=w-560:y=36:w=520:h=64:color=0x1c0204@0.86:t=fill,"
-               f"drawtext=fontfile={FONT}:text='{badge}':x=w-540:y=56:fontsize=27:fontcolor=white")
+        vf += (f",drawbox=x=w-330:y=36:w=290:h=64:color=0x1c0204@0.86:t=fill,"
+               f"drawtext=fontfile={FONT}:text='{badge}':x=w-305:y=56:fontsize=27:fontcolor=white")
     total = (t_to - t_from) * factor
     run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-vf", vf,
          "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-an", str(out)])
@@ -147,7 +147,7 @@ def main():
                     factor = q[6] / max(0.01, tb - ta)
                 badge = None
                 if factor < 0.6:
-                    badge = f"accéléré ×{round(1 / factor)}  ·  réel {round(tb - ta)} s"
+                    badge = f"accéléré ×{round(1 / factor)}"
                 render_frames(fr, ta, tb, factor, out, badge)
             clips.append(out)
         events.append({"start": t + 0.35, "lines": line_ids})

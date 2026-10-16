@@ -68,9 +68,9 @@
   {
    "id": "l10",
    "scene": "s_numbers",
-   "fr": "Même modèle, mêmes questions. Seul, Apertus cite un article faux ou inventé dans 67 pour cent des cas. Avec Bélèkt, 17 pour cent. Et il refuse 0 pièges sur 0. Mesuré, ouvert, réutilisable.",
-   "sub_fr": "Même modèle, mêmes questions. Article faux ou inventé : 67 % seul, 17 % avec Belegt. Pièges refusés : 0/0.",
-   "sub_en": "Same model, same questions. Wrong or invented article: 67% alone, 17% with Belegt. Traps refused: 0/0."
+   "fr": "Même modèle, mêmes questions. Seul, Apertus cite un article faux ou inventé dans 59 pour cent des cas. Avec Bélèkt, 5 pour cent. Et il refuse 19 pièges sur 19. Mesuré, ouvert, réutilisable.",
+   "sub_fr": "Même modèle, mêmes questions. Article faux ou inventé : 59 % seul, 5 % avec Belegt. Pièges refusés : 19/19.",
+   "sub_en": "Same model, same questions. Wrong or invented article: 59% alone, 5% with Belegt. Traps refused: 19/19."
   },
   {
    "id": "l11",

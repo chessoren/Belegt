@@ -4,9 +4,9 @@
 
 ## Une IA qui se trompe avec assurance ne peut pas servir l’État
 
-Nous avons commencé par une expérience simple. Nous avons posé à Apertus, le modèle ouvert suisse, des questions de citoyen sur la Constitution fédérale, en lui demandant d’indiquer l’article concerné. « Combien de membres compte le Conseil fédéral ? » — « Sept. Cette composition est définie à l’article 134. » C’est l’article 175. « Quelles sont les langues nationales ? » — « L’allemand, le français et l’italien. » Le romanche a disparu.
+Nous avons commencé par une expérience simple. Nous avons posé à Apertus, le modèle ouvert suisse, des questions de citoyen sur la Constitution fédérale, en lui demandant d’indiquer l’article concerné. « Quel article de la Constitution fixe le prix maximum du pain ? » — « L’article 30 de la Constitution fédérale suisse fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton où la denrée est vendue. » Cette disposition n’existe pas. Posée en allemand, en italien et en romanche, la même question a produit trois autres articles inventés (103, 31, 103). « Quelles sont les langues nationales ? » — « L’allemand, le français et l’italien. » Le romanche a disparu.
 
-Ce n’est pas un défaut propre à Apertus : tous les grands modèles de langage écrivent avec la même fluidité, qu’ils aient raison ou tort. Sur notre jeu de test, Apertus seul a cité un article faux ou inventé dans **67 %** des réponses. Pour un usage grand public, c’est gênant. Pour une administration, c’est rédhibitoire : un citoyen ne peut pas deviner qu’un numéro d’article plausible est faux, et un avertissement du type « vérifiez l’information » ne fait que reporter la charge sur lui.
+Ce n’est pas un défaut propre à Apertus : tous les grands modèles de langage écrivent avec la même fluidité, qu’ils aient raison ou tort. Sur notre jeu de test, Apertus seul a cité un article faux ou inventé dans **59 %** des réponses. Pour un usage grand public, c’est gênant. Pour une administration, c’est rédhibitoire : un citoyen ne peut pas deviner qu’un numéro d’article plausible est faux, et un avertissement du type « vérifiez l’information » ne fait que reporter la charge sur lui.
 
 Le frein à l’IA dans le service public n’est donc ni la puissance ni le prix. C’est la confiance. Et la confiance ne se décrète pas : elle se vérifie.
 
@@ -28,7 +28,7 @@ Cette séparation est visible à l’écran : chaque étape porte une étiquette
 
 En Suisse, l’égalité entre les langues n’est pas un supplément d’âme : c’est une exigence constitutionnelle. Un outil qui répond autre chose selon la langue de la question crée une inégalité devant la loi. Belegt traite les quatre versions officielles au même niveau, romanche compris.
 
-Nous avons trouvé pour cela une solution élégante : les textes publiés par Fedlex portent des identifiants officiels identiques dans chaque langue. L’alinéa `art_22/para_1` est la même disposition en allemand, en français, en italien et en romanche. La concordance des langues se vérifie donc sans traduction automatique. Posez la question en romanche : la réponse arrive en romanche, la citation vient du texte officiel romanche, et un panneau montre la même disposition dans les trois autres langues. Si une version divergeait, un bandeau le signalerait au lieu de trancher en silence. Avec Belegt, les questions posées dans les quatre langues ont reçu la même réponse dans **0 %** des cas, contre **0 %** pour Apertus seul.
+Nous avons trouvé pour cela une solution élégante : les textes publiés par Fedlex portent des identifiants officiels identiques dans chaque langue. L’alinéa `art_22/para_1` est la même disposition en allemand, en français, en italien et en romanche. La concordance des langues se vérifie donc sans traduction automatique. Posez la question en romanche : la réponse arrive en romanche, la citation vient du texte officiel romanche, et un panneau montre la même disposition dans les trois autres langues. Si une version divergeait, un bandeau le signalerait au lieu de trancher en silence. Avec Belegt, les questions posées dans les quatre langues ont reçu la même réponse dans **80 %** des cas, contre **40 %** pour Apertus seul.
 
 ## La souveraineté, démontrée plutôt que proclamée
 
@@ -40,15 +40,15 @@ Chaque réponse produit un reçu lisible : quel modèle a répondu (et son empre
 
 ## Mesuré, pas promis
 
-Nous ne disons pas « ça marche bien ». Nous avons comparé le même modèle local, aux mêmes questions, avec et sans Belegt : 12 questions, dont 0 pièges, une série posée dans les quatre langues, et une série tenue à l’écart, écrite après notre dernière modification du système.
+Nous ne disons pas « ça marche bien ». Nous avons comparé le même modèle local, aux mêmes questions, avec et sans Belegt : 81 questions, dont 19 pièges, une série posée dans les quatre langues, et une série tenue à l’écart, écrite après notre dernière modification du système.
 
 | | Apertus seul | Apertus + Belegt |
 |---|---|---|
-| Article correct cité | 4/12 = 33% [14–61] | **11/12 = 92% [65–99]** |
-| Article faux ou inventé publié | 8/12 = 67% [39–86] | **2/12 = 17% [5–45]** |
-| Pièges refusés | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
-| Même réponse dans les 4 langues | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
-| Abstention alors qu’une réponse existe | — | 0/12 = 0% [0–24] |
+| Article correct cité | 26/62 = 42% [30–54] | **51/62 = 82% [71–90]** |
+| Article faux ou inventé publié | 48/81 = 59% [48–69] | **4/81 = 5% [2–12]** |
+| Pièges refusés | 6/19 = 32% [15–54] | **19/19 = 100% [83–100]** |
+| Même réponse dans les 4 langues | 4/10 = 40% [17–69] | **8/10 = 80% [49–94]** |
+| Abstention alors qu’une réponse existe | — | 9/62 = 15% [8–25] |
 
 *Intervalles de confiance à 95 % (Wilson). Toutes les sorties brutes sont publiées dans le dépôt.*
 

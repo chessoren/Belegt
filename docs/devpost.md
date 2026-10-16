@@ -27,7 +27,7 @@ apertus · swiss-ai · llama.cpp · gguf · python · retrieval-augmented-genera
 
 ## Elevator pitch (short description field)
 
-AI assistants answer with confidence even when they are wrong. On our test set, Apertus asked alone named a wrong or invented article of the Swiss Constitution in **67%** of answers. Belegt, built on Apertus, does the opposite: it answers only with sentences that a deterministic verifier finds **word for word** in the official Fedlex text, checks that the four language versions agree, issues a receipt for every answer, and otherwise stays silent. With Belegt, wrong or invented articles dropped to **17%**, on the same local model, fully offline.
+AI assistants answer with confidence even when they are wrong. On our test set, Apertus asked alone named a wrong or invented article of the Swiss Constitution in **59%** of answers. Belegt, built on Apertus, does the opposite: it answers only with sentences that a deterministic verifier finds **word for word** in the official Fedlex text, checks that the four language versions agree, issues a receipt for every answer, and otherwise stays silent. With Belegt, wrong or invented articles dropped to **5%**, on the same local model, fully offline.
 
 ## Video demo
 
@@ -48,7 +48,7 @@ AI assistants answer with confidence even when they are wrong. On our test set, 
 
 ### Inspiration
 
-The main brake on AI in the public sector is not power or price. It is trust. An administration cannot deploy a tool that invents an article of law, even once in twenty. We tried it with Apertus itself, asked alone: “How many members does the Federal Council have?” — *“Seven. This is defined in Article 134.”* It is Article 175. “What are the national languages?” — *“German, French and Italian.”* Romansh, forgotten. Fluent, plausible, wrong: exactly the failure a citizen can’t detect.
+The main brake on AI in the public sector is not power or price. It is trust. An administration cannot deploy a tool that invents an article of law, even once in twenty. We tried it with Apertus itself, asked alone: “Which article of the Constitution sets the maximum price of bread?” — *“Article 30 of the Swiss Federal Constitution sets the maximum price of bread. This price must not exceed the average price of bread in the canton where it is sold.”* No such provision exists. “What are the national languages?” — *“German, French and Italian.”* Romansh, forgotten. Fluent, plausible, wrong: exactly the failure a citizen can’t detect. Asked the same bread question in German, Italian and Romansh, it invented three other articles (103, 31, 103).
 
 A disclaimer like “please verify” moves the burden to the user. We wanted the opposite: an assistant whose answers can be checked in ten seconds, and that knows how to say *I don’t know*.
 
@@ -80,17 +80,17 @@ Stack: Apertus 1.5 8B (Q4_K_M GGUF) on llama.cpp built *without* network support
 
 ### Measured, not promised
 
-Same local model, same questions, with and without Belegt. 12 items: 12 answerable, 0 traps, a parallel set asked in DE/FR/IT/RM, and a held-out set written after our last design change. Temperature 0, 95% Wilson intervals.
+Same local model, same questions, with and without Belegt. 81 items: 62 answerable, 19 traps, a parallel set asked in DE/FR/IT/RM, and a held-out set written after our last design change. Temperature 0, 95% Wilson intervals.
 
 | | Apertus alone | Apertus + Belegt |
 |---|---|---|
-| Cites a correct article | 4/12 = 33% [14–61] | **11/12 = 92% [65–99]** |
-| Publishes a wrong or invented article | 8/12 = 67% [39–86] | **2/12 = 17% [5–45]** |
-| Trap questions refused | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
-| Same answer in all 4 languages | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
-| Abstains although an answer exists | — | 0/12 = 0% [0–24] |
+| Cites a correct article | 26/62 = 42% [30–54] | **51/62 = 82% [71–90]** |
+| Publishes a wrong or invented article | 48/81 = 59% [48–69] | **4/81 = 5% [2–12]** |
+| Trap questions refused | 6/19 = 32% [15–54] | **19/19 = 100% [83–100]** |
+| Same answer in all 4 languages | 4/10 = 40% [17–69] | **8/10 = 80% [49–94]** |
+| Abstains although an answer exists | — | 9/62 = 15% [8–25] |
 
-The verifier rejected 0 quotes that were not word for word and removed 0 sentences naming an unproven article. Median latency: 67.4 s per answer on 4 CPU cores. Every item and raw output is in `eval/`.
+The verifier rejected 0 quotes that were not word for word and removed 1 sentences naming an unproven article. Median latency: 49.2 s per answer on 4 CPU cores. Every item and raw output is in `eval/`.
 
 ### Challenges we ran into
 

@@ -21,15 +21,15 @@ Hack Apertus 2026 · Track 2B “Own Project” · Apache-2.0
 See [`eval/results.md`](eval/results.md) for every item and the raw outputs in `eval/runs/`.
 
 <!-- RESULTS:START -->
-| 12 questions (12 answerable, 0 traps) | Apertus alone | Apertus + Belegt |
+| 81 questions (62 answerable, 19 traps) | Apertus alone | Apertus + Belegt |
 |---|---|---|
-| Cites a correct article | 4/12 = 33% [14–61] | **11/12 = 92% [65–99]** |
-| Publishes a wrong or invented article | 8/12 = 67% [39–86] | **2/12 = 17% [5–45]** |
-| Trap questions refused | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
-| Same answer in all 4 languages | 0/0 = 0% [0–0] | **0/0 = 0% [0–0]** |
-| Abstains although an answer exists | — | 0/12 = 0% [0–24] |
+| Cites a correct article | 26/62 = 42% [30–54] | **51/62 = 82% [71–90]** |
+| Publishes a wrong or invented article | 48/81 = 59% [48–69] | **4/81 = 5% [2–12]** |
+| Trap questions refused | 6/19 = 32% [15–54] | **19/19 = 100% [83–100]** |
+| Same answer in all 4 languages | 4/10 = 40% [17–69] | **8/10 = 80% [49–94]** |
+| Abstains although an answer exists | — | 9/62 = 15% [8–25] |
 
-Median latency 67.4 s per answer on 4 CPU cores. 95% Wilson intervals.
+Median latency 49.2 s per answer on 4 CPU cores. 95% Wilson intervals.
 <!-- RESULTS:END -->
 
 ## Submission material

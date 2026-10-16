@@ -48,7 +48,7 @@ AI assistants answer with confidence even when they are wrong. On our test set, 
 
 ### Inspiration
 
-The main brake on AI in the public sector is not power or price. It is trust. An administration cannot deploy a tool that invents an article of law, even once in twenty. We tried it with Apertus itself, asked alone: “How many members does the Federal Council have?” — *“Seven. This is defined in Article 134.”* It is Article 175. “What are the national languages?” — *“German, French and Italian.”* Romansh, forgotten. Fluent, plausible, wrong: exactly the failure a citizen can’t detect.
+The main brake on AI in the public sector is not power or price. It is trust. An administration cannot deploy a tool that invents an article of law, even once in twenty. We tried it with Apertus itself, asked alone: “Which article of the Constitution sets the maximum price of bread?” — *“Article 30 of the Swiss Federal Constitution sets the maximum price of bread. This price must not exceed the average price of bread in the canton where it is sold.”* No such provision exists. “What are the national languages?” — *“German, French and Italian.”* Romansh, forgotten. Fluent, plausible, wrong: exactly the failure a citizen can’t detect. Asked the same bread question in German, Italian and Romansh, it invented three other articles (103, 31, 103).
 
 A disclaimer like “please verify” moves the burden to the user. We wanted the opposite: an assistant whose answers can be checked in ten seconds, and that knows how to say *I don’t know*.
 

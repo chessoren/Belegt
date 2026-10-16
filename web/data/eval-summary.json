@@ -1,16 +1,16 @@
 {
  "chart": {
   "trap_refused": {
-   "base": 0,
-   "belegt": 0
+   "base": 32,
+   "belegt": 100
   },
   "wrong_published": {
-   "base": 67,
-   "belegt": 17
+   "base": 59,
+   "belegt": 5
   },
   "lang_agree": {
-   "base": 0,
-   "belegt": 0
+   "base": 40,
+   "belegt": 80
   }
  },
  "table": [
@@ -22,8 +22,8 @@
     "rm": "Artitgel correct cità",
     "en": "Correct article cited"
    },
-   "base": "4/12 = 33% [14–61]",
-   "belegt": "11/12 = 92% [65–99]"
+   "base": "26/62 = 42% [30–54]",
+   "belegt": "51/62 = 82% [71–90]"
   },
   {
    "label": {
@@ -33,8 +33,8 @@
     "rm": "Artitgel fauss u inventà publitgà",
     "en": "Wrong or invented article published"
    },
-   "base": "8/12 = 67% [39–86]",
-   "belegt": "2/12 = 17% [5–45]"
+   "base": "48/81 = 59% [48–69]",
+   "belegt": "4/81 = 5% [2–12]"
   },
   {
    "label": {
@@ -44,8 +44,8 @@
     "rm": "Trappas refusadas",
     "en": "Traps refused"
    },
-   "base": "0/0 = 0% [0–0]",
-   "belegt": "0/0 = 0% [0–0]"
+   "base": "6/19 = 32% [15–54]",
+   "belegt": "19/19 = 100% [83–100]"
   },
   {
    "label": {
@@ -56,7 +56,7 @@
     "en": "Wrongful abstention"
    },
    "base": "—",
-   "belegt": "0/12 = 0% [0–24]"
+   "belegt": "9/62 = 15% [8–25]"
   },
   {
    "label": {
@@ -66,16 +66,27 @@
     "rm": "Medema resposta en 4 linguas",
     "en": "Same answer in 4 languages"
    },
-   "base": "0/0 = 0% [0–0]",
-   "belegt": "0/0 = 0% [0–0]"
+   "base": "4/10 = 40% [17–69]",
+   "belegt": "8/10 = 80% [49–94]"
+  },
+  {
+   "label": {
+    "fr": "Article correct — romanche",
+    "de": "Korrekter Artikel — Rumantsch",
+    "it": "Articolo corretto — romancio",
+    "rm": "Artitgel correct — rumantsch",
+    "en": "Correct article — Romansh"
+   },
+   "base": "3/9 = 33% [12–65]",
+   "belegt": "8/9 = 89% [56–98]"
   }
  ],
  "text": {
-  "fr": "12 questions (12 avec réponse, 0 pièges), dont 0 posées dans les 4 langues. Même modèle Apertus 1.5 8B local, température 0. Intervalles de confiance à 95 % (Wilson).",
-  "de": "12 Fragen (12 beantwortbar, 0 Fallen), davon 0 in allen 4 Sprachen. Gleiches lokales Modell Apertus 1.5 8B, Temperatur 0. 95-%-Konfidenzintervalle (Wilson).",
-  "it": "12 domande (12 con risposta, 0 trappole), di cui 0 nelle 4 lingue. Stesso modello locale Apertus 1.5 8B, temperatura 0. Intervalli di confidenza al 95% (Wilson).",
-  "rm": "12 dumondas (12 cun resposta, 0 trappas), da quellas 0 en tut las 4 linguas. Il medem model local Apertus 1.5 8B, temperatura 0.",
-  "en": "12 questions (12 answerable, 0 traps), 0 of them asked in all 4 languages. Same local Apertus 1.5 8B model, temperature 0. 95% Wilson confidence intervals."
+  "fr": "81 questions (62 avec réponse, 19 pièges), dont 10 posées dans les 4 langues. Même modèle Apertus 1.5 8B local, température 0. Intervalles de confiance à 95 % (Wilson).",
+  "de": "81 Fragen (62 beantwortbar, 19 Fallen), davon 10 in allen 4 Sprachen. Gleiches lokales Modell Apertus 1.5 8B, Temperatur 0. 95-%-Konfidenzintervalle (Wilson).",
+  "it": "81 domande (62 con risposta, 19 trappole), di cui 10 nelle 4 lingue. Stesso modello locale Apertus 1.5 8B, temperatura 0. Intervalli di confidenza al 95% (Wilson).",
+  "rm": "81 dumondas (62 cun resposta, 19 trappas), da quellas 10 en tut las 4 linguas. Il medem model local Apertus 1.5 8B, temperatura 0.",
+  "en": "81 questions (62 answerable, 19 traps), 10 of them asked in all 4 languages. Same local Apertus 1.5 8B model, temperature 0. 95% Wilson confidence intervals."
  },
  "footnote": {
   "fr": "Détail par question, sorties brutes et étiquetage manuel des pièges : eval/results.md dans le dépôt.",

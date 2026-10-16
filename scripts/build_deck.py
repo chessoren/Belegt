@@ -56,10 +56,10 @@ add(f"""
 <span class="kicker">The problem</span>
 <h2>A confident wrong answer cannot serve the state.</h2>
 <div class="grid2" style="margin-top:40px">
-  <div class="card line"><div class="muted" style="font-size:18px">Apertus 1.5 8B, asked alone — real output</div>
-    <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«Le Conseil fédéral compte sept membres. Cette composition est définie à l’<s>article 134</s> de la Constitution fédérale.»</p>
-    <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ wrong</span>&nbsp; It is Art. 175.</p></div>
-  <div class="card line"><div class="muted" style="font-size:18px">Same model, same setting — real output</div>
+  <div class="card line"><div class="muted" style="font-size:18px">Apertus 1.5 8B asked alone: “Which article sets the maximum price of bread?” — real output</div>
+    <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«L’<s>article 30</s> de la Constitution fédérale suisse fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton…»</p>
+    <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ invented</span>&nbsp; No such provision. In DE/IT/RM: Art. 103, 31, 103.</p></div>
+  <div class="card line"><div class="muted" style="font-size:18px">Same model: “What are the national languages?” — real output</div>
     <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«Les langues nationales de la Suisse sont l’allemand, le français et l’italien.»</p>
     <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ incomplete</span>&nbsp; Romansh is forgotten (Art. 4).</p></div>
 </div>

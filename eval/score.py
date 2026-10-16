@@ -147,6 +147,23 @@ def main(path: str):
     L.append(f"- Answers where the model said 'answerable' but no evidence survived (Belegt abstained): "
              f"**{vv['model_said_answerable_but_abstained']}**.")
     L.append(f"- Ablation, retrieval *without* verifier: raw drafts that name a wrong article: **{vv['rag_without_verifier_wrong']}**.")
+    ho = [p for p in per if p["id"].startswith("h")]
+    if ho:
+        ha = [p for p in ho if not p["trap"]]; ht = [p for p in ho if p["trap"]]
+        L.append("\n## Held-out questions (written after the last design change)\n")
+        L.append(f"- Answerable: correct article Apertus alone {fmt(sum(p['base_correct'] for p in ha), len(ha))} · Belegt {fmt(sum(p['b_correct'] for p in ha), len(ha))}")
+        L.append(f"- Traps refused: Apertus alone {fmt(sum(p.get('base_trap') == 'refused' for p in ht), len(ht))} · Belegt {fmt(sum(p['b_abstain'] for p in ht), len(ht))}")
+    L.append("\n## Weakness map (every Belegt failure, kept visible)\n")
+    for p, r in zip(per, rows):
+        if p["trap"] and not p["b_abstain"]:
+            L.append(f"- **{p['id']}** ({p['lang']}) trap answered: {r['q']}")
+        elif not p["trap"] and p["b_abstain"]:
+            L.append(f"- **{p['id']}** ({p['lang']}) wrongful abstention — gold {', '.join(r['gold'])}; closest shown: {', '.join(n['label'] for n in r['belegt']['nearest'])} — {r['q']}")
+        elif not p["trap"] and p["b_wrong"]:
+            L.append(f"- **{p['id']}** ({p['lang']}) real quote, wrong article — cited {', '.join(p['b_arts'])}, gold {', '.join(r['gold'])} — {r['q']}")
+    L.append("\nScoring is conservative: a real quote from a neighbouring article counts as an error even when it is "
+             "defensible (e.g. Art. 70 *official languages* cited next to Art. 4, or the transitional provision of Art. 196 "
+             "on the direct federal tax).")
     L.append(f"\nLatency per answer (CPU, 4 cores): median {out['latency_seconds']['median']} s, p90 {out['latency_seconds']['p90']} s.\n")
     L.append("## Every item\n")
     L.append("| id | lang | gold | Belegt | Belegt articles | baseline articles | baseline trap label |\n|---|---|---|---|---|---|---|")

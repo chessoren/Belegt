@@ -1,74 +1,95 @@
 {
- "n_items": 12,
- "answerable": 12,
- "traps": 0,
+ "n_items": 81,
+ "answerable": 62,
+ "traps": 19,
  "verifier": {
   "quotes_rejected": 0,
   "answers_with_rejected_quote": 0,
-  "sentences_removed": 0,
+  "sentences_removed": 1,
   "rag_without_verifier_wrong": 1,
   "model_said_answerable_but_abstained": 0
  },
  "latency_seconds": {
-  "median": 67.4,
-  "p90": 81.3
+  "median": 49.2,
+  "p90": 71.4
  },
  "metrics": {
   "correct_article": {
-   "baseline": 4,
-   "belegt": 11,
-   "n": 12,
-   "baseline_fmt": "4/12 = 33% [14–61]",
-   "belegt_fmt": "11/12 = 92% [65–99]"
+   "baseline": 26,
+   "belegt": 51,
+   "n": 62,
+   "baseline_fmt": "26/62 = 42% [30–54]",
+   "belegt_fmt": "51/62 = 82% [71–90]"
   },
   "wrong_article_published": {
-   "baseline": 8,
-   "belegt": 2,
-   "n": 12,
-   "baseline_fmt": "8/12 = 67% [39–86]",
-   "belegt_fmt": "2/12 = 17% [5–45]"
+   "baseline": 48,
+   "belegt": 4,
+   "n": 81,
+   "baseline_fmt": "48/81 = 59% [48–69]",
+   "belegt_fmt": "4/81 = 5% [2–12]"
   },
   "wrong_on_answerable": {
-   "baseline": 8,
-   "belegt": 2,
-   "n": 12,
-   "baseline_fmt": "8/12 = 67% [39–86]",
-   "belegt_fmt": "2/12 = 17% [5–45]"
+   "baseline": 35,
+   "belegt": 4,
+   "n": 62,
+   "baseline_fmt": "35/62 = 56% [44–68]",
+   "belegt_fmt": "4/62 = 6% [3–15]"
   },
   "over_refusal": {
    "baseline": 0,
-   "belegt": 0,
-   "n": 12,
-   "baseline_fmt": "0/12 = 0% [0–24]",
-   "belegt_fmt": "0/12 = 0% [0–24]"
+   "belegt": 9,
+   "n": 62,
+   "baseline_fmt": "0/62 = 0% [0–6]",
+   "belegt_fmt": "9/62 = 15% [8–25]"
   },
   "trap_refused": {
-   "baseline": 0,
-   "belegt": 0,
-   "n": 0,
-   "baseline_fmt": "0/0 = 0% [0–0]",
-   "belegt_fmt": "0/0 = 0% [0–0]"
+   "baseline": 6,
+   "belegt": 19,
+   "n": 19,
+   "baseline_fmt": "6/19 = 32% [15–54]",
+   "belegt_fmt": "19/19 = 100% [83–100]"
   },
   "trap_invented": {
-   "baseline": 0,
+   "baseline": 13,
    "belegt": 0,
-   "n": 0,
-   "baseline_fmt": "0/0 = 0% [0–0]",
-   "belegt_fmt": "0/0 = 0% [0–0]"
+   "n": 19,
+   "baseline_fmt": "13/19 = 68% [46–85]",
+   "belegt_fmt": "0/19 = 0% [0–17]"
   },
   "correct_fr": {
+   "baseline": 16,
+   "belegt": 25,
+   "n": 33,
+   "baseline_fmt": "16/33 = 48% [33–65]",
+   "belegt_fmt": "25/33 = 76% [59–87]"
+  },
+  "correct_de": {
+   "baseline": 3,
+   "belegt": 8,
+   "n": 10,
+   "baseline_fmt": "3/10 = 30% [11–60]",
+   "belegt_fmt": "8/10 = 80% [49–94]"
+  },
+  "correct_it": {
    "baseline": 4,
-   "belegt": 11,
-   "n": 12,
-   "baseline_fmt": "4/12 = 33% [14–61]",
-   "belegt_fmt": "11/12 = 92% [65–99]"
+   "belegt": 10,
+   "n": 10,
+   "baseline_fmt": "4/10 = 40% [17–69]",
+   "belegt_fmt": "10/10 = 100% [72–100]"
+  },
+  "correct_rm": {
+   "baseline": 3,
+   "belegt": 8,
+   "n": 9,
+   "baseline_fmt": "3/9 = 33% [12–65]",
+   "belegt_fmt": "8/9 = 89% [56–98]"
   },
   "lang_agree": {
-   "baseline": 0,
-   "belegt": 0,
-   "n": 0,
-   "baseline_fmt": "0/0 = 0% [0–0]",
-   "belegt_fmt": "0/0 = 0% [0–0]"
+   "baseline": 4,
+   "belegt": 8,
+   "n": 10,
+   "baseline_fmt": "4/10 = 40% [17–69]",
+   "belegt_fmt": "8/10 = 80% [49–94]"
   }
  },
  "items": [
@@ -360,6 +381,1618 @@
    "raw_wrong": false,
    "model_said_answerable": true,
    "seconds": 42.99
+  },
+  {
+   "id": "q13",
+   "lang": "fr",
+   "set": "core",
+   "of": "q13",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "62"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "62"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 56.41
+  },
+  {
+   "id": "q14",
+   "lang": "fr",
+   "set": "core",
+   "of": "q14",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "12"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "12"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 73.33
+  },
+  {
+   "id": "q15",
+   "lang": "fr",
+   "set": "core",
+   "of": "q15",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "15"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "15"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 53.71
+  },
+  {
+   "id": "q16",
+   "lang": "fr",
+   "set": "core",
+   "of": "q16",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "24"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "12"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 46.14
+  },
+  {
+   "id": "q17",
+   "lang": "fr",
+   "set": "core",
+   "of": "q17",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "10"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "10"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 44.62
+  },
+  {
+   "id": "q18",
+   "lang": "fr",
+   "set": "core",
+   "of": "q18",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "13"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 49.37
+  },
+  {
+   "id": "q19",
+   "lang": "fr",
+   "set": "core",
+   "of": "q19",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "14"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 35.9
+  },
+  {
+   "id": "q20",
+   "lang": "fr",
+   "set": "core",
+   "of": "q20",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "26"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "61"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 54.73
+  },
+  {
+   "id": "q21",
+   "lang": "fr",
+   "set": "core",
+   "of": "q21",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "28"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "28"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 75.57
+  },
+  {
+   "id": "q22",
+   "lang": "fr",
+   "set": "core",
+   "of": "q22",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "3"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "3"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 49.7
+  },
+  {
+   "id": "q23",
+   "lang": "fr",
+   "set": "core",
+   "of": "q23",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "149"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "144"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 39.93
+  },
+  {
+   "id": "q24",
+   "lang": "fr",
+   "set": "core",
+   "of": "q24",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "13"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "13"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 57.98
+  },
+  {
+   "id": "q25",
+   "lang": "fr",
+   "set": "core",
+   "of": "q25",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "80"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 44.22
+  },
+  {
+   "id": "q26",
+   "lang": "fr",
+   "set": "core",
+   "of": "q26",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "33"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "103"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 63.62
+  },
+  {
+   "id": "q27",
+   "lang": "fr",
+   "set": "core",
+   "of": "q27",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "106"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 29.83
+  },
+  {
+   "id": "q28",
+   "lang": "fr",
+   "set": "core",
+   "of": "q28",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "53"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 38.8
+  },
+  {
+   "id": "q29",
+   "lang": "fr",
+   "set": "core",
+   "of": "q29",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "29"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "29"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 50.8
+  },
+  {
+   "id": "q30",
+   "lang": "fr",
+   "set": "core",
+   "of": "q30",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "144"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 29.35
+  },
+  {
+   "id": "t01",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t01",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "30"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 42.56,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t02",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t02",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "36"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 29.6,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t03",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t03",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "3"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 47.0,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t04",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t04",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "30"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 47.12,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t05",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t05",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "117"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 42.43,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t06",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t06",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "4"
+   ],
+   "base_correct": false,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 31.74,
+   "base_trap": "refused"
+  },
+  {
+   "id": "t07",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t07",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [],
+   "base_correct": false,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 39.14,
+   "base_trap": "refused"
+  },
+  {
+   "id": "t08",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t08",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "2"
+   ],
+   "base_correct": false,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 44.86,
+   "base_trap": "refused"
+  },
+  {
+   "id": "t09",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t09",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [],
+   "base_correct": false,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 34.08,
+   "base_trap": "refused"
+  },
+  {
+   "id": "t10",
+   "lang": "fr",
+   "set": "trap",
+   "of": "t10",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "134"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 47.49,
+   "base_trap": "invented"
+  },
+  {
+   "id": "q01-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q01",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "22"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "16"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 64.21
+  },
+  {
+   "id": "q01-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q01",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "22"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "16"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 50.17
+  },
+  {
+   "id": "q01-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q01",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "22"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "16"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 57.08
+  },
+  {
+   "id": "q02-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q02",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "4"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [],
+   "base_correct": false,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 39.96
+  },
+  {
+   "id": "q02-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q02",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "4",
+    "70"
+   ],
+   "b_correct": true,
+   "b_wrong": true,
+   "b_abstain": false,
+   "base_arts": [
+    "4"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 56.17
+  },
+  {
+   "id": "q02-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q02",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "4"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "4"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 42.6
+  },
+  {
+   "id": "q03-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q03",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "136"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "134"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 47.98
+  },
+  {
+   "id": "q03-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q03",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "136"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "34"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 51.95
+  },
+  {
+   "id": "q03-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q03",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "136"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "133"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 68.42
+  },
+  {
+   "id": "q04-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q04",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "10"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "10"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 47.76
+  },
+  {
+   "id": "q04-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q04",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "10"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "10"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 43.59
+  },
+  {
+   "id": "q04-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q04",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "10"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "10"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 60.47
+  },
+  {
+   "id": "q07-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q07",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "139"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "114"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 72.32
+  },
+  {
+   "id": "q07-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q07",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "139"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "100"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 66.82
+  },
+  {
+   "id": "q07-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q07",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "139"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "114"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 104.05
+  },
+  {
+   "id": "q09-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q09",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "104"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 37.24
+  },
+  {
+   "id": "q09-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q09",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "175"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "104"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 41.04
+  },
+  {
+   "id": "q09-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q09",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "175"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "102"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 45.94
+  },
+  {
+   "id": "q12-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q12",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "17"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "16"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 40.54
+  },
+  {
+   "id": "q12-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q12",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "17"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "16"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 39.6
+  },
+  {
+   "id": "q12-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q12",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "17"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "16"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 40.54
+  },
+  {
+   "id": "q15-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "q15",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "15"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "15"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 52.69
+  },
+  {
+   "id": "q15-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "q15",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "15"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "15"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 78.96
+  },
+  {
+   "id": "q15-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "q15",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "15"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "15"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 55.72
+  },
+  {
+   "id": "t01-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "t01",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "103"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 48.76,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t01-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "t01",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "31"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 44.53,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t01-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "t01",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "103"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 44.01,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t10-de",
+   "lang": "de",
+   "set": "parallel",
+   "of": "t10",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "114"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 50.2,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t10-it",
+   "lang": "it",
+   "set": "parallel",
+   "of": "t10",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "26"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 39.55,
+   "base_trap": "invented"
+  },
+  {
+   "id": "t10-rm",
+   "lang": "rm",
+   "set": "parallel",
+   "of": "t10",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "13"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 49.18,
+   "base_trap": "invented"
+  },
+  {
+   "id": "h01",
+   "lang": "fr",
+   "set": "heldout",
+   "of": "h01",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "27"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "27"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 54.85
+  },
+  {
+   "id": "h02",
+   "lang": "de",
+   "set": "heldout",
+   "of": "h02",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "19"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "62"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 49.42
+  },
+  {
+   "id": "h03",
+   "lang": "it",
+   "set": "heldout",
+   "of": "h03",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "82"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "86"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 69.77
+  },
+  {
+   "id": "h04",
+   "lang": "fr",
+   "set": "heldout",
+   "of": "h04",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "56"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "54"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 65.31
+  },
+  {
+   "id": "h05",
+   "lang": "de",
+   "set": "heldout",
+   "of": "h05",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "124"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 39.76
+  },
+  {
+   "id": "h06",
+   "lang": "rm",
+   "set": "heldout",
+   "of": "h06",
+   "trap": false,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "36"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 35.19
+  },
+  {
+   "id": "h07",
+   "lang": "fr",
+   "set": "heldout",
+   "of": "h07",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "196"
+   ],
+   "b_correct": false,
+   "b_wrong": true,
+   "b_abstain": false,
+   "base_arts": [
+    "121"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 1,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 61.3
+  },
+  {
+   "id": "h08",
+   "lang": "it",
+   "set": "heldout",
+   "of": "h08",
+   "trap": false,
+   "b_decision": "answered",
+   "b_arts": [
+    "13"
+   ],
+   "b_correct": true,
+   "b_wrong": false,
+   "b_abstain": false,
+   "base_arts": [
+    "13"
+   ],
+   "base_correct": true,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": true,
+   "seconds": 62.33
+  },
+  {
+   "id": "h09",
+   "lang": "fr",
+   "set": "heldout",
+   "of": "h09",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "32"
+   ],
+   "base_correct": false,
+   "base_wrong": true,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 35.68,
+   "base_trap": "invented"
+  },
+  {
+   "id": "h10",
+   "lang": "de",
+   "set": "heldout",
+   "of": "h10",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [
+    "1"
+   ],
+   "base_correct": false,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 28.42,
+   "base_trap": "refused"
+  },
+  {
+   "id": "h11",
+   "lang": "it",
+   "set": "heldout",
+   "of": "h11",
+   "trap": true,
+   "b_decision": "abstained",
+   "b_arts": [],
+   "b_correct": false,
+   "b_wrong": false,
+   "b_abstain": true,
+   "base_arts": [],
+   "base_correct": false,
+   "base_wrong": false,
+   "rejected": 0,
+   "removed": 0,
+   "raw_wrong": false,
+   "model_said_answerable": false,
+   "seconds": 43.92,
+   "base_trap": "refused"
   }
  ]
 }

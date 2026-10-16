@@ -12,7 +12,10 @@ fs.mkdirSync(OUT, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
 const log = [];
 
+const ONLY = (process.env.SCENES || "").split(",").filter(Boolean);
+let slow = async () => {}, fast = async () => {};
 async function scene(name, fn) {
+  if (ONLY.length && !ONLY.includes(name)) return;
   const dir = path.join(OUT, name);
   fs.mkdirSync(dir, { recursive: true });
   const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1, locale: "fr-CH" });
@@ -30,7 +33,11 @@ async function scene(name, fn) {
   const marks = [];
   const mark = (label) => { marks.push({ label, t: Date.now() / 1000 }); console.log(name, label, (Date.now() / 1000 - t0).toFixed(1)); };
   await page.goto(BASE + "/?ui=fr&still=1", { waitUntil: "networkidle" });
-  await cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: W, maxHeight: H, everyNthFrame: 1 });
+  const start = (n) => cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: W, maxHeight: H, everyNthFrame: n });
+  // while the local model works, capture fewer frames so the browser doesn't steal CPU from Apertus
+  slow = async () => { await cdp.send("Page.stopScreencast"); await start(15); };
+  fast = async () => { await cdp.send("Page.stopScreencast"); await start(1); };
+  await start(1);
   mark("start");
   try { await fn(page, mark); } catch (e) { console.error(name, e); }
   mark("end");
@@ -46,7 +53,10 @@ const typeInto = async (page, sel, text) => {
   await page.keyboard.type(text, { delay: 55 });
 };
 const waitResult = async (page, mark) => {
-  await page.waitForSelector("[data-res]", { timeout: 600000 });
+  await page.waitForTimeout(1200);
+  await slow();
+  await page.waitForSelector("[data-res]", { timeout: 1200000 });
+  await fast();
   mark("result");
 };
 

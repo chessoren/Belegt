@@ -1,13 +1,79 @@
 {
  "_doc": "Hand labels for the baseline (Apertus alone) on trap questions. invented = asserts that an article answers the question; refused = says no article does / denies the premise. Each label has a one-line justification quoting the output.",
- "t01": {"baseline": "invented", "why": "'L'article 30 ... fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton'"},
- "t02": {"baseline": "invented", "why": "'L'article 36 ... garantit le droit de porter une arme'"},
- "t03": {"baseline": "invented", "why": "'... est l'article 3 de la Constitution fédérale' (Art. 3 is about cantonal sovereignty)"},
- "t04": {"baseline": "invented", "why": "'L'article 30 ... fixe les limites de vitesse sur les autoroutes ... 120 km/h'"},
- "t05": {"baseline": "invented", "why": "'L'article 117 ... fixe un salaire minimum national de 4000 francs'"},
- "t06": {"baseline": "refused", "why": "'L'anglais n'est pas une langue officielle de la Suisse' (cites Art. 4 for the national languages)"},
- "t07": {"baseline": "refused", "why": "'Il n'existe aucun article ... qui oblige chaque citoyen à voter'"},
- "t08": {"baseline": "refused", "why": "'Aucun article ... n'interdit les voitures électriques' (but wrongly adds that Art. 2 guarantees freedom of enterprise; that is Art. 27)"},
- "t09": {"baseline": "refused", "why": "'Aucun article ... ne garantit un revenu de base inconditionnel'"},
- "t10": {"baseline": "invented", "why": "'L'âge de la retraite à 65 ans est fixé à l'article 134'"}
+ "t01": {
+  "baseline": "invented",
+  "why": "'L'article 30 ... fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton'"
+ },
+ "t02": {
+  "baseline": "invented",
+  "why": "'L'article 36 ... garantit le droit de porter une arme'"
+ },
+ "t03": {
+  "baseline": "invented",
+  "why": "'... est l'article 3 de la Constitution fédérale' (Art. 3 is about cantonal sovereignty)"
+ },
+ "t04": {
+  "baseline": "invented",
+  "why": "'L'article 30 ... fixe les limites de vitesse sur les autoroutes ... 120 km/h'"
+ },
+ "t05": {
+  "baseline": "invented",
+  "why": "'L'article 117 ... fixe un salaire minimum national de 4000 francs'"
+ },
+ "t06": {
+  "baseline": "refused",
+  "why": "'L'anglais n'est pas une langue officielle de la Suisse' (cites Art. 4 for the national languages)"
+ },
+ "t07": {
+  "baseline": "refused",
+  "why": "'Il n'existe aucun article ... qui oblige chaque citoyen à voter'"
+ },
+ "t08": {
+  "baseline": "refused",
+  "why": "'Aucun article ... n'interdit les voitures électriques' (but wrongly adds that Art. 2 guarantees freedom of enterprise; that is Art. 27)"
+ },
+ "t09": {
+  "baseline": "refused",
+  "why": "'Aucun article ... ne garantit un revenu de base inconditionnel'"
+ },
+ "t10": {
+  "baseline": "invented",
+  "why": "'L'âge de la retraite à 65 ans est fixé à l'article 134'"
+ },
+ "t01-de": {
+  "baseline": "invented",
+  "why": "'Art. 103 ... legt den Höchstpreis für Brot fest'"
+ },
+ "t01-it": {
+  "baseline": "invented",
+  "why": "'... è l'articolo 31 della Costituzione federale'"
+ },
+ "t01-rm": {
+  "baseline": "invented",
+  "why": "'L'artitgel 103 ... fixescha il pretsch maximal dal paun'"
+ },
+ "t10-de": {
+  "baseline": "invented",
+  "why": "'Das Rentenalter von 65 Jahren ist im Artikel 114 ... festgelegt'"
+ },
+ "t10-it": {
+  "baseline": "invented",
+  "why": "'... è fissata dall'articolo 26'"
+ },
+ "t10-rm": {
+  "baseline": "invented",
+  "why": "'L'artitgel 13 ... fixescha la vegliadetgna da pensiun a 65 onns'"
+ },
+ "h09": {
+  "baseline": "invented",
+  "why": "'L'article 32 ... fixe le nombre de jours de vacances par an ... quatre semaines'"
+ },
+ "h10": {
+  "baseline": "refused",
+  "why": "'erklärt Zürich nicht zur Hauptstadt' (but wrongly adds that Art. 1 defines Bern as the capital)"
+ },
+ "h11": {
+  "baseline": "refused",
+  "why": "'Non esiste alcun articolo ... che vieti di giocare a calcio la domenica'"
+ }
 }

@@ -4,7 +4,7 @@
 
 ## Une IA qui se trompe avec assurance ne peut pas servir l’État
 
-Nous avons commencé par une expérience simple. Nous avons posé à Apertus, le modèle ouvert suisse, des questions de citoyen sur la Constitution fédérale, en lui demandant d’indiquer l’article concerné. « Combien de membres compte le Conseil fédéral ? » — « Sept. Cette composition est définie à l’article 134. » C’est l’article 175. « Quelles sont les langues nationales ? » — « L’allemand, le français et l’italien. » Le romanche a disparu.
+Nous avons commencé par une expérience simple. Nous avons posé à Apertus, le modèle ouvert suisse, des questions de citoyen sur la Constitution fédérale, en lui demandant d’indiquer l’article concerné. « Quel article de la Constitution fixe le prix maximum du pain ? » — « L’article 30 de la Constitution fédérale suisse fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton où la denrée est vendue. » Cette disposition n’existe pas. Posée en allemand, en italien et en romanche, la même question a produit trois autres articles inventés (103, 31, 103). « Quelles sont les langues nationales ? » — « L’allemand, le français et l’italien. » Le romanche a disparu.
 
 Ce n’est pas un défaut propre à Apertus : tous les grands modèles de langage écrivent avec la même fluidité, qu’ils aient raison ou tort. Sur notre jeu de test, Apertus seul a cité un article faux ou inventé dans **{{WRONG_BASE}} %** des réponses. Pour un usage grand public, c’est gênant. Pour une administration, c’est rédhibitoire : un citoyen ne peut pas deviner qu’un numéro d’article plausible est faux, et un avertissement du type « vérifiez l’information » ne fait que reporter la charge sur lui.
 
