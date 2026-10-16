@@ -63,7 +63,7 @@ def md(text):
 dev = (ROOT / "docs" / "devpost.md").read_text()
 story = dev.split("## About the project (Devpost story — Markdown)")[1].split("## For judges and organisers")[0]
 judges = dev.split("## For judges and organisers (Additional info — not public)")[1]
-essai = (ROOT / "docs" / "essai-fr.md").read_text()
+essai = (ROOT / "docs" / "essay-en.md").read_text()
 tagline = re.search(r"## Tagline.*?\n\n\*\*(.+?)\*\*", dev, re.S).group(1)
 tags = re.search(r"## 25 tags.*?\n\n(.+?)\n", dev, re.S).group(1)
 M = S["metrics"]
@@ -109,7 +109,7 @@ blockquote {{ margin: 8pt 0; padding: 6pt 10pt; border-left: 2pt solid #da291c; 
 </section>
 <h1>About the project</h1>
 {md(story)}
-<div class="shots"><img src="../img/answer_fr.png"><img src="../img/answer_rm.png"><img src="../img/refusal.png"><img src="../img/receipt.png"></div>
+<div class="shots"><img src="../img/answer_en.png"><img src="../img/answer_rm.png"><img src="../img/refusal.png"><img src="../img/receipt.png"></div>
 <section class="pb"><h1>For judges and organisers</h1>{md(judges)}</section>
 <section class="pb">{md(essai)}</section>
 </body></html>"""

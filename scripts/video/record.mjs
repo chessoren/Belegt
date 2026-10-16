@@ -5,6 +5,18 @@ import fs from "node:fs";
 import path from "node:path";
 
 const OUT = process.argv[2] || "video-frames";
+const UI = process.env.UI || "fr";
+const Q = UI === "en" ? {
+  fr: "Do I have the right to demonstrate in the street?",
+  rm: "Hai jau il dretg da demonstrar sin via?",
+  de: "Wie viele Unterschriften braucht eine Volksinitiative?",
+  trap: "Which article of the Swiss Constitution sets the maximum price of bread?",
+} : {
+  fr: "Ai-je le droit de manifester dans la rue ?",
+  rm: "Hai jau il dretg da demonstrar sin via?",
+  de: "Wie viele Unterschriften braucht eine Volksinitiative?",
+  trap: "Quel article de la Constitution fixe le prix maximum du pain ?",
+};
 const BASE = process.env.BELEGT_URL || "http://127.0.0.1:8080";
 const W = 1920, H = 1080;
 fs.mkdirSync(OUT, { recursive: true });
@@ -18,7 +30,7 @@ async function scene(name, fn) {
   if (ONLY.length && !ONLY.includes(name)) return;
   const dir = path.join(OUT, name);
   fs.mkdirSync(dir, { recursive: true });
-  const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1, locale: "fr-CH" });
+  const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1, locale: UI === "en" ? "en-GB" : "fr-CH" });
   const page = await ctx.newPage();
   const cdp = await ctx.newCDPSession(page);
   const frames = [];
@@ -32,7 +44,9 @@ async function scene(name, fn) {
   const t0 = Date.now() / 1000;
   const marks = [];
   const mark = (label) => { marks.push({ label, t: Date.now() / 1000 }); console.log(name, label, (Date.now() / 1000 - t0).toFixed(1)); };
-  await page.goto(BASE + "/?ui=fr&still=1", { waitUntil: "networkidle" });
+  await page.goto(BASE + `/?ui=${UI}&still=1`, { waitUntil: "networkidle" });
+  // question scenes: no CSS animation (the spinner would make the browser steal CPU from Apertus)
+  if (name !== "a_landing") await page.emulateMedia({ reducedMotion: "reduce" });
   const start = (n) => cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: W, maxHeight: H, everyNthFrame: n });
   // while the local model works, capture fewer frames so the browser doesn't steal CPU from Apertus
   slow = async () => { await cdp.send("Page.stopScreencast"); await start(15); };
@@ -78,7 +92,7 @@ await scene("a_landing", async (page, mark) => {
 await scene("b_fr", async (page, mark) => {
   await page.waitForTimeout(800);
   mark("type");
-  await typeInto(page, "#q-hero", "Ai-je le droit de manifester dans la rue ?");
+  await typeInto(page, "#q-hero", Q.fr);
   await page.waitForTimeout(500);
   mark("submit");
   await page.keyboard.press("Enter");
@@ -97,7 +111,7 @@ await scene("b_fr", async (page, mark) => {
 await scene("c_rm", async (page, mark) => {
   await page.waitForTimeout(600);
   mark("type");
-  await typeInto(page, "#q-hero", "Hai jau il dretg da demonstrar sin via?");
+  await typeInto(page, "#q-hero", Q.rm);
   await page.waitForTimeout(400);
   mark("submit");
   await page.keyboard.press("Enter");
@@ -113,7 +127,7 @@ await scene("d_net", async (page, mark) => {
   await page.click(".site-header [data-net]"); await page.waitForTimeout(5000);
   await page.keyboard.press("Escape"); await page.waitForTimeout(600);
   mark("type");
-  await typeInto(page, "#q-hero", "Wie viele Unterschriften braucht eine Volksinitiative?");
+  await typeInto(page, "#q-hero", Q.de);
   mark("submit");
   await page.keyboard.press("Enter");
   await waitResult(page, mark);
@@ -124,7 +138,7 @@ await scene("d_net", async (page, mark) => {
 await scene("e_trap", async (page, mark) => {
   await page.waitForTimeout(600);
   mark("type");
-  await typeInto(page, "#q-hero", "Quel article de la Constitution fixe le prix maximum du pain ?");
+  await typeInto(page, "#q-hero", Q.trap);
   mark("submit");
   await page.keyboard.press("Enter");
   await waitResult(page, mark);

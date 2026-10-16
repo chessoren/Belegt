@@ -39,7 +39,7 @@ def main():
         if only and line["id"] not in only:
             continue
         mp3 = out / f"{line['id']}.mp3"
-        tts(line["fr"], mp3)
+        tts(line.get("text") or line["fr"], mp3)
         line["duration"] = round(duration(mp3), 2)
         print(line["id"], line["duration"], "s")
     (out / "durations.json").write_text(json.dumps({l["id"]: l.get("duration") for l in script["lines"]}, indent=1))

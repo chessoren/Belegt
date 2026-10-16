@@ -7,12 +7,9 @@
   const LANGS = ["de", "fr", "it", "rm"];
 
   /* ------------------------------------------------------------ i18n */
-  const guess = () => {
-    const n = (navigator.language || "fr").slice(0, 2);
-    return ["de", "fr", "it", "rm", "en"].includes(n) ? n : "fr";
-  };
+  const guess = () => "en"; // default interface language: English (switch with the FR/DE/IT/RM selector)
   let ui = params.get("ui") || (() => { try { return localStorage.getItem("belegt.ui"); } catch { return null; } })() || guess();
-  if (!I18N[ui]) ui = "fr";
+  if (!I18N[ui]) ui = "en";
   const t = (k, vars = {}) => {
     let s = (I18N[ui] && I18N[ui][k]) ?? I18N.fr[k] ?? k;
     for (const [a, b] of Object.entries(vars)) s = s.replaceAll(`{${a}}`, b);
@@ -71,11 +68,11 @@
   };
 
   const CHIPS = [
-    ["FR", "Ai-je le droit de manifester dans la rue ?"],
+    ["EN", "Do I have the right to demonstrate in the street?"],
     ["RM", "Hai jau il dretg da demonstrar sin via?"],
     ["DE", "Wie viele Unterschriften braucht eine Volksinitiative?"],
-    ["IT", "La pena di morte è ammessa in Svizzera?"],
-    ["FR", "Quel article de la Constitution fixe le prix maximum du pain ?"],
+    ["FR", "Ai-je le droit de manifester dans la rue ?"],
+    ["EN", "Which article of the Swiss Constitution sets the maximum price of bread?"],
   ];
   $("[data-chips]").innerHTML = CHIPS.map(([l, q]) => `<button class="chip" type="button" data-ask="${esc(q)}"><b>${l}</b>${esc(q)}</button>`).join("");
 

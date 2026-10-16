@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Belegt video cards</title>
+<link rel="stylesheet" href="../deck/deck.css">
+<style>
+  body { background: #fff; margin: 0; }
+  .card16 { width: 1920px; height: 1080px; position: relative; overflow: hidden; background: #fff; display: flex; flex-direction: column; justify-content: center; padding: 0 150px; }
+  .term { background: #12090a; color: #f1e9e7; border-radius: 36px; padding: 44px 52px; font-family: var(--font-mono); font-size: 27px; line-height: 1.55; box-shadow: 0 30px 80px #1c020433; white-space: pre-wrap; }
+  .term .p { color: #ff6b5e; } .term .ok { color: #7ee2a0; } .term .dim { color: #ffffff80; }
+  .ex { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 54px; }
+  .ex .card { padding: 44px 48px; }
+  .ex .q { font-size: 24px; color: var(--color-text-secondary); }
+  .ex .a { font-family: var(--font-display); font-size: 38px; line-height: 1.25; margin-top: 18px; letter-spacing: -.02em; }
+  .ex .tr { margin-top: 10px; font-size: 22px; color: var(--color-text-secondary); font-style: italic; }
+  .ex .v { margin-top: 24px; font-size: 26px; }
+</style></head><body>
+
+<section class="card16" id="problem">
+  <div class="kicker" style="font-size:22px">Apertus 1.5 8B asked on its own · real output</div>
+  <div class="serif" style="font-size:84px;line-height:1.02;margin-top:18px;letter-spacing:-.035em">Fluent. Plausible. Wrong.</div>
+  <div class="ex">
+    <div class="card line"><div class="q">“Which article of the Constitution sets the maximum price of bread?” <i style="color:var(--color-text-tertiary)">(asked in French)</i></div>
+      <div class="a" data-ex1>…</div><div class="tr" data-tr1></div>
+      <div class="v"><span class="chip bad" style="height:38px;font-size:20px">✗ invented</span>&nbsp; No such provision exists.</div></div>
+    <div class="card line"><div class="q">“What are the national languages of Switzerland?” <i style="color:var(--color-text-tertiary)">(asked in French)</i></div>
+      <div class="a" data-ex2>…</div><div class="tr" data-tr2></div>
+      <div class="v"><span class="chip bad" style="height:38px;font-size:20px">✗ incomplete</span>&nbsp; Romansh is forgotten (Art. 4).</div></div>
+  </div>
+</section>
+
+<section class="card16" id="terminal">
+  <div class="kicker" style="font-size:22px">Proof · isolated Linux network namespace</div>
+  <div class="serif" style="font-size:72px;margin:16px 0 40px;letter-spacing:-.035em">No route to the outside world.</div>
+  <div class="term" data-term></div>
+</section>
+
+<section class="card16" id="end" style="align-items:center;text-align:center">
+  <span class="mark" style="width:96px;height:96px;border-radius:22px"><svg viewBox="0 0 18 18" style="width:64px;height:64px"><path d="M3.2 5.2 0.8 9l2.4 3.8M7.2 5.2 4.8 9l2.4 3.8M10.8 5.2 13.2 9l-2.4 3.8M14.8 5.2 17.2 9l-2.4 3.8" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  <div class="serif" style="font-size:260px;line-height:.9;letter-spacing:-.06em;margin-top:30px">Belegt<span style="color:var(--color-swiss)">.</span></div>
+  <div class="serif" style="font-size:64px;margin-top:30px">Prove it, or stay silent.</div>
+  <div style="font-size:26px;color:var(--color-text-secondary);margin-top:36px">Apertus 1.5 · llama.cpp · Fedlex · Apache-2.0 &nbsp;·&nbsp; Hack Apertus 2026 · Track 2B &nbsp;·&nbsp; github.com/chessoren/swiss</div>
+</section>
+
+<script>
+  const P = new URLSearchParams(location.search);
+  document.querySelector('[data-ex1]').textContent = '« ' + (P.get('ex1') || '') + ' »';
+  document.querySelector('[data-ex2]').textContent = '« ' + (P.get('ex2') || '') + ' »';
+  document.querySelector('[data-tr1]').textContent = P.get('tr1') || '';
+  document.querySelector('[data-tr2]').textContent = P.get('tr2') || '';
+  document.querySelector('[data-term]').innerHTML = P.get('term') || '';
+</script>
+</body></html>

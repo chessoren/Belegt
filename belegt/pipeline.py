@@ -47,6 +47,19 @@ UNDERSTAND_SYS = (
     "Never answer the question. Output compact JSON only."
 )
 
+# English is not an official language of the Confederation: an English question is
+# translated faithfully into the four official languages (plus the Constitution's
+# own legal terms) and answered in English with quotes from the official French text.
+# This path is a convenience for international readers and is not part of the evaluation.
+UNDERSTAND_SYS_EN = (
+    "You prepare search queries for the Swiss Federal Constitution. The citizen's question is in English. "
+    "For each official language (German de, French fr, Italian it, Romansh rm) write a faithful translation of the "
+    "question followed by the legal terms the Constitution itself would use "
+    "(e.g. 'demonstrate in the street' -> 'manifester dans la rue, liberté de réunion'). "
+    "Also give up to 6 legal keywords in French. Do not write 'article' or 'Art.'. Never answer the question. "
+    "Output compact JSON only."
+)
+
 ANSWER_SCHEMA = {
     "type": "object",
     "properties": {
@@ -100,9 +113,10 @@ class Belegt:
         self.network_state = network_state
 
     # ---------------------------------------------------------------- steps
-    def understand(self, question: str) -> dict:
+    def understand(self, question: str, q_lang: str = "") -> dict:
+        system = UNDERSTAND_SYS_EN if q_lang == "en" else UNDERSTAND_SYS
         r = llm.chat(
-            [{"role": "system", "content": UNDERSTAND_SYS}, {"role": "user", "content": question}],
+            [{"role": "system", "content": system}, {"role": "user", "content": question}],
             schema=UNDERSTAND_SCHEMA, max_tokens=260,
         )
         try:
@@ -116,8 +130,8 @@ class Belegt:
         queries = {}
         for l in LANGS:
             q = understood["queries"].get(l, "")
-            if l == q_lang:
-                q = question + " " + q + " " + " ".join(understood.get("keywords", []))
+            if l == q_lang or (q_lang == "en" and l == "fr"):
+                q = (question if l == q_lang else "") + " " + q + " " + " ".join(understood.get("keywords", []))
             queries[l] = q.strip() or question
         return self.retriever.search(queries, k=20)
 
@@ -178,7 +192,7 @@ class Belegt:
         yield {"type": "step", "step": "detect", "status": "done", "lang": q_lang}
 
         yield {"type": "step", "step": "understand", "status": "start"}
-        und = self.understand(question)
+        und = self.understand(question, q_lang)
         yield {"type": "step", "step": "understand", "status": "done", "seconds": und["seconds"],
                "queries": und["queries"], "keywords": und["keywords"]}
 

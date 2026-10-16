@@ -80,12 +80,13 @@ r = re.sub(r"<!-- RESULTS:START -->.*<!-- RESULTS:END -->", lambda m: block, r, 
 readme.write_text(r)
 
 # video numbers line
-sp = ROOT / "docs" / "video" / "script.json"
-s = json.loads(sp.read_text())
+sp = ROOT / "docs" / "video" / "fr" / "script-fr-extended.json"
+s = json.loads(sp.read_text()) if sp.exists() else {"lines": []}
 for line in s["lines"]:
     if line["id"] == "l10":
         line["fr"] = fill("Même modèle, mêmes questions. Seul, Apertus cite un article faux ou inventé dans {{WRONG_BASE}} pour cent des cas. Avec Bélèkt, {{WRONG_BELEGT}} pour cent. Et il refuse {{TRAP_K}} pièges sur {{TRAP_N}}. Mesuré, ouvert, réutilisable.")
         line["sub_fr"] = fill("Même modèle, mêmes questions. Article faux ou inventé : {{WRONG_BASE}} % seul, {{WRONG_BELEGT}} % avec Belegt. Pièges refusés : {{TRAP_K}}/{{TRAP_N}}.")
         line["sub_en"] = fill("Same model, same questions. Wrong or invented article: {{WRONG_BASE}}% alone, {{WRONG_BELEGT}}% with Belegt. Traps refused: {{TRAP_K}}/{{TRAP_N}}.")
-sp.write_text(json.dumps(s, ensure_ascii=False, indent=1))
+if sp.exists():
+    sp.write_text(json.dumps(s, ensure_ascii=False, indent=1))
 print(json.dumps({k: V[k] for k in ("WRONG_BASE", "WRONG_BELEGT", "TRAP_K", "TRAP_N", "LANG_BASE", "LANG_BELEGT")}))

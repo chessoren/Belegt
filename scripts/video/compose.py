@@ -148,7 +148,7 @@ def main():
                     factor = q[6] / max(0.01, tb - ta)
                 badge = None
                 if factor < 0.6:
-                    badge = f"accéléré ×{round(1 / factor)}"
+                    badge = (os.environ.get("BADGE", "accéléré ×{n}")).format(n=round(1 / factor))
                 render_frames(fr, ta, tb, factor, out, badge)
             clips.append(out)
         events.append({"start": t + 0.35, "lines": line_ids})
@@ -192,9 +192,12 @@ def main():
         for lid, a, b in ev["timing"]:
             L = LINES[lid]
             nb = lambda x: x.replace(" :", "\u00a0:").replace(" ?", "\u00a0?").replace(" !", "\u00a0!").replace("« ", "«\u00a0").replace(" »", "\u00a0»")
-            txt = nb(L["sub_fr"]) + r"\N{\fs29\c&HD6DCFF&\i1}" + L["sub_en"]
+            if "sub" in L:
+                txt = L["sub"]
+            else:
+                txt = nb(L["sub_fr"]) + r"\N{\fs29\c&HD6DCFF&\i1}" + L["sub_en"]
             ass.append(f"Dialogue: 0,{ts(a)},{ts(b + 0.2)},Sub,,0,0,0,,{txt}")
-            srt.append(f"{n}\n{srt_ts(a)} --> {srt_ts(b + 0.2)}\n{L['sub_fr']}\n{L['sub_en']}\n"); n += 1
+            srt.append(f"{n}\n{srt_ts(a)} --> {srt_ts(b + 0.2)}\n" + (L["sub"] if "sub" in L else f"{L['sub_fr']}\n{L['sub_en']}") + "\n"); n += 1
     (TMP / "subs.ass").write_text("\n".join(ass) + "\n")
     OUT.with_suffix(".srt").write_text("\n".join(srt))
 

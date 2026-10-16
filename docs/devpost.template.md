@@ -31,11 +31,11 @@ AI assistants answer with confidence even when they are wrong. On our test set, 
 
 ## Video demo
 
-- Main cut: `docs/video/Belegt-demo.mp4` ({{VIDEO_LEN}}) — French voice-over (Oren, Fish Audio s2.1-pro-free), burned-in FR + EN subtitles (`.srt` alongside).
-- Extended cut: `docs/video/Belegt-demo-extended.mp4` (≈ 2:00) with more explanation.
+- Main cut: `docs/video/Belegt-demo.mp4` ({{VIDEO_LEN}}) — English voice-over (Oren, Fish Audio s2.1-pro-free), burned-in English subtitles (`.srt` alongside).
+- Also available: a French-voiced cut with FR + EN subtitles (`docs/video/fr/`).
 - Upload to YouTube/Vimeo (unlisted) and paste the link.
 
-Suggested video description: *All app footage is the real application, recorded live inside a Linux network namespace with no route out (routing table empty, 0 outbound connections shown in the header). The local model's thinking time is time-lapsed and marked “accéléré ×N” on screen; screen recording slowed the CPU, the measured median latency without recording is {{LAT}} s per answer on 4 cores. The opening examples are real outputs of Apertus 1.5 8B asked alone (eval items t01 and q02).*
+Suggested video description: *All app footage is the real application, recorded live inside a Linux network namespace with no route out (routing table empty, 0 outbound connections shown in the header). The local model's thinking time is time-lapsed and marked “time-lapse ×N” on screen; screen recording slowed the CPU, the measured median latency without recording is {{LAT}} s per answer on 4 cores. The opening examples are real outputs of Apertus 1.5 8B asked alone (eval items t01 and q02, asked in French; English translation on screen).*
 
 ## Try it out / links
 
@@ -64,6 +64,7 @@ Belegt (German for *substantiated*) answers questions about the Swiss Federal Co
 - **Honest.** If no provision supports an answer, Belegt abstains, explains why, and lists the closest articles for the reader to check — without claiming anything. *“Which article sets the maximum price of bread?”* → none, and it says so.
 - **One law, four languages.** Ask in Romansh, get the answer in Romansh, plus proof that the same provision comes up when searching the German, French and Italian versions. Divergences are flagged instead of silently resolved.
 - **A receipt for every answer.** Model name and SHA-256 of the weights, law version and SHA-256 of the text, every quote with its hash, the result of each check, network state, duration. Downloadable, printable, fileable by a legal or compliance team.
+- **English welcome.** English is not an official language of the Confederation, so an English question gets an English answer with quotes from the official French text.
 - **Sovereign, demonstrated.** Apertus runs on the machine (llama.cpp, CPU). Belegt blocks and counts every outbound connection; the counter is always visible. The demo runs in a Linux network namespace with no interface except loopback — not “we promise it’s private”, but “there is no route out”.
 
 What it is not: a legal adviser. It helps people find and read the official text.
@@ -129,4 +130,5 @@ Apertus is good at understanding a question and rephrasing it in four languages,
 - **Offline proof:** `sudo scripts/offline_demo.sh` starts llama.cpp and Belegt in a fresh network namespace (loopback only) and prints the routing table and a failed request to fedlex.admin.ch before serving.
 - **Reproduce the numbers:** `python eval/run_eval.py && python eval/score.py` (≈ 75 s per item on 4 CPU cores). Baseline trap answers were labelled by hand in `eval/manual_labels.json` with a one-line justification each.
 - **Honesty notes:** the verifier proves quotes exist, not that the paraphrase is right. Romansh questions were written by the team, not by native speakers. The design reproduces America.gov’s *structure*; no asset of that site is used, the Swiss coat of arms is not used, and the prototype is clearly labelled as unofficial.
-- **File to upload:** `docs/submission/Belegt-submission.pdf` (or the zip `docs/submission/Belegt-submission.zip` with PDF + deck + video).
+- **File to upload:** `docs/submission/Belegt-submission.zip` (submission PDF + deck PDF and PNGs + 90 s video + subtitles + Devpost kit + essay + evaluation report), or the PDF alone: `docs/submission/Belegt-submission.pdf`.
+- **Essay:** `docs/essay-en.md` (a French version is kept in `docs/essai-fr.md`).

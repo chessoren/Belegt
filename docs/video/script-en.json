@@ -1,0 +1,72 @@
+{
+ "voice": "Oren (Fish Audio, model s2.1-pro-free, English)",
+ "note": "English 90-second cut. 'text' is sent to TTS ('Beleckt' is a pronunciation hint for 'Belegt'); 'sub' is the burned-in subtitle.",
+ "lines": [
+  {
+   "id": "l01",
+   "scene": "s_problem",
+   "text": "This is what an AI does when it doesn't know: it makes things up, with total confidence.",
+   "sub": "This is what an AI does when it doesn't know: it makes things up, with total confidence."
+  },
+  {
+   "id": "l02",
+   "scene": "s_problem",
+   "text": "Even Apertus, the Swiss model, asked on its own: “Article 30 sets the maximum price of bread.” That article doesn't exist.",
+   "sub": "Even Apertus, asked on its own: “Article 30 sets the maximum price of bread.” That article doesn't exist."
+  },
+  {
+   "id": "l03",
+   "scene": "s_rule",
+   "text": "Beleckt is built on Apertus, the open Swiss AI. Its rule fits in three words: cite, or stay silent.",
+   "sub": "Belegt is built on Apertus, the open Swiss AI. Its rule fits in three words: cite, or stay silent."
+  },
+  {
+   "id": "l04",
+   "scene": "s_fr",
+   "text": "First question: the right to demonstrate. Apertus reads it and rephrases it in four languages. Then plain code, with no AI, checks every quote, word for word.",
+   "sub": "First question: the right to demonstrate. Apertus reads it and rephrases it in four languages. Then plain code, with no AI, checks every quote, word for word."
+  },
+  {
+   "id": "l05",
+   "scene": "s_fr_evidence",
+   "text": "One click: the sentence, highlighted in the official text. In German, in Romansh: the same provision.",
+   "sub": "One click: the sentence, highlighted in the official text. In German, in Romansh: the same provision."
+  },
+  {
+   "id": "l06",
+   "scene": "s_rm",
+   "text": "The same question in Romansh. Beleckt answers in Romansh, and all four official versions lead to the same article. Four languages, one law.",
+   "sub": "The same question in Romansh. Belegt answers in Romansh, and all four official versions lead to the same article. Four languages, one law."
+  },
+  {
+   "id": "l07",
+   "scene": "s_net",
+   "text": "No foreign service: this whole demo runs in an isolated network, with zero outbound connections. And the answer still arrives.",
+   "sub": "No foreign service: this whole demo runs in an isolated network, with zero outbound connections. And the answer still arrives."
+  },
+  {
+   "id": "l08",
+   "scene": "s_trap",
+   "text": "Now a trap: which article sets the maximum price of bread? None does. Beleckt says so, and claims nothing.",
+   "sub": "Now a trap: which article sets the maximum price of bread? None does. Belegt says so, and claims nothing."
+  },
+  {
+   "id": "l09",
+   "scene": "s_receipt",
+   "text": "Every answer comes with a receipt: model, law version, evidence, checks.",
+   "sub": "Every answer comes with a receipt: model, law version, evidence, checks."
+  },
+  {
+   "id": "l10",
+   "scene": "s_numbers",
+   "text": "Same model, same questions. Wrong or invented articles: 59 percent alone, 5 percent with Beleckt. 19 traps out of 19 refused.",
+   "sub": "Same model, same questions. Wrong or invented articles: 59% alone, 5% with Belegt. Traps refused: 19/19."
+  },
+  {
+   "id": "l11",
+   "scene": "s_end",
+   "text": "This is Beleckt. Prove it, or stay silent.",
+   "sub": "This is Belegt. Prove it, or stay silent."
+  }
+ ]
+}

@@ -48,7 +48,7 @@ add(f"""
   <div><div class="serif" style="font-size:250px;line-height:.85;letter-spacing:-.06em">Belegt<span style="color:var(--color-swiss)">.</span></div>
   <div class="serif" style="font-size:54px;margin-top:34px;letter-spacing:-.03em">Cite, or stay silent.</div>
   <p class="lead" style="margin-top:18px">A Swiss-law assistant built on <b>Apertus</b> that answers only when it can prove every claim with the official text — in German, French, Italian and Romansh, fully offline.</p></div>
-  <div class="shot" style="transform:rotate(1.5deg)"><img src="../img/answer_fr.png" style="height:640px;object-fit:cover;object-position:top"></div>
+  <div class="shot" style="transform:rotate(1.5deg)"><img src="../img/answer_en.png" style="height:640px;object-fit:cover;object-position:top"></div>
 </div>""")
 
 # 2 — problem, with real outputs of Apertus alone
@@ -56,11 +56,13 @@ add(f"""
 <span class="kicker">The problem</span>
 <h2>A confident wrong answer cannot serve the state.</h2>
 <div class="grid2" style="margin-top:40px">
-  <div class="card line"><div class="muted" style="font-size:18px">Apertus 1.5 8B asked alone: “Which article sets the maximum price of bread?” — real output</div>
+  <div class="card line"><div class="muted" style="font-size:18px">Apertus 1.5 8B asked alone (in French): “Which article sets the maximum price of bread?” — real output</div>
     <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«L’<s>article 30</s> de la Constitution fédérale suisse fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton…»</p>
+    <p class="muted" style="margin:10px 0 0;font-size:18px;font-style:italic">“Article 30 of the Swiss Federal Constitution sets the maximum price of bread. This price must not exceed the average price of bread in the canton…”</p>
     <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ invented</span>&nbsp; No such provision. In DE/IT/RM: Art. 103, 31, 103.</p></div>
-  <div class="card line"><div class="muted" style="font-size:18px">Same model: “What are the national languages?” — real output</div>
+  <div class="card line"><div class="muted" style="font-size:18px">Same model (in French): “What are the national languages?” — real output</div>
     <p class="quote" style="margin:14px 0 0;color:var(--color-text-primary)">«Les langues nationales de la Suisse sont l’allemand, le français et l’italien.»</p>
+    <p class="muted" style="margin:10px 0 0;font-size:18px;font-style:italic">“The national languages of Switzerland are German, French and Italian.”</p>
     <p style="margin-top:16px;font-size:20px"><span class="chip bad">✗ incomplete</span>&nbsp; Romansh is forgotten (Art. 4).</p></div>
 </div>
 <div class="grid3" style="margin-top:28px">
@@ -105,10 +107,10 @@ add("""
 # 5 — scene 1
 add("""
 <div class="grid2" style="grid-template-columns:.8fr 1.2fr;gap:56px;flex:1;align-items:center">
-  <div><span class="kicker">Scene 1 · the clear question</span><h2 style="font-size:56px">“Can I demonstrate in the street?”</h2>
-  <p class="lead" style="font-size:23px">A short answer, and next to it the exact sentences of Art. 22, found word for word in the official text. One click opens the article with the sentence highlighted.</p>
+  <div><span class="kicker">Scene 1 · the clear question</span><h2 style="font-size:56px">“Do I have the right to demonstrate in the street?”</h2>
+  <p class="lead" style="font-size:23px">A short answer, and next to it the exact sentences of Art. 22, found word for word in the official text (English is not an official language, so quotes come from the official French version). One click opens the article in DE, FR, IT or RM.</p>
   <p class="lead" style="font-size:23px">Sentences that rephrase instead of quoting are <span style="text-decoration:underline dotted;text-underline-offset:5px">dotted-underlined</span>.</p></div>
-  <div class="shot"><img src="../img/answer_fr.png" style="height:800px;object-fit:cover;object-position:top"></div>
+  <div class="shot"><img src="../img/answer_en.png" style="height:800px;object-fit:cover;object-position:top"></div>
 </div>""")
 
 # 6 — scene 2 romansh
@@ -222,7 +224,7 @@ add(f"""
     <div><div class="kicker">Code & data</div><p class="lead" style="font-size:22px;margin-top:8px">github.com/chessoren/swiss<br>Apache-2.0</p></div>
     <div><div class="kicker">Built with</div><p class="lead" style="font-size:22px;margin-top:8px">Apertus 1.5 8B · llama.cpp · Fedlex · Python stdlib</p></div>
   </div>
-  <div class="serif" style="font-size:44px;margin-top:70px">Prouver, ou se taire. <span class="muted">— Cite, or stay silent.</span></div>
+  <div class="serif" style="font-size:44px;margin-top:70px">Prove it, or stay silent.</div>
 </div>""")
 
 html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Belegt — deck</title>

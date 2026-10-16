@@ -36,11 +36,11 @@ Median latency 49.2 s per answer on 4 CPU cores. 95% Wilson intervals.
 
 | | |
 |---|---|
-| Demo video, 90 s (FR voice by Oren via Fish Audio, FR + EN subtitles) | [`docs/video/Belegt-demo.mp4`](docs/video/Belegt-demo.mp4) · [`.srt`](docs/video/Belegt-demo.srt) · script [`script-90s.json`](docs/video/script-90s.json) · extended 2-min cut [`Belegt-demo-extended.mp4`](docs/video/Belegt-demo-extended.mp4) |
+| Demo video, 90 s (English voice by Oren via Fish Audio, English subtitles) | [`docs/video/Belegt-demo.mp4`](docs/video/Belegt-demo.mp4) · [`.srt`](docs/video/Belegt-demo.srt) · script [`script-en.json`](docs/video/script-en.json) · French-voiced cuts in [`docs/video/fr/`](docs/video/fr/) |
 | Slide deck, 3:2 images (2400×1600) + PDF | [`docs/deck/png/`](docs/deck/png/) · [`docs/deck/Belegt-deck.pdf`](docs/deck/Belegt-deck.pdf) |
 | Submission PDF (A4) | [`docs/submission/Belegt-submission.pdf`](docs/submission/Belegt-submission.pdf) |
 | Devpost kit: title, tagline, 25 tags, story, judges’ notes | [`docs/devpost.md`](docs/devpost.md) |
-| Essay (French) | [`docs/essai-fr.md`](docs/essai-fr.md) |
+| Essay | [`docs/essay-en.md`](docs/essay-en.md) (French version: [`docs/essai-fr.md`](docs/essai-fr.md)) |
 | Design system notes | [`docs/design-system.md`](docs/design-system.md) |
 
 All numbers in these documents are filled in by `scripts/fill_numbers.py` from `eval/summary.json`; nothing is typed by hand.
