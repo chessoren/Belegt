@@ -1,0 +1,38 @@
+[
+ {
+  "name": "bread_en",
+  "q": "Which article of the Swiss Constitution sets the maximum price of bread?",
+  "lang": "en",
+  "decision": "abstained"
+ },
+ {
+  "name": "demonstrate_en",
+  "q": "Do I have the right to demonstrate in the street?",
+  "lang": "en",
+  "decision": "answered"
+ },
+ {
+  "name": "langues",
+  "q": "Quelles sont les langues nationales de la Suisse ?",
+  "lang": "fr",
+  "decision": "answered"
+ },
+ {
+  "name": "manifester",
+  "q": "Ai-je le droit de manifester dans la rue ?",
+  "lang": "fr",
+  "decision": "answered"
+ },
+ {
+  "name": "pain",
+  "q": "Quel article de la Constitution fixe le prix maximum du pain ?",
+  "lang": "fr",
+  "decision": "abstained"
+ },
+ {
+  "name": "romanche",
+  "q": "Hai jau il dretg da demonstrar sin via?",
+  "lang": "rm",
+  "decision": "answered"
+ }
+]

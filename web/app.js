@@ -4,6 +4,7 @@
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const params = new URLSearchParams(location.search);
+  const STATIC = !!window.BELEGT_STATIC;
   const LANGS = ["de", "fr", "it", "rm"];
 
   /* ------------------------------------------------------------ i18n */
@@ -91,12 +92,13 @@
   let status = null;
   async function pollStatus() {
     try {
-      const r = await fetch("/api/status", { cache: "no-store" });
+      const r = await fetch(STATIC ? "/data/status.json" : "/api/status", { cache: "no-store" });
       status = await r.json(); net = status.network;
     } catch { net = null; }
     renderNet();
+    if (STATIC) $$("[data-net]").forEach((pill) => { pill.dataset.offline = "false"; $("[data-net-label]", pill).textContent = "Static demo"; $("[data-net-count]", pill).textContent = "· replays of real offline runs"; });
   }
-  pollStatus(); setInterval(pollStatus, 2500);
+  pollStatus(); if (!STATIC) setInterval(pollStatus, 2500);
 
   /* ------------------------------------------------------- mini chart */
   let summary = null;
@@ -196,7 +198,7 @@
     lang = LANGS.includes(lang) ? lang : (LANGS.includes(ui) ? ui : "fr");
     let data = artCache[article];
     if (!data) {
-      try { data = artCache[article] = await (await fetch(`/api/article?id=${encodeURIComponent(article)}`)).json(); }
+      try { data = artCache[article] = await (await fetch(STATIC ? `/data/articles/${encodeURIComponent(article)}.json` : `/api/article?id=${encodeURIComponent(article)}`)).json(); }
       catch { return; }
     }
     const render = (l) => {
@@ -332,6 +334,15 @@
     };
     try {
       if (params.get("replay")) await replay(params.get("replay"), question, handle);
+      else if (STATIC) {
+        const idx = await (await fetch("/data/replays/index.json")).json();
+        const key = question.trim().toLowerCase();
+        const hit = idx.find((r) => r.q.trim().toLowerCase() === key);
+        if (hit) await replay(hit.name, question, handle, 8);
+        else {
+          bot.innerHTML = `<div class="refusal"><h3>Static demo</h3><p>This public page replays real answers that Belegt produced offline with Apertus on a local machine. Live questions need the local model: run <code>scripts/start.sh</code> (see the README). Try one of these recorded questions:</p><div class="near-list">${idx.map((r) => `<button class="near" type="button" data-ask="${esc(r.q)}"><b>${esc(r.lang.toUpperCase())}</b><span>${esc(r.q)}</span></button>`).join("")}</div></div>`;
+        }
+      }
       else await stream(question, handle);
     } catch (e) {
       handle({ type: "error", message: String(e) });
@@ -359,9 +370,9 @@
   }
 
   /* Replays a recorded real run (web/data/replays/<name>.json); used for docs screenshots. */
-  async function replay(name, question, onEvent) {
+  async function replay(name, question, onEvent, defaultSpeed = 20) {
     const evs = await (await fetch(`/data/replays/${encodeURIComponent(name)}.json`)).json();
-    const speed = +(params.get("speed") || 20);
+    const speed = +(params.get("speed") || defaultSpeed);
     for (const ev of evs) {
       if (ev.type === "step" && ev.status === "done" && ev.seconds) await new Promise((r) => setTimeout(r, (ev.seconds * 1000) / speed));
       else await new Promise((r) => setTimeout(r, 120));
