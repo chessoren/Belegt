@@ -109,6 +109,7 @@ add("""
 <div class="grid2" style="grid-template-columns:.8fr 1.2fr;gap:56px;flex:1;align-items:center">
   <div><span class="kicker">Scene 1 · the clear question</span><h2 style="font-size:56px">“Do I have the right to demonstrate in the street?”</h2>
   <p class="lead" style="font-size:23px">A short answer, and next to it the exact sentences of Art. 22, found word for word in the official text (English is not an official language, so quotes come from the official French version). One click opens the article in DE, FR, IT or RM.</p>
+  <p class="lead" style="font-size:23px">In this run the German and Romansh searches did not reach Art. 22 on their own (“Straße” pulled road traffic, Art. 82): Belegt flags <b>2/4</b> instead of hiding it.</p>
   <p class="lead" style="font-size:23px">Sentences that rephrase instead of quoting are <span style="text-decoration:underline dotted;text-underline-offset:5px">dotted-underlined</span>.</p></div>
   <div class="shot"><img src="../img/answer_en.png" style="height:800px;object-fit:cover;object-position:top"></div>
 </div>""")

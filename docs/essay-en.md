@@ -58,7 +58,7 @@ These numbers come at a price we accept: Belegt sometimes abstains when an answe
 
 ## What Belegt is not, and its limits
 
-Belegt is not a legal adviser: it helps people find and read the official text, not decide an individual case. The verifier guarantees that quotes exist word for word; it does not guarantee that the paraphrase around them is right, nor that the quoted article is the most relevant one. That is why sentences that are not quotes are dotted-underlined, and why a “real quote from the wrong article” counts as an error in our measurements. The model runs at 4 bits on a CPU: an answer takes about 50 seconds (measured median). Finally, our Romansh test questions were written by the team, not by native speakers.
+Belegt is not a legal adviser: it helps people find and read the official text, not decide an individual case. The verifier guarantees that quotes exist word for word; it does not guarantee that the paraphrase around them is right, nor that the quoted article is the most relevant one. That is why sentences that are not quotes are dotted-underlined, and why a “real quote from the wrong article” counts as an error in our measurements. The model runs at 4 bits on a CPU: an answer takes about 50 seconds (measured median). Our Romansh test questions were written by the team, not by native speakers. And local CPU inference is not bit-for-bit reproducible: in one of our demo recording takes the Romansh question was refused — a wrongful abstention, never an invention.
 
 ## What Belegt gives back to Apertus
 

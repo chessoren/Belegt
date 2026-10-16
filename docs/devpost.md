@@ -31,7 +31,7 @@ AI assistants answer with confidence even when they are wrong. On our test set, 
 
 ## Video demo
 
-- Main cut: `docs/video/Belegt-demo.mp4` (≈ 2 min) — English voice-over (Oren, Fish Audio s2.1-pro-free), burned-in English subtitles (`.srt` alongside).
+- Main cut: `docs/video/Belegt-demo.mp4` (1:33) — English voice-over (Oren, Fish Audio s2.1-pro-free), burned-in English subtitles (`.srt` alongside).
 - Also available: a French-voiced cut with FR + EN subtitles (`docs/video/fr/`).
 - Upload to YouTube/Vimeo (unlisted) and paste the link.
 
@@ -129,6 +129,6 @@ Apertus is good at understanding a question and rephrasing it in four languages,
 - **Run it in 10 minutes:** see README “Quick start”. Python ≥ 3.10, no pip dependencies; llama.cpp + the GGUF; `scripts/start.sh`.
 - **Offline proof:** `sudo scripts/offline_demo.sh` starts llama.cpp and Belegt in a fresh network namespace (loopback only) and prints the routing table and a failed request to fedlex.admin.ch before serving.
 - **Reproduce the numbers:** `python eval/run_eval.py && python eval/score.py` (≈ 75 s per item on 4 CPU cores). Baseline trap answers were labelled by hand in `eval/manual_labels.json` with a one-line justification each.
-- **Honesty notes:** the verifier proves quotes exist, not that the paraphrase is right. Romansh questions were written by the team, not by native speakers. The design reproduces America.gov’s *structure*; no asset of that site is used, the Swiss coat of arms is not used, and the prototype is clearly labelled as unofficial.
+- **Honesty notes:** the verifier proves quotes exist, not that the paraphrase is right. CPU inference is not bit-for-bit reproducible: in one demo recording take the Romansh question was refused (wrongful abstention); the video uses a second take, the first take is kept. Romansh questions were written by the team, not by native speakers. The design reproduces America.gov’s *structure*; no asset of that site is used, the Swiss coat of arms is not used, and the prototype is clearly labelled as unofficial.
 - **File to upload:** `docs/submission/Belegt-submission.zip` (submission PDF + deck PDF and PNGs + 90 s video + subtitles + Devpost kit + essay + evaluation report), or the PDF alone: `docs/submission/Belegt-submission.pdf`.
 - **Essay:** `docs/essay-en.md` (a French version is kept in `docs/essai-fr.md`).

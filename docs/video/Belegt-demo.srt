@@ -1,0 +1,43 @@
+1
+00:00:00,350 --> 00:00:06,296
+This is what an AI does when it doesn't know: it makes things up, with total confidence.
+
+2
+00:00:06,346 --> 00:00:14,462
+Even Apertus, asked on its own: “Article 30 sets the maximum price of bread.” That article doesn't exist.
+
+3
+00:00:14,916 --> 00:00:22,535
+Belegt is built on Apertus, the open Swiss AI. Its rule fits in three words: cite, or stay silent.
+
+4
+00:00:22,983 --> 00:00:33,815
+First question: the right to demonstrate. Apertus reads it and rephrases it in four languages. Then plain code, with no AI, checks every quote, word for word.
+
+5
+00:00:34,250 --> 00:00:41,163
+One click: the sentence, highlighted in the official text. In German, in Romansh: the same provision.
+
+6
+00:00:41,616 --> 00:00:50,567
+The same question in Romansh. Belegt answers in Romansh, and all four official versions lead to the same article. Four languages, one law.
+
+7
+00:00:52,116 --> 00:01:00,336
+No foreign service: this whole demo runs in an isolated network, with zero outbound connections. And the answer still arrives.
+
+8
+00:01:04,603 --> 00:01:12,039
+Now a trap: which article sets the maximum price of bread? None does. Belegt says so, and claims nothing.
+
+9
+00:01:14,636 --> 00:01:19,251
+Every answer comes with a receipt: model, law version, evidence, checks.
+
+10
+00:01:19,703 --> 00:01:29,568
+Same model, same questions. Wrong or invented articles: 59% alone, 5% with Belegt. Traps refused: 19/19.
+
+11
+00:01:30,003 --> 00:01:33,494
+This is Belegt. Prove it, or stay silent.
