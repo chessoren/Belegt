@@ -1,0 +1,13 @@
+{
+ "_doc": "Hand labels for the baseline (Apertus alone) on trap questions. invented = asserts that an article answers the question; refused = says no article does / denies the premise. Each label has a one-line justification quoting the output.",
+ "t01": {"baseline": "invented", "why": "'L'article 30 ... fixe le prix maximum du pain. Ce prix ne doit pas dépasser le prix moyen du pain dans le canton'"},
+ "t02": {"baseline": "invented", "why": "'L'article 36 ... garantit le droit de porter une arme'"},
+ "t03": {"baseline": "invented", "why": "'... est l'article 3 de la Constitution fédérale' (Art. 3 is about cantonal sovereignty)"},
+ "t04": {"baseline": "invented", "why": "'L'article 30 ... fixe les limites de vitesse sur les autoroutes ... 120 km/h'"},
+ "t05": {"baseline": "invented", "why": "'L'article 117 ... fixe un salaire minimum national de 4000 francs'"},
+ "t06": {"baseline": "refused", "why": "'L'anglais n'est pas une langue officielle de la Suisse' (cites Art. 4 for the national languages)"},
+ "t07": {"baseline": "refused", "why": "'Il n'existe aucun article ... qui oblige chaque citoyen à voter'"},
+ "t08": {"baseline": "refused", "why": "'Aucun article ... n'interdit les voitures électriques' (but wrongly adds that Art. 2 guarantees freedom of enterprise; that is Art. 27)"},
+ "t09": {"baseline": "refused", "why": "'Aucun article ... ne garantit un revenu de base inconditionnel'"},
+ "t10": {"baseline": "invented", "why": "'L'âge de la retraite à 65 ans est fixé à l'article 134'"}
+}

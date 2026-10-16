@@ -12,9 +12,9 @@
   {
    "id": "l02",
    "scene": "s_problem",
-   "fr": "Même Apertus, le modèle suisse, interrogé seul. Le Conseil fédéral ? Article cent trente-quatre. Faux : c'est l'article cent soixante-quinze. Les langues nationales ? Il oublie le romanche.",
-   "sub_fr": "Même Apertus, interrogé seul. Le Conseil fédéral ? « Article 134 ». Faux : c'est l'art. 175. Les langues nationales ? Il oublie le romanche.",
-   "sub_en": "Even Apertus, asked on its own. The Federal Council? “Article 134”. Wrong: it's Art. 175. The national languages? It forgets Romansh."
+   "fr": "Même Apertus, le modèle suisse, interrogé seul. Quel article fixe le prix maximum du pain ? « L'article trente », répond-il, avec un plafond cantonal en prime. Ça n'existe pas. Et les langues nationales ? Il oublie le romanche.",
+   "sub_fr": "Même Apertus, interrogé seul. Le prix maximum du pain ? « L'article 30 », avec un plafond cantonal en prime. Ça n'existe pas. Les langues nationales ? Il oublie le romanche.",
+   "sub_en": "Even Apertus, asked on its own. The maximum price of bread? “Article 30”, with a cantonal cap thrown in. It doesn't exist. The national languages? It forgets Romansh."
   },
   {
    "id": "l03",
