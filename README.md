@@ -111,6 +111,7 @@ Belegt is an independent prototype. It is **not** an official website of the Swi
 - Lexical retrieval sometimes misses the right article; Belegt then abstains (counted as over-refusal) or cites a neighbour (counted as wrong).
 - 4-bit 8B model on CPU: about a minute per answer.
 - Romansh test questions were written by the team, not by native speakers.
+- Local CPU inference is not bit-for-bit reproducible across runs: in one of our demo recording takes the Romansh question was refused (a wrongful abstention, never an invention). Evaluation numbers come from a single run.
 
 ## Credits
 

@@ -212,7 +212,7 @@ add("""
     <li><b>A behaviour worth training</b>: cite or abstain, as a target for future alignment work.</li>
     <li><b>A receipt format</b> other projects can adopt. Everything Apache-2.0.</li>
   </ul>
-  <div class="card ink" style="padding:44px"><h3>Limits, said first</h3><p style="font-size:23px;line-height:1.6;margin-top:14px">Not legal advice. The verifier proves quotes exist — not that the paraphrase is right, nor that the quoted article is the relevant one (those cases are counted as errors). Lexical search can miss the article → abstention. ≈ 50 s per answer on 4 CPU cores. Romansh test questions written by the team, not native speakers.</p></div>
+  <div class="card ink" style="padding:44px"><h3>Limits, said first</h3><p style="font-size:23px;line-height:1.6;margin-top:14px">Not legal advice. The verifier proves quotes exist — not that the paraphrase is right, nor that the quoted article is the relevant one (those cases are counted as errors). Lexical search can miss the article → abstention. ≈ 50 s per answer on 4 CPU cores. Romansh test questions written by the team, not native speakers. CPU inference is not bit-for-bit reproducible: one demo take refused the Romansh question (wrongful abstention, never an invention).</p></div>
 </div>""")
 
 # 14 — close
